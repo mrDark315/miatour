@@ -18,6 +18,7 @@ body {
     font-size: 20px;
     background: vars.$color-black;
     color: vars.$color-white;
+    overflow-x: hidden;
 }
 
 .wrapper {margin: 0 5% 0 5%;}
@@ -154,8 +155,9 @@ header {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 row-gap: 20px;
-                column-gap: 20px;
+                column-gap: 30px;
                 max-width: 720px;
+
 
                 .input_wrapper {
                     position: relative;
@@ -168,7 +170,7 @@ header {
                     border-bottom-left-radius: 15px;
                     border-bottom-right-radius: 15px;
                     background: transparent;
-                    padding: 0 10px;
+                    padding: 0 5px 0 10px;
                     box-sizing: border-box;
                     font-size: 16px;
                     color: vars.$color-gray;
@@ -180,14 +182,15 @@ header {
                         top: 10px;
                         left: 50%;
                         transform: translateX(-50%);
-                        font-size: 16px;
+                        font-size: 18px;
                         color: vars.$color-gray;
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
                     }
 
-                    input:focus + label {
+                    &.is-focused label,
+                    &.has-value label {
                         top: -10px;
                         font-size: 14px;
                         color: vars.$color-purple;
