@@ -24,6 +24,18 @@ body {
 
 .wrapper {margin: 0 5% 0 5%;}
 
+    // фиксация header и travel
+header, .travel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+    padding-top: 20px;
+    z-index: 1;
+}
+
 // HEADER
 @keyframes SlideFromTop {
         0% {
@@ -39,13 +51,11 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
     animation: SlideFromTop 1s ease-out forwards;
+    z-index: 3;
+    background: #000;
 
-    img {
-        height: 50px;
-        width: 195px;
-    }
+    img {height: 50px; width: 195px;}
 
     ul {
         display: flex;
@@ -249,4 +259,11 @@ header {
             }
         }
 }
+}
+
+// IMAGE BACKGROUND
+.image-bg {
+    position: relative;
+    // margin-top: 10000px;
+    z-index: 2;
 }
