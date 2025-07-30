@@ -220,7 +220,6 @@ header {
                         top: 10px;
                         left: 50%;
                         transform: translateX(-50%);
-                        font-size: 20px;
                         color: vars.$color-gray;
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
@@ -243,6 +242,7 @@ header {
                     border-radius: 15px;
                     cursor: pointer;
                     transition: background 0.3s ease;
+                    font-size: 16px;
 
                     &:hover {background: color.adjust(vars.$color-purple, $lightness: -4%);}
                 }
@@ -257,8 +257,6 @@ header {
             }
 
             .visible{opacity: 1;}
-
-            .warning_border {color: vars.$color-red;}
         }
 }
 }
@@ -268,5 +266,62 @@ header {
     position: relative;
     margin-top: 100px;
     z-index: 2;
-    max-width: 100%;
+    max-width: 100% ;
+}
+
+// MAIN COUNTRIES
+.countries {
+    margin-top: 100px;
+
+    .countries_header {
+        display: flex;
+        justify-content: space-between;
+
+        h5 {
+            font-family: 'Playfair Display';
+            font-size: 26px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        a {
+            display: flex;
+            color: vars.$color-white;
+            background: vars.$color-purple;
+            width: 120px;
+            height: 40px;
+            padding-left: 5px;
+            border-radius: 15px;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+    }
+
+    .popular_countries {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 50px;
+
+        @media (max-width: 1200px) {
+            .coutry {
+                flex-basis: calc((100% - (1 * 20px)) / 2);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .coutry {
+                flex-basis: calc((100% - (1 * 20px)) / 2);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .coutry {
+                flex-basis: calc((100% - (1 * 20px)) / 2);
+            }
+        }
+    }
 }
