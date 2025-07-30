@@ -257,6 +257,8 @@ header {
             }
 
             .visible{opacity: 1;}
+
+            .warning_border {border-bottom-color: vars.$color-red;}
         }
 }
 }
