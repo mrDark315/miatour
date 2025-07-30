@@ -37,19 +37,19 @@
                 <div class="request_input">
                     <form action="">
                         <div class="input_wrapper">
-                            <input type="text" id="name" inputmode="text">
+                            <input type="text" id="name" class="check_input" inputmode="text">
                             <label for="name">Ім'я*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="email" id="email" inputmode="email">
+                            <input type="email" id="email" class="check_input" inputmode="email">
                             <label for="email">Електронна пошта*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="date" autocomplete="off" readonly>
+                            <input type="text" id="date" class="check_input" autocomplete="off" readonly>
                             <label for="date">Дата початку туру*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="country" inputmode="text">
+                            <input type="text" id="country" class="check_input" inputmode="text">
                             <label for="country">Країна*</label>
                         </div>
                         <div class="input_wrapper">
@@ -57,20 +57,21 @@
                             <label for="city">Місто</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="number" id="name" pattern="\d*" inputmode="numeric" autocomplete="off">
-                            <label for="name">Кількість осіб</label>
+                            <input type="number" id="people_num" pattern="\d*" inputmode="numeric" autocomplete="off">
+                            <label for="people_num">Кількість осіб</label>
                         </div>
                         <div class="input_wrapper info">
                             <input type="text" id="info" inputmode="text">
                             <label for="info">Додаткова інформація</label>
                         </div>
-                        <button type="button">Відправити запит</button>
+                        <button type="button" id="send_request">Відправити запит</button>
                     </form>
+                    <div class="input_warning">Поля з зірочкою (*) обов’язкові до заповнення</div>
                 </div>
             </div>
         </main>
-        <!-- <picture></picture> -->
         <img class="image-bg" src="/src/img/image-bg.png" alt="Planet Earth Background Image">
+
     </div>
 </body>
 </html>

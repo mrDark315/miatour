@@ -247,6 +247,16 @@ header {
                     &:hover {background: color.adjust(vars.$color-purple, $lightness: -4%);}
                 }
             }
+
+            .input_warning {
+                margin-top: 10px;
+                color: vars.$color-red;
+                font-size: 18px;
+                opacity: 0;
+                transition: opacity 0.2s ease
+            }
+
+            .visible{opacity: 1;}
         }
 }
 }
