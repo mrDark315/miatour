@@ -56,7 +56,6 @@ const warningMessage = document.querySelector('.input_warning');
                 warningMessage.classList.add('visible');
             } else {
                 warningMessage.classList.remove('visible');
-                alert('Форма успешно отправлена (это тестовое окно)');
             }
         });
     }
