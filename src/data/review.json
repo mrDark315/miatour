@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "clientName": "Прізвище Ім'я",
+        "image": "src/img/client1.jpg",
+        "location": "Країна, Місто",
+        "hotel": "Готель",
+        "rating": 5,
+        "reviewText": "Відгук 1"
+    },
+    {
+        "id": 2,
+        "clientName": "Прізвище Ім'я",
+        "image": "src/img/client1.jpg",
+        "location": "Країна, Місто",
+        "hotel": "Готель",
+        "rating": 5,
+        "reviewText": "Відгук 2"
+    },
+    {
+        "id": 3,
+        "clientName": "Прізвище Ім'я",
+        "image": "src/img/client1.jpg",
+        "location": "Країна, Місто",
+        "hotel": "Готель",
+        "rating": 5,
+        "reviewText": "Відгук 3"
+    },
+    {
+        "id": 4,
+        "clientName": "Прізвище Ім'я",
+        "image": "src/img/client1.jpg",
+        "location": "Країна, Місто",
+        "hotel": "Готель",
+        "rating": 5,
+        "reviewText": "Відгук 4"
+    }
+]

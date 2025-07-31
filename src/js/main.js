@@ -1,5 +1,6 @@
 import '../scss/style.scss'
 import './air-datepicker.js'
+import './splide.js'
 
 // TRAVEL REQUEST INPUT ANIMATION
 document.addEventListener('DOMContentLoaded', () => {

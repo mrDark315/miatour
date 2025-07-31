@@ -269,59 +269,124 @@ header {
     max-width: 100% ;
 }
 
-// MAIN COUNTRIES
-.countries {
+// MAIN COUNTRIES & HOTELS (HEADER)
+.countries_header,
+.hotels_header {
+    display: flex;
+    justify-content: space-between;
     margin-top: 100px;
 
-    .countries_header {
+    h5 {
+        font-family: 'Playfair Display';
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .next_page {
         display: flex;
-        justify-content: space-between;
+        color: vars.$color-white;
+        background: vars.$color-purple;
+        width: 120px;
+        height: 40px;
+        padding-right: 10px;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        box-sizing: border-box;
+        position: relative;
+
+        i {
+            position: absolute;
+            top: 13px;
+            left: 87px;
+            transition: left .3s ease ;
+            font-size: 14px;
+        }
+
+        &:hover {i {left: 90px;}}
+    }
+}
+
+
+
+// MAIN COUNTRIES
+.popular_countries {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 50px;
+
+    .country {
+            cursor: pointer;
+
+            p {
+                text-align: center;
+                font-size: 16px;
+                color: vars.$color-light-gray;
+            }
+    }
+}
+
+// MAIN HOTELS
+.hotels_header {
+    .next_page {
+        padding-right: 8px;
+        i {left: 85px;}
+        &:hover {i {left: 88px;}}
+    }
+}
+
+.hotels_inpection {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 100%;
+
+    .hotel {
+        cursor: pointer;
 
         h5 {
             font-family: 'Playfair Display';
-            font-size: 26px;
-            font-weight: 600;
+            font-size: 20px;
+            font-weight: 500;
             letter-spacing: 1px;
+            margin-top: 5px;
+            margin-left: 3px;
         }
 
-        a {
+        div {
             display: flex;
-            color: vars.$color-white;
-            background: vars.$color-purple;
-            width: 120px;
-            height: 40px;
-            padding-left: 5px;
-            border-radius: 15px;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
-    }
+            justify-content: space-between;
+            margin-top: 5px;
 
-    .popular_countries {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-top: 50px;
+            h6 {
+                font-size: 18px;
+                color: vars.$color-light-gray;
+                letter-spacing: 1px;
 
-        @media (max-width: 1200px) {
-            .coutry {
-                flex-basis: calc((100% - (1 * 20px)) / 2);
-            }
-        }
-
-        @media (max-width: 800px) {
-            .coutry {
-                flex-basis: calc((100% - (1 * 20px)) / 2);
-            }
-        }
-
-        @media (max-width: 500px) {
-            .coutry {
-                flex-basis: calc((100% - (1 * 20px)) / 2);
+                i {
+                    color: vars.$color-purple;
+                    margin-right: 3px;
+                }
             }
         }
     }
 }
+
+// MAIN REVIEW
+.review {
+    margin-top: 100px;
+
+    h5 {
+        font-family: 'Playfair Display';
+        font-size: 26px;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+
+.splide__slide {background: firebrick;}
