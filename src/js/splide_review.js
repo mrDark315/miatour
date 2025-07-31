@@ -30,9 +30,9 @@ export async function initializeReviewsSplide() {
                         <p>${review.location || 'Не указано'}</p>
                     </div>
                     <div class="review_info">
-                        <p>${review.hotel || 'Не указан'}</p>
+                        <p class="hotel_name">${review.hotel || 'Не указан'}</p>
                         <div class="review-rating-container">${starsSvg}</div>
-                        <p>${review.reviewText || 'Отзыв отсутствует'}</p>
+                        <p class="review_text">${review.reviewText || 'Отзыв отсутствует'}</p>
                     </div>
                 </div>
             </li>
@@ -50,12 +50,14 @@ export async function initializeReviewsSplide() {
             rewind: true,
             rewindByDrag: true,
             drag: true,
-            perPage: 2,
-            gap: '150px',
-            perMove: 2,
+            gap: '10vw',
+            // perPage: 2,
+            // perMove: 2,
+            speed: 700,
             arrows: true,
-            pagination: true,
+            pagination: false,
             paginationKeyboard: false,
+            autoHeight: true,
             // breakpoints: {
             //     1024: { perPage: 2, gap: '1rem' },
             //     768: { perPage: 1, gap: '.7rem' },

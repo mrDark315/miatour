@@ -16,11 +16,11 @@
         <header>
             <img src="src/img/miatour-logo.svg" alt="miatour">
             <ul>
-                <li><a href="#">країни</a></li>
-                <li><a href="#">готелі</a></li>
-                <li><a href="#">відгуки</a></li>
-                <li><a href="#">про нас</a></li>
-                <li><a href="#">контакти</a></li>
+                <li><a href="#countries">країни</a></li>
+                <li><a href="#hotels">готелі</a></li>
+                <li><a href="#reviews">відгуки</a></li>
+                <li><a href="#about_us">про нас</a></li>
+                <li><a href="#contacts">контакти</a></li>
             </ul>
             <div class="language">
                 <p>UA</p>
@@ -77,7 +77,7 @@
 
         <img class="image-bg" src="src/img/image-bg.png" alt="Планета Земля Фонове Зображення">
 
-        <main class="countries">
+        <main class="countries" id="countries">
             <div class="countries_header">
                     <h5>Популярні напрямки</h5>
                     <a href="" class="next_page">Усі країни<i class="fa-solid fa-angle-right"></i></a>
@@ -110,7 +110,7 @@
             </div>
         </main>
 
-        <main class="hotels">
+        <main class="hotels" id="hotels">
             <div class="hotels_header">
                     <h5>Наша готельна інспекція</h5>
                     <a href="" class="next_page">Усі готелі<i class="fa-solid fa-angle-right"></i></a>
@@ -151,7 +151,7 @@
             </div>
         </main>
 
-        <main class="review">
+        <main class="review" id="reviews">
             <h5>Відгуки</h5>
             <section class="splide" aria-label="Відгуки клієнтів">
                 <div class="splide__arrows">
@@ -170,25 +170,3 @@
     </div>
 </body>
 </html>
-
-
-<!--
-<li class="splide__slide">
-    <div class="review_item">
-
-        <div class="review_header">
-            <p>${review.clientName || 'N/A'}</p>
-            ${clientImagePath ? `<img src="${clientImagePath}" alt="Фото клієнта">` : ''}
-            <p>${review.location || 'Не указано'}</p>
-        </div>
-
-
-        <div class="review_info">
-            <p>${review.hotel || 'Не указан'}</p>
-            <div class="review-rating-container">${starsSvg}</div>
-            <p>${review.reviewText || 'Отзыв отсутствует'}</p>
-        </div>
-
-    </div>
-</li>
--->
