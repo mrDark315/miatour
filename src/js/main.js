@@ -1,6 +1,6 @@
 import '../scss/style.scss'
 import './air-datepicker.js'
-import './splide.js'
+import { initializeReviewsSplide } from './splide_review.js';
 
 // TRAVEL REQUEST INPUT ANIMATION
 document.addEventListener('DOMContentLoaded', () => {
@@ -60,4 +60,9 @@ const warningMessage = document.querySelector('.input_warning');
             }
         });
     }
+});
+
+// INITIALIZE REVIEW SLIDER FROM splide.js
+document.addEventListener('DOMContentLoaded', () => {
+    initializeReviewsSplide();
 });

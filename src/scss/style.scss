@@ -380,6 +380,7 @@ header {
 // MAIN REVIEW
 .review {
     margin-top: 100px;
+    margin-bottom: 100px;
 
     h5 {
         font-family: 'Playfair Display';
@@ -389,4 +390,11 @@ header {
     }
 }
 
-.splide__slide {background: firebrick;}
+.splide {
+    // width: 100%;
+
+    .review_item {
+    background: red;
+    // height: 400px;
+}
+}

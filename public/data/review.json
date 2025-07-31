@@ -2,25 +2,25 @@
     {
         "id": 1,
         "clientName": "Прізвище Ім'я",
-        "image": "src/img/client1.jpg",
+        "clientImage": "/clients/client1.jpg",
         "location": "Країна, Місто",
         "hotel": "Готель",
-        "rating": 5,
+        "rating": 4,
         "reviewText": "Відгук 1"
     },
     {
         "id": 2,
         "clientName": "Прізвище Ім'я",
-        "image": "src/img/client1.jpg",
+        "clientImage": "/clients/client1.jpg",
         "location": "Країна, Місто",
         "hotel": "Готель",
-        "rating": 5,
+        "rating": 2,
         "reviewText": "Відгук 2"
     },
     {
         "id": 3,
         "clientName": "Прізвище Ім'я",
-        "image": "src/img/client1.jpg",
+        "clientImage": "/clients/client1.jpg",
         "location": "Країна, Місто",
         "hotel": "Готель",
         "rating": 5,
@@ -29,10 +29,10 @@
     {
         "id": 4,
         "clientName": "Прізвище Ім'я",
-        "image": "src/img/client1.jpg",
+        "clientImage": "/clients/client1.jpg",
         "location": "Країна, Місто",
         "hotel": "Готель",
-        "rating": 5,
+        "rating": 1,
         "reviewText": "Відгук 4"
     }
 ]
