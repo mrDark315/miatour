@@ -1,6 +1,31 @@
 import '../scss/style.scss'
+import '../scss/splide-js.scss'
 import './air-datepicker.js'
 import { initializeReviewsSplide } from './splide_review.js';
+
+// HEADER ANCHOR LIMKS SCROLL
+document.addEventListener('DOMContentLoaded', () => {
+    const anchorLinks = document.querySelectorAll('.anchor-link');
+    const scrollOffset = 130;
+
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const targetPosition = targetElement.offsetTop - scrollOffset;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
 
 // TRAVEL REQUEST INPUT ANIMATION
 document.addEventListener('DOMContentLoaded', () => {
