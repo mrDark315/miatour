@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-.wrapper {margin: 0 5% 0 5%;}
+.wrapper {margin: 0 5%;}
 
 header, .image-bg {
     position: fixed;
@@ -388,20 +388,35 @@ header {
         font-weight: 600;
         letter-spacing: 1px;
     }
-}
 
-.splide {
-
-    .splide__arrow {
+    .splide {
+    height: 450px;
+    .splide__arrows {
+        .splide__arrow {
         background: vars.$color-purple;
         color: vars.$color-white;
         width: 100px;
         height: 100px;
         opacity: 1;
+        }
     }
 
-    .review_item {
-    background: red;
-    height: 400px;
+    .splide__track {
+        width: 75%;
+        margin: 0 auto;
+        .splide__list {
+            .splide__slide {
+                .review_item {
+                background: vars.$color-gray;
+                border-radius: 24px;
+                height: 400px;
+
+                .review_header {}
+
+                .review_info {}
+                }
+            }
+        }
+    }
 }
 }
