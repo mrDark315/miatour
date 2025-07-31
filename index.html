@@ -154,6 +154,14 @@
         <main class="review">
             <h5>Відкуги</h5>
             <section class="splide" aria-label="Відгуки клієнтів">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <i class="fa-solid fa-chevron-left fa-2xl"></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <i class="fa-solid fa-chevron-right fa-2xl"></i>
+                    </button>
+                </div>
                 <div class="splide__track">
                     <ul class="splide__list" id="reviews_list"></ul>
                 </div>
@@ -162,3 +170,22 @@
     </div>
 </body>
 </html>
+
+
+<li class="splide__slide">
+    <div class="review_item">
+
+        <div class="review_header">
+            <p>${review.clientName || 'N/A'}</p>
+            ${clientImagePath ? `<img src="${clientImagePath}" alt="Фото клієнта">` : ''}
+            <p>${review.location || 'Не указано'}</p>
+        </div>
+
+        <div class="review_info">
+            <p>${review.hotel || 'Не указан'}</p>
+            <div class="review-rating-container">${starsSvg}</div>
+            <p>${review.reviewText || 'Отзыв отсутствует'}</p>
+        </div>
+
+    </div>
+</li>

@@ -391,10 +391,17 @@ header {
 }
 
 .splide {
-    // width: 100%;
+
+    .splide__arrow {
+        background: vars.$color-purple;
+        color: vars.$color-white;
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
 
     .review_item {
     background: red;
-    // height: 400px;
+    height: 400px;
 }
 }
