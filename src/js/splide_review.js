@@ -51,8 +51,6 @@ export async function initializeReviewsSplide() {
             rewindByDrag: true,
             drag: true,
             gap: '10vw',
-            // perPage: 2,
-            // perMove: 2,
             speed: 700,
             arrows: true,
             pagination: false,
