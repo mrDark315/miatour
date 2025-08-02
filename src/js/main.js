@@ -2,6 +2,8 @@ import '../scss/style.scss'
 import '../scss/splide-js.scss'
 import './air-datepicker.js'
 import { initializeReviewsSplide } from './splide_review.js';
+import AOS from 'aos';
+import 'aos/dist/aos.css'
 
 // HEADER ANCHOR LIMKS SCROLL
 document.addEventListener('DOMContentLoaded', () => {
@@ -90,4 +92,10 @@ const warningMessage = document.querySelector('.input_warning');
 // INITIALIZE REVIEW SLIDER FROM splide.js
 document.addEventListener('DOMContentLoaded', () => {
     initializeReviewsSplide();
+});
+
+//INITIALIZE AOS LIBRARY
+AOS.init({
+    duration: 1200,
+    anchorPlacement: 'center-bottom'
 });
