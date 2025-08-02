@@ -12,7 +12,7 @@
     scroll-behavior: smooth;
 }
 
-html {width: 100%; min-height: 100vh;}
+html {width: 100%;}
 
 body {
     position: relative;
@@ -50,6 +50,7 @@ a {all: unset; cursor: pointer;}
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     animation: SlideFromTop 1s ease-out forwards;
     padding: 10px 5%;
     padding-top: 20px;
@@ -61,7 +62,8 @@ header {
     width: 100%;
     box-sizing: border-box;
 
-    img {height: 50px; width: 195px;}
+    .logo {height: 50px; width: 195px;}
+    .logo-mini {display: none;}
 
     ul {
         display: flex;
@@ -71,29 +73,31 @@ header {
         max-width: 650px;
         margin: 0 30px;
 
-    a {
-        color: vars.$color-white;
-        position: relative;
-        display: inline-block;
+        a {
+            color: vars.$color-white;
+            position: relative;
+            display: inline-block;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 25px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background: vars.$color-purple;
-            transition: width 0.3s ease, transform 0.3s ease;
-            border-radius: 24px;
-        }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 2px;
+                background: vars.$color-purple;
+                transition: width 0.3s ease, transform 0.3s ease;
+                border-radius: 24px;
+            }
 
-        &:hover::before {
-            width: 100%;
-            transform: translateX(-50%);
+            @media (pointer: fine) {
+                &:hover::before {
+                width: 100%;
+                transform: translateX(-50%);
+                }
+            }
         }
-}
     }
 
     .language {
@@ -102,11 +106,74 @@ header {
         gap: 3px;
         cursor: pointer;
         i {transition: color 0.3s ease;}
-        &:hover {i {color: vars.$color-purple;}}
+        @media (pointer: fine) {
+            &:hover {i {color: vars.$color-purple;}}
+        }
     }
 
-    @media (max-width: 991.98px ) {
+    .hamburger {
+        display: none;
+        margin-left: 15px;
 
+        .line {
+            display: block;
+            width: 30px;
+            height: 4px;
+            margin: 6px 0;
+            background: vars.$color-white;
+            border-radius: 24px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    @media (max-width: 767.98px ) {
+        .logo{width: 150px;}
+
+        .language {
+            position: fixed;
+            top: 120px;
+            right: -100%;
+            font-size: 25px;
+            gap: 1px;
+            transition: .3s;
+            i {font-size: 16px;}
+        }
+
+        .language.active {right: 25px;}
+
+        .hamburger {display: block;}
+
+        .hamburger.active .line:nth-child(1) {transform: translateY(10px) rotate(45deg);}
+
+        .hamburger.active .line:nth-child(2) {opacity: 0;}
+
+        .hamburger.active .line:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
+
+        .hamburger.active .line:nth-child(4) {
+            width: 0;
+            left: 50%;
+            top: 10px;
+        }
+
+        .nav_menu {
+            position: fixed;
+            flex-direction: column;
+            left: -100%;
+            top: 120px;
+            margin: 0;
+            transition: .4s;
+            background: vars.$color-black;
+            width: 100%;
+            height: 100vh;
+            justify-content: flex-start;
+
+            a {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+        }
+
+        ul.active {left: 0;}
     }
 }
 
@@ -270,7 +337,11 @@ header {
 
             .visible{opacity: 1;}
         }
-}
+    }
+
+    @media (max-width: 767.98px ) {
+
+    }
 }
 
 // IMAGE BACKGROUND

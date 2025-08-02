@@ -29,6 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// HEADER BURGER MENU
+const menu = document.querySelector('.hamburger')
+const navMenu = document.querySelector('.nav_menu')
+const language = document.querySelector('.language')
+const navLinks = document.querySelectorAll('.nav_menu .anchor-link');
+
+menu.addEventListener("click", () => {
+    menu.classList.toggle("active")
+    navMenu.classList.toggle("active")
+    language.classList.toggle("active")
+})
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        // Проверяем, активно ли меню, и если да, то закрываем его
+        if (navMenu.classList.contains("active")) {
+            menu.classList.remove("active");
+            navMenu.classList.remove("active");
+            language.classList.remove("active");
+        }
+    });
+});
+
 // TRAVEL REQUEST INPUT ANIMATION
 document.addEventListener('DOMContentLoaded', () => {
     const inputWrappers = document.querySelectorAll('.input_wrapper');
