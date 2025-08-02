@@ -26,14 +26,6 @@ body {
 
 .wrapper {margin: 0 5%;}
 
-header, .image-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
-}
-
 h5 {
         font-family: 'Playfair Display';
         font-size: 28px;
@@ -63,15 +55,21 @@ header {
     padding-top: 20px;
     z-index: 3;
     background: vars.$color-header-black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
 
     img {height: 50px; width: 195px;}
 
     ul {
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        gap: 50px;
-        width: 650px;
+        align-items: center;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 30px;
 
     a {
         color: vars.$color-white;
@@ -105,6 +103,10 @@ header {
         cursor: pointer;
         i {transition: color 0.3s ease;}
         &:hover {i {color: vars.$color-purple;}}
+    }
+
+    @media (max-width: 991.98px ) {
+
     }
 }
 
