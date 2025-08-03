@@ -12,8 +12,7 @@
                         color: vars.$color-gray;
                         background: vars.$color-dark-gray;
                         border-radius: 24px;
-                        padding: 0 7%;
-                        min-width: 350px;
+                        padding: 0 5%;
                         font-family: 'Playfair Display';
                         font-size: 24px;
                         font-weight: 700;
@@ -69,5 +68,26 @@
             height: 80px;
             opacity: 1;
             }
+    }
+}
+
+@media (max-width: 767.98px ) {
+    .splide {
+        margin-top: 20px;
+        .review_header {
+        p {font-size: 20px;}
+        }
+
+        .review_info {
+            .hotel_name {font-size: 20px;}
+            .review_text {font-size: 20px;}
+        }
+
+        .splide__arrows {
+            .splide__arrow {
+                width: 50px;
+                height: 50px;
+            }
+        }
     }
 }
