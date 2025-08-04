@@ -12,7 +12,10 @@
     scroll-behavior: smooth;
 }
 
-html {width: 100%; overflow-x: hidden;}
+html {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
 
 body {
     position: relative;
@@ -147,7 +150,7 @@ header {
     }
     .logo{width: 150px;}
 
-    header .hamburger {display: block; margin-right: 25px;}
+    header .hamburger {display: block;}
 
     .hamburger.active .line:nth-child(1) {transform: translateY(10px) rotate(45deg);}
 
@@ -159,11 +162,11 @@ header {
         position: fixed;
         flex-direction: column;
         right: -100%;
-        top: 120px;
+        top: 90px;
         margin: 0;
         transition: .4s;
         background: vars.$color-header-black;
-        width: 50vh;
+        width: 45vw;
         height: 100vh;
         justify-content: flex-start;
 
@@ -361,7 +364,6 @@ header {
                 margin-top: 10px;
                 font-size: 26px;
             }
-
         }
 
         .travel_request {
@@ -370,14 +372,7 @@ header {
             .request_title {
                 letter-spacing: 1.5px;
             }
-
-            .request_input {
-                form {
-                }
-            }
         }
-
-
     }
 }
 
@@ -430,10 +425,6 @@ header {
     max-width: 100% ;
 }
 
-@media (max-width: 767.98px) {
-    .image-bg {margin-top: 20px;}
-}
-
 // MAIN COUNTRIES & HOTELS (HEADER)
 .countries_header,
 .hotels_header {
@@ -482,7 +473,7 @@ header {
 .popular_countries {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 5%;
+    gap: 1vw;
     margin-top: 30px;
 
     .country {
@@ -535,7 +526,6 @@ header {
 @media (max-width: 575.98px) {
     .popular_countries {
         grid-template-columns: repeat(1, 1fr);
-        gap: 0;
 
         .country {
             p {
@@ -724,9 +714,10 @@ header {
 
                 .timeline-text {
                     position: absolute;
-                    width: 260px;
+                    max-width: 260px;
                     font-size: 24px;
                     letter-spacing: 0.5px;
+                    text-wrap: nowrap;
                 }
             }
         }
@@ -775,8 +766,78 @@ header {
     }
 }
 
+@media (max-width: 861.98px) {
+    .about_us {
+        .timeline_container {
+            padding: 20px 0;
+            overflow: hidden;
+
+            .timeline {
+                flex-direction: column;
+                align-items: flex-start;
+                position: relative;
+                width: 100%;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 100%;
+                    background: vars.$color-purple;
+                    left: 50%;
+                    top: 0;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                    border-radius: 24px;
+                }
+
+                .timeline-item {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .timeline-circle {
+                        position: absolute;
+                        left: 50%;
+                        top: 60%;
+                        transform: translateX(-50%);
+                        z-index: 1;
+                    }
+
+                    .timeline-text {
+                        position: relative;
+                        width: 220px;
+                    }
+                }
+            }
+            .timeline-item--top-text {
+                .timeline-text-top {
+                    right: 130px;
+                    top: -10px;
+                    text-align: right;
+                }
+            }
+
+            .timeline-item--bottom-text {
+                .timeline-text-bottom {
+                    left: 130px;
+                    top: -10px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 767.98px) {
     .about_us {
+        .timeline_container {
+            .timeline {
+                .timeline-item {
+                    .timeline-text {font-size: 20px;}
+                }
+            }
+        }
+
         .our_team {
             margin-top: 50px;
 
@@ -787,6 +848,36 @@ header {
                 h6 {font-size: 24px;}
             }
 
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about_us {
+        .timeline_container {
+            .timeline {
+                .timeline-item {
+                    .timeline-text {
+                        text-wrap: wrap;
+                        width: 130px;
+                    }
+                }
+            }
+            .timeline-item--top-text {
+                .timeline-text-top {
+                    right: 100px;
+                    top: 0px;
+                    text-align: right;
+                }
+            }
+
+            .timeline-item--bottom-text {
+                .timeline-text-bottom {
+                    left: 100px;
+                    top: 0px;
+                    text-align: left;
+                }
+            }
         }
     }
 }
