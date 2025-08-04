@@ -41,7 +41,6 @@ menu.addEventListener("click", () => {
 
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        // Проверяем, активно ли меню, и если да, то закрываем его
         if (navMenu.classList.contains("active")) {
             menu.classList.remove("active");
             navMenu.classList.remove("active");
@@ -118,5 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //INITIALIZE AOS LIBRARY
 AOS.init({
     duration: 1200,
-    anchorPlacement: 'center-bottom'
+    anchorPlacement: 'center-bottom',
+    disable: 'mobile',
+    once: true
 });

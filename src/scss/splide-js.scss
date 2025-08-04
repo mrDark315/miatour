@@ -8,6 +8,7 @@
             margin: 0 auto;
             .splide__list {
                 .splide__slide {
+
                     .review_item {
                         color: vars.$color-gray;
                         background: vars.$color-dark-gray;
@@ -17,44 +18,46 @@
                         font-size: 24px;
                         font-weight: 700;
 
-                    .review_header {
-                        display: flex;
-                        justify-content: space-between;
-                        padding-top: 30px;
-
-                        p {
+                        .review_header {
                             display: flex;
-                            width: 120px;
-                            text-align: center;
-                            align-items: center;
-                            line-height: 35px;
+                            justify-content: space-between;
+                            padding-top: 30px;
+
+                            p {
+                                display: flex;
+                                align-items: center;
+                                line-height: 35px;
+                                width: 120px;
+                                text-wrap: balance;
+
+                                &:last-of-type {text-align: right;}
+                            }
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
                         }
 
-                        img {
-                            width: 100px;
-                            height: 100px;
-                        }
-                    }
+                        .review_info {
+                                text-align: center;
+                            .hotel_name {
+                                color: vars.$color-light-gray;
+                                margin-top: 20px;
+                            }
 
-                    .review_info {
-                            text-align: center;
-                        .hotel_name {
-                            color: vars.$color-light-gray;
-                            margin-top: 20px;
-                        }
+                            img {
+                                width: 140px;
+                                height: 20px;
+                            }
 
-                        img {
-                            width: 140px;
-                            height: 20px;
+                            .review_text {
+                                font-family: "Playfair Display SC";
+                                line-height: 35px;
+                                margin: 20px 0;
+                                padding-bottom: 30px;
+                            }
                         }
-
-                        .review_text {
-                            font-family: "Playfair Display SC";
-                            line-height: 35px;
-                            margin: 20px 0;
-                            padding-bottom: 30px;
-                        }
-                    }
                     }
                 }
             }
@@ -87,6 +90,40 @@
             .splide__arrow {
                 width: 50px;
                 height: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px ) {
+    .splide {
+        margin-top: 20px;
+
+        .splide__track {
+            width: 90%;
+            .splide__list {
+                .splide__slide {
+                    .review_item {
+                        padding: 0 10%;
+                    }
+                }
+            }
+        }
+        .review_header {
+        p {font-size: 18px;}
+        }
+
+        .review_info {
+            .hotel_name {font-size: 20px;}
+            .review_text {font-size: 20px;}
+        }
+
+        .splide__arrows {
+            .splide__arrow {
+                width: 50px;
+                height: 50px;
+
+                i {font-size: 20px;}
             }
         }
     }
