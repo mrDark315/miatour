@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // HEADER BURGER MENU
 const menu = document.querySelector('.hamburger')
 const navMenu = document.querySelector('.nav_menu')
-const navLinks = document.querySelectorAll('.nav_menu .anchor-link');
+const navLinks = document.querySelectorAll('.nav_menu .anchor-link')
+const body = document.body
 
 menu.addEventListener("click", () => {
     menu.classList.toggle("active")

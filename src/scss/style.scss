@@ -9,12 +9,11 @@
     list-style: none;
     border: none;
     outline: none;
-    // scroll-behavior: smooth;
+    // outline: 1px solid red;
 }
 
 html {
-    max-width: 100vw;
-    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -903,9 +902,9 @@ header {
 // FOOTER IMAGE BACKGROUND
 .footer_bg {
     position: absolute;
-    left: 10px;
+    left: 0px;
     bottom: 0;
-    width: 100%;
+    width: 95%;
     z-index: -1;
 }
 
