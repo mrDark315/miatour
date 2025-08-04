@@ -37,6 +37,7 @@ const navLinks = document.querySelectorAll('.nav_menu .anchor-link');
 menu.addEventListener("click", () => {
     menu.classList.toggle("active")
     navMenu.classList.toggle("active")
+    body.classList.toggle("body_no_scroll");
 })
 
 navLinks.forEach(link => {
@@ -44,6 +45,7 @@ navLinks.forEach(link => {
         if (navMenu.classList.contains("active")) {
             menu.classList.remove("active");
             navMenu.classList.remove("active");
+            body.classList.remove("body_no_scroll");
         }
     });
 });
@@ -55,6 +57,7 @@ document.addEventListener("click", (event) => {
     if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains("active")) {
         menu.classList.remove("active");
         navMenu.classList.remove("active");
+        body.classList.remove("body_no_scroll");
     }
 });
 
@@ -119,11 +122,9 @@ const warningMessage = document.querySelector('.input_warning');
 });
 
 // INITIALIZE REVIEW SLIDER FROM splide.js
-document.addEventListener('DOMContentLoaded', () => {
-    initializeReviewsSplide();
-});
+document.addEventListener('DOMContentLoaded', () => {initializeReviewsSplide();});
 
-//INITIALIZE AOS LIBRARY
+// INITIALIZE AOS LIBRARY
 AOS.init({
     duration: 1200,
     anchorPlacement: 'center-bottom',

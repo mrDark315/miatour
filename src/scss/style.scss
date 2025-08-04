@@ -9,7 +9,7 @@
     list-style: none;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 }
 
 html {
@@ -26,6 +26,7 @@ body {
     color: vars.$color-white;
     overflow-x: hidden;
 }
+body.body_no_scroll {overflow: hidden;}
 
 .wrapper {margin: 0 5%;}
 
@@ -537,6 +538,12 @@ header {
                 font-size: 28px;
             }
         }
+    }
+}
+
+@media (max-width: 424.98px) {
+    .popular_countries {
+        row-gap: 4vw;
     }
 }
 
