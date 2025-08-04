@@ -44,9 +44,18 @@ navLinks.forEach(link => {
         if (navMenu.classList.contains("active")) {
             menu.classList.remove("active");
             navMenu.classList.remove("active");
-
         }
     });
+});
+
+document.addEventListener("click", (event) => {
+    const isClickInsideMenu = navMenu.contains(event.target);
+    const isClickOnHamburger = menu.contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains("active")) {
+        menu.classList.remove("active");
+        navMenu.classList.remove("active");
+    }
 });
 
 // TRAVEL REQUEST INPUT ANIMATION

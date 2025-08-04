@@ -75,21 +75,18 @@ header {
     width: 100%;
     box-sizing: border-box;
     animation: SlideFromTop 1s ease-out forwards;
-
     .logo {
         display: block;
         height: 50px;
         width: 195px;
     }
-
-    ul {
+    .nav_menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         max-width: 650px;
         margin: 0 30px;
-
         a {
             color: vars.$color-white;
             position: relative;
@@ -115,8 +112,8 @@ header {
                 }
             }
         }
+        .language_mobile {display: none;}
     }
-
     .language {
         display: flex;
         align-items: center;
@@ -127,11 +124,9 @@ header {
             &:hover {i {color: vars.$color-purple;}}
         }
     }
-
     .hamburger {
         display: none;
         margin-left: 15px;
-
         .line {
             display: block;
             width: 30px;
@@ -147,18 +142,17 @@ header {
 @media (max-width: 767.98px) {
     header {
         padding: 20px 10%;
-    }
-    .logo{width: 150px;}
+        .logo{width: 150px;}
+        .language {display: none;}
+        .hamburger {display: block;}
 
-    header .hamburger {display: block;}
+        .hamburger.active .line:nth-child(1) {transform: translateY(10px) rotate(45deg);}
 
-    .hamburger.active .line:nth-child(1) {transform: translateY(10px) rotate(45deg);}
+        .hamburger.active .line:nth-child(2) {opacity: 0;}
 
-    .hamburger.active .line:nth-child(2) {opacity: 0;}
+        .hamburger.active .line:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
 
-    .hamburger.active .line:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
-
-    .nav_menu {
+        .nav_menu {
         position: fixed;
         flex-direction: column;
         right: -100%;
@@ -169,18 +163,27 @@ header {
         width: 45vw;
         height: 100vh;
         justify-content: flex-start;
-
         a {
             font-size: 30px;
             margin-bottom: 15px;
         }
+        .language_mobile {
+            display: block;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        }
+        .nav_menu.active {right: 0;}
     }
-
-    ul.active {right: 0;}
 }
 
 @media (max-width: 575.98px) {
     header {padding: 20px 8%;}
+}
+
+@media (max-width: 424.98px) {
+    header {.nav_menu {width: 55vw;}}
 }
 
 // MAIN TRAVEL
@@ -473,7 +476,7 @@ header {
 .popular_countries {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 1vw;
+    column-gap: 2vw;
     margin-top: 30px;
 
     .country {
@@ -515,6 +518,8 @@ header {
 @media (max-width: 767.98px) {
     .popular_countries {
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 3vw;
+        row-gap: 2vw;
         .country {
             p {
                 font-size: 24px;
