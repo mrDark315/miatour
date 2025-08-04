@@ -13,7 +13,7 @@
 }
 
 html {
-    max-width: 100%;
+    width: 100%;
 }
 
 body {
@@ -72,7 +72,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     animation: SlideFromTop 1s ease-out forwards;
     .logo {
@@ -156,9 +156,9 @@ header {
         position: fixed;
         flex-direction: column;
         right: -100%;
+        transition: right .4s ease;
         top: 90px;
         margin: 0;
-        transition: .4s;
         background: vars.$color-header-black;
         width: 45vw;
         height: 100vh;
@@ -420,6 +420,48 @@ header {
         }
 }
 
+@media (max-width: 424.98px) {
+    .travel {
+        .travel_title {
+            h1 {font-size: 35px;}
+            p {display: none;}
+        }
+        .travel_request {
+        .request_title {
+            margin-top: -40px;
+            h4 {font-size: 24px; font-weight: 700;}
+            h6 {font-size: 18px;}
+        }
+        .request_input {
+            form {
+                .input_wrapper {
+                    label {
+                        font-size: 14px;
+                        top: 15px;
+                    }
+                    &.is-focused label,
+                    &.has-value label {
+                        top: -15px;
+                        font-size: 14px;
+                        color: vars.$color-purple;
+                    }
+                }
+
+            .input_warning {
+                margin-top: 10px;
+                color: vars.$color-red;
+                font-size: 18px;
+                opacity: 0;
+                transition: opacity 0.2s ease
+            }
+
+            .visible{opacity: 1;}
+            }
+        }
+        }
+    }
+}
+
 // IMAGE BACKGROUND
 .image-bg {
     position: relative;
@@ -542,6 +584,7 @@ header {
 
 @media (max-width: 424.98px) {
     .popular_countries {
+        column-gap: 0;
         row-gap: 4vw;
     }
 }
@@ -851,7 +894,6 @@ header {
                 }
             }
         }
-
         .our_team {
             margin-top: 50px;
             .team {
@@ -890,7 +932,6 @@ header {
                 }
             }
         }
-
         .our_team {
             .team {
                 h6 {font-size: 20px;}
@@ -910,7 +951,7 @@ header {
 
 @media (max-width: 767.98px) {
     .footer_bg {
-        transform: scale(1.3);
+        transform: translateX(20px) scale(1.3);
     }
 }
 
@@ -967,23 +1008,30 @@ header {
 
 @media (max-width: 767.98px) {
     .logo {display: none;}
-
     .footer_wrapper {
         margin-top: 0;
         footer {
             .footer_content {
                 .footer_top_row {
-                    margin-top: 70px;
+                    margin-top: 80px;
                     display: block;
                     h4{display: none;}
                 }
                 .footer_bottom_row {
                     margin-bottom: 20px;
-                    .logo-mini {
-                        display: block;
-                        margin-left: 33px;
-                    }
+                    .logo-mini {display: block;}
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .footer_wrapper {
+        margin-top: -10px;
+        footer {
+            .footer_content {
+                .footer_top_row {margin-top: 100px;}
             }
         }
     }

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "clientName": "Прізвище Ім'я",
+        "clientName": "Ашихмін Артур",
         "clientImage": "avatar1.png",
         "location": "Країна, Місто",
         "hotel": "Готель",
@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "clientName": "Прізвище Ім'я",
+        "clientName": "Москаленко Марта",
         "clientImage": "client1.jpg",
         "location": "Країна, Місто",
         "hotel": "Готель",
