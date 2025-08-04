@@ -743,7 +743,10 @@ header {
             margin-top: 50px;
             gap: 20%;
 
-            img {max-width: 350px; width: 100%; height: auto;}
+            img {
+                max-width: 350px;
+                width: 100%;
+            }
 
             h6 {
                 margin-top: 10px;
@@ -845,14 +848,11 @@ header {
 
         .our_team {
             margin-top: 50px;
-
             .team {
                 margin-top: 30px;
                 gap: 15%;
-
                 h6 {font-size: 24px;}
             }
-
         }
     }
 }
@@ -882,6 +882,12 @@ header {
                     top: 0px;
                     text-align: left;
                 }
+            }
+        }
+
+        .our_team {
+            .team {
+                h6 {font-size: 20px;}
             }
         }
     }
