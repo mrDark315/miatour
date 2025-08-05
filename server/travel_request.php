@@ -39,10 +39,10 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     exit;
 }
 
-// $to_email = 'mia@miatour.com.ua';
-$to_email = 'ashykhmin04@gmail.com';
+$to_email = 'mia@miatour.com.ua';
+// $to_email = 'ashykhmin04@gmail.com';
 $currentDateTime = date('d.m.Y H:i');
-$subject = 'Запит на подорож від ('. $currentDateTime .')';
+$subject = '('. $currentDateTime .')';
 
 $message_body = '<html><body>';
 $message_body .= '<h2>Ви отримали новий запит на подорож:</h2>';
@@ -69,7 +69,7 @@ try {
     $mail->Port       = 465;
 
     // Відправник і одержувач
-    $mail->setFrom('mia@miatour.com.ua', 'Miatour');
+    $mail->setFrom('mia@miatour.com.ua', 'Запит на подорож');
     $mail->addAddress($to_email, 'Mia Tour');
 
     // Зміст листа
