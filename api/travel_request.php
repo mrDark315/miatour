@@ -1,6 +1,6 @@
 <?php
-require __DIR__ . '/../vendor/autoload.php';
-date_default_timezone_set('Europe/Kyiv');
+require $_SERVER['DOCUMENT_ROOT'] . '/../vendor/autoload.php';
+date_default_timezone_set('Europe/Kiev');
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -26,7 +26,7 @@ $people_num = isset($_POST['people_num']) ? htmlspecialchars(trim($_POST['people
 $info = isset($_POST['info']) ? htmlspecialchars(trim($_POST['info'])) : '';
 
 // Перевірка обов'язкових input
-if (empty($name) || empty($email) || empty($country)) {
+if (empty($name) || empty($email) || empty($date) || empty($country)) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Будь-ласка, заповніть обов\'язкові поля: Ім\'я, email, Дата, Країна.']);
     exit;
