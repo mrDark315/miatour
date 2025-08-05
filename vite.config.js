@@ -5,11 +5,14 @@ export default defineConfig({
     base: './',
     build: {
         rollupOptions: {
-        input: {
-            main: resolve(__dirname, 'index.html'),
-            // about: resolve(__dirname, 'src/pages/countries.html'),
-            // about: resolve(__dirname, 'src/pages/hotels.html')
-        },
+            input: {
+                index: resolve(__dirname, 'index.html'),
+                countries: resolve(__dirname, 'countries.html'),
+                hotels: resolve(__dirname, 'hotels.html')
+            },
+            // output: {
+            //     entryFileNames: '[name].html',
+            // }
         },
     },
     server: {
