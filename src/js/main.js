@@ -172,8 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {initializeReviewsSplide();}
 AOS.init({
     duration: 1200,
     anchorPlacement: 'center-bottom',
-    disable: 'mobile',
-    once: true
+    disable: 'mobile'
 });
 
 //INITIALIZE SWEET ALERT 2
@@ -194,3 +193,18 @@ AOS.init({
 //             }
 //     }
 // });
+
+// SWEET ALERT 2 IN FOOTER (EMAIL CONTACT)
+document.addEventListener('DOMContentLoaded', () => {
+    const myButton = document.getElementById('myButton');
+
+    myButton.addEventListener('click', () => {
+        Swal.fire({
+            title: 'mia@miatour.com.ua',
+            text: 'Якщо виникнуть питання/пропозиції щодо сайту - website@miatour.com.ua',
+            icon: 'info',
+            confirmButtonText: 'Добре',
+            theme: 'dark'
+        });
+    });
+});
