@@ -3,29 +3,48 @@ import 'air-datepicker/air-datepicker.css';
 import '../scss/air-datepicker.scss';
 import localeUk from 'air-datepicker/locale/uk';
 
-let myDatePicker;
+const dateInput = document.getElementById('date');
+let datepicker;
 
-function initializeDatePicker() {
-    // Определяем позицию на основе ширины экрана
-    const screenWidth = window.innerWidth;
-    const position = screenWidth <= 575.98 ? 'bottom left' : 'bottom center';
+if (dateInput) {
+    const wrapper = dateInput.closest('.input_wrapper');
 
-    // Если экземпляр уже существует, обновляем его
-    if (myDatePicker) {
-        myDatePicker.update({ position: position });
-    } else {
-        // Если нет, создаем новый
-        myDatePicker = new AirDatepicker('#date', {
+    function initializeDatepicker() {
+        const screenWidth = window.innerWidth;
+        const position = screenWidth <= 575.98 ? 'bottom left' : 'bottom center';
+
+        if (datepicker) {
+            datepicker.destroy();
+        }
+
+        datepicker = new AirDatepicker(dateInput, {
             locale: localeUk,
             position: position,
             minDate: new Date(),
-            buttons: ['clear']
+            buttons: ['clear'],
+            autoClose: true,
+
+            onSelect({formattedDate}) {
+                if (formattedDate) {
+                    wrapper.classList.add('has-value');
+                } else {
+                    wrapper.classList.remove('has-value');
+                }
+            },
+
+            onShow() {
+                wrapper.classList.add('is-focused');
+            },
+            onHide() {
+                wrapper.classList.remove('is-focused');
+            }
         });
+
+        if (dateInput.value.trim() !== '') {
+            wrapper.classList.add('has-value');
+        }
     }
+
+    initializeDatepicker();
+    window.addEventListener('resize', initializeDatepicker);
 }
-
-// Инициализируем календарь при первой загрузке
-initializeDatePicker();
-
-// Добавляем обработчик события для изменения размера экрана
-window.addEventListener('resize', initializeDatePicker);
