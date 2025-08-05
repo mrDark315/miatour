@@ -48,33 +48,33 @@
                     <h6>Заповніть анкету та ми зв’яжемося з вами</h6>
                 </div>
                 <div class="request_input">
-                    <form action="">
+                    <form id="travel_request_form">
                         <div class="input_wrapper">
-                            <input type="text" id="name" class="check_input" inputmode="text">
+                            <input type="text" id="name" name="name" class="check_input" inputmode="text">
                             <label for="name">Ім'я*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="email" id="email" class="check_input" inputmode="email">
+                            <input type="email" id="email" name="email" class="check_input" inputmode="email">
                             <label for="email">Електронна пошта*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="date" class="check_input" autocomplete="off" readonly>
+                            <input type="text" id="date" name="date" class="check_input" autocomplete="off" readonly>
                             <label for="date">Дата початку туру*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="country" class="check_input" inputmode="text">
+                            <input type="text" id="country" name="country" class="check_input" inputmode="text">
                             <label for="country">Країна*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="city" inputmode="text">
+                            <input type="text" id="city" name="city" inputmode="text">
                             <label for="city">Місто</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="people_num" pattern="\d*" inputmode="numeric" autocomplete="off" maxlength="2">
+                            <input type="text" id="people_num" name="people_num" pattern="\d*" inputmode="numeric" autocomplete="off" maxlength="2">
                             <label for="people_num">Кількість осіб</label>
                         </div>
                         <div class="input_wrapper info">
-                            <input type="text" id="info" inputmode="text">
+                            <input type="text" id="info" name="info" inputmode="text">
                             <label for="info">Додаткова інформація</label>
                         </div>
                         <button type="button" id="send_request">Відправити запит</button>

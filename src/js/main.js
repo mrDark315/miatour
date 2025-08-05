@@ -95,18 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-// CHECK EMPTY INPUT IN REQUEST TRAVEL
+// REQUEST TRAVEL INPUT FIELDS
 document.addEventListener('DOMContentLoaded', () => {
-const sendRequestButton = document.getElementById('send_request');
-const checkInputs = document.querySelectorAll('.check_input');
-const warningMessage = document.querySelector('.input_warning');
+    const sendRequestButton = document.getElementById('send_request');
+    const checkInputs = document.querySelectorAll('.check_input');
+    const warningMessage = document.querySelector('.input_warning');
+    const form = document.querySelector('#travel_request_form');
 
-    if (sendRequestButton && checkInputs.length > 0 && warningMessage) {
+    // CHECK INPUT VALUE
+    if (sendRequestButton && checkInputs.length > 0 && warningMessage && form) {
         sendRequestButton.addEventListener('click', function(event) {
             event.preventDefault();
 
             let allFieldsFilled = true;
-
             checkInputs.forEach(input => {
                 if (input.value.trim() === '') {
                     allFieldsFilled = false;
@@ -120,8 +121,29 @@ const warningMessage = document.querySelector('.input_warning');
                 warningMessage.classList.add('visible');
             } else {
                 warningMessage.classList.remove('visible');
+                sendFormData();
             }
         });
+    }
+
+    // SEND DATA FROM INPUT
+    async function sendFormData() {
+        const formData = new FormData(form);
+        const url = '/api/travel_request.php';
+
+        const response = await fetch(url, {
+            method: 'POST',
+            body: formData,
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert(result.message);
+            form.reset();
+        } else {
+            alert('Помилка: ' + result.message);
+        }
     }
 });
 

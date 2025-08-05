@@ -1,14 +1,16 @@
 {
-  "name": "vite-project",
+  "name": "miatour",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start-php": "php -S localhost:8000 -t ./server",
+    "dev": "concurrently \"npm:start-php\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "concurrently": "^9.2.0",
     "sass": "^1.89.2",
     "vite": "^7.0.4"
   },
