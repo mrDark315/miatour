@@ -12,9 +12,7 @@
     // outline: 1px solid red;
 }
 
-html {
-    width: 100%;
-}
+html {width: 100%;}
 
 body {
     position: relative;
@@ -141,6 +139,7 @@ header {
 
 @media (max-width: 767.98px) {
     header {
+        position: fixed;
         padding: 20px 10%;
         .logo{width: 150px;}
         .language {display: none;}
@@ -183,7 +182,10 @@ header {
 }
 
 @media (max-width: 424.98px) {
-    header {.nav_menu {width: 55vw;}}
+    header {
+        padding: 10px 8%;
+        .nav_menu {width: 55vw;}
+    }
 }
 
 // MAIN TRAVEL
@@ -191,6 +193,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
+    overflow: hidden;
 
     @keyframes SlideFromLeft {
         0% {
@@ -422,6 +425,7 @@ header {
 
 @media (max-width: 424.98px) {
     .travel {
+        margin-top: 70px;
         .travel_title {
             h1 {font-size: 35px;}
             p {display: none;}
@@ -945,14 +949,8 @@ header {
     position: absolute;
     left: 0px;
     bottom: 0;
-    width: 95%;
+    width: 100%;
     z-index: -1;
-}
-
-@media (max-width: 767.98px) {
-    .footer_bg {
-        transform: translateX(20px) scale(1.3);
-    }
 }
 
 // FOOTER (CONTACTS)
