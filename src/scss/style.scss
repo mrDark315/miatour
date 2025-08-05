@@ -474,6 +474,10 @@ header {
     max-width: 100% ;
 }
 
+@media (max-width: 424.98px) {
+    .image-bg {margin-top: 20px;}
+}
+
 // MAIN COUNTRIES & HOTELS (HEADER)
 .countries_header,
 .hotels_header {
@@ -493,7 +497,6 @@ header {
         font-size: 15px;
         box-sizing: border-box;
         position: relative;
-
         i {
             position: absolute;
             top: 13px;
@@ -501,7 +504,6 @@ header {
             transition: left .3s ease ;
             font-size: 14px;
         }
-
         @media (pointer: fine) {
             &:hover {i {left: 95px;}}
         }
@@ -510,12 +512,16 @@ header {
 
 @media (max-width: 575.98px) {
     .countries_header,
-    .hotels_header {
-        .next_page {
-            padding: 10px 25px;
-            i {display: none;}
-        }
-    }
+    .hotels_header {.next_page {i {display: none;}}}
+}
+
+@media (max-width: 424.98px) {
+    .countries_header,
+    .hotels_header {.next_page {
+        font-size: 16px;
+        padding: 10px 15px;
+        text-align: center;
+    }}
 }
 
 // MAIN COUNTRIES
@@ -717,6 +723,10 @@ header {
 
 @media (max-width: 575.98px) {
     .review {margin-top: 200px;}
+}
+
+@media (max-width: 424.98px) {
+    .review {margin-top: 170px;}
 }
 
 // MAIN ABOUT US
@@ -941,6 +951,12 @@ header {
                 h6 {font-size: 20px;}
             }
         }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .about_us {
+        p {&:last-of-type {margin-top: 30px;}}
     }
 }
 
