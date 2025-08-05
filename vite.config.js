@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 export default defineConfig({
-    base: './',
+    base: '/',
     build: {
         rollupOptions: {
             input: {
@@ -10,9 +10,6 @@ export default defineConfig({
                 countries: resolve(__dirname, 'countries.html'),
                 hotels: resolve(__dirname, 'hotels.html')
             },
-            // output: {
-            //     entryFileNames: '[name].html',
-            // }
         },
     },
     server: {
