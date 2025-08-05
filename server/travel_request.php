@@ -89,4 +89,3 @@ try {
     echo json_encode(['success' => false, 'message' => "На жаль, під час відправлення заявки сталася помилка: {$mail->ErrorInfo}"]);
 }
 ?>
-?>

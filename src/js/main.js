@@ -1,12 +1,10 @@
 import '../scss/style.scss'
-
 import './air-datepicker.js'
-
 import '../scss/splide-js.scss'
-import { initializeReviewsSplide } from './splide_review.js';
-
-import AOS from 'aos';
+import { initializeReviewsSplide } from './splide_review.js'
+import AOS from 'aos'
 import 'aos/dist/aos.css'
+import Swal from 'sweetalert2'
 
 // HEADER ANCHOR LIMKS SCROLL
 document.addEventListener('DOMContentLoaded', () => {
@@ -128,23 +126,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // SEND DATA FROM INPUT
     async function sendFormData() {
-        const formData = new FormData(form);
-        const url = '/api/travel_request.php';
+    const formData = new FormData(form);
+    const url = '/api/travel_request.php';
 
+    try {
         const response = await fetch(url, {
             method: 'POST',
             body: formData,
         });
 
+        if (!response.ok) {
+            throw new Error(`Помилка мережі: ${response.status} ${response.statusText}`);
+        }
+
         const result = await response.json();
 
         if (result.success) {
-            alert(result.message);
+            Swal.fire({
+                title: 'Повідомлення надіслано',
+                text: 'Ми зв\'яжемось з вами найближчим часом',
+                icon: 'success',
+                confirmButtonText: 'Закрити',
+                theme: 'dark',
+            });
             form.reset();
-        } else {
-            alert('Помилка: ' + result.message);
         }
+    } catch (error) {
+        console.error('Помилка при відправці:', error);
+        Swal.fire({
+            // title: 'Помилка!',
+            title: 'Виникла помилка під час відправлення запиту',
+            text: 'Якщо помилка не зникне - зв\'яжіться з нами',
+            icon: 'error',
+            confirmButtonText: 'Закрити',
+            theme: 'dark',
+        });
     }
+}
 });
 
 // INITIALIZE REVIEW SLIDER FROM splide.js
@@ -157,3 +175,22 @@ AOS.init({
     disable: 'mobile',
     once: true
 });
+
+//INITIALIZE SWEET ALERT 2
+// Swal.fire({
+//     title: 'Сайт ще в розробці!',
+//     text: 'Деякі функції або стронінки можуть не працювати',
+//     icon: 'info',
+//     confirmButtonText: 'Закрити',
+//     theme: 'dark',
+//     input: "checkbox",
+//     inputValue: 0,
+//     inputPlaceholder: `Я згоден/згодна`,
+//     preConfirm: (result) => {
+//         if (result) {return true;}
+//             else {
+//             Swal.showValidationMessage('Будь ласка, прийміть тимчасові умови.');
+//             return false;
+//             }
+//     }
+// });

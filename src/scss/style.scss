@@ -9,7 +9,6 @@
     list-style: none;
     border: none;
     outline: none;
-    // outline: 1px solid red;
 }
 
 html {width: 100%;}
@@ -980,7 +979,6 @@ header {
         flex-direction: column;
         height: 300px;
         z-index: 1;
-
         .footer_content {
             display: flex;
             flex-direction: column;
@@ -988,23 +986,13 @@ header {
             justify-content: space-between;
             text-align: center;
             color: vars.$color-light-gray;
-
             .footer_top_row {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 50px;
-
-                h4 {font-size: 28px;}
-                p {
-                    font-size: 24px;
-                    &:last-of-type {
-                        font-size: 20px;
-                        margin-top: 10px;
-                    }
-                }
+                h4 {font-size: 26px;}
             }
-
             .footer_bottom_row {
                 display: flex;
                 justify-content: space-between;
@@ -1013,7 +1001,15 @@ header {
 
                 .logo-mini {display: none;}
 
-                i {color: vars.$color-purple; font-size: 40px;}
+                div {
+                    display: flex;
+                    gap: 100px;
+                    i {
+                        color: vars.$color-purple;
+                        font-size: 40px;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
@@ -1022,17 +1018,18 @@ header {
 @media (max-width: 767.98px) {
     .logo {display: none;}
     .footer_wrapper {
-        margin-top: 0;
+        margin-top: -20px;
         footer {
             .footer_content {
                 .footer_top_row {
-                    margin-top: 80px;
                     display: block;
-                    h4{display: none;}
+                    margin-top: 100px;
+                    h4:first-of-type{display: none;}
                 }
                 .footer_bottom_row {
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                     .logo-mini {display: block;}
+                    div {gap: 2vw;}
                 }
             }
         }
