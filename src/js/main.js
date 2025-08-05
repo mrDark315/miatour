@@ -176,23 +176,23 @@ AOS.init({
 });
 
 //INITIALIZE SWEET ALERT 2
-// Swal.fire({
-//     title: 'Сайт ще в розробці!',
-//     text: 'Деякі функції або стронінки можуть не працювати',
-//     icon: 'info',
-//     confirmButtonText: 'Закрити',
-//     theme: 'dark',
-//     input: "checkbox",
-//     inputValue: 0,
-//     inputPlaceholder: `Я згоден/згодна`,
-//     preConfirm: (result) => {
-//         if (result) {return true;}
-//             else {
-//             Swal.showValidationMessage('Будь ласка, прийміть тимчасові умови.');
-//             return false;
-//             }
-//     }
-// });
+Swal.fire({
+    title: 'Сайт ще в розробці!',
+    text: 'Деякі функції або стронінки можуть не працювати',
+    icon: 'info',
+    confirmButtonText: 'Закрити',
+    theme: 'dark',
+    input: "checkbox",
+    inputValue: 0,
+    inputPlaceholder: `Я згоден/згодна`,
+    preConfirm: (result) => {
+        if (result) {return true;}
+            else {
+            Swal.showValidationMessage('Будь ласка, прийміть тимчасові умови.');
+            return false;
+            }
+    }
+});
 
 // SWEET ALERT 2 IN FOOTER (EMAIL CONTACT)
 document.addEventListener('DOMContentLoaded', () => {
