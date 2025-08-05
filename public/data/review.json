@@ -1,38 +1,11 @@
 [
     {
         "id": 1,
-        "clientName": "Ашихмін Артур",
+        "clientName": "Олексій",
         "clientImage": "avatar1.png",
-        "location": "Країна, Місто",
-        "hotel": "Готель",
-        "rating": 4,
-        "reviewText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
-        "id": 2,
-        "clientName": "Москаленко Марта",
-        "clientImage": "client1.jpg",
-        "location": "Країна, Місто",
-        "hotel": "Готель",
-        "rating": 2,
-        "reviewText": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean."
-    },
-    {
-        "id": 3,
-        "clientName": "Прізвище Ім'я",
-        "clientImage": "client1.jpg",
-        "location": "Країна, Місто",
-        "hotel": "Готель",
+        "location": "Греція, острів Санторіні",
+        "hotel": "La Perla Villas and Suites",
         "rating": 5,
-        "reviewText": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Ex sapien vitae pellentesque sem placerat in id. Pretium tellus duis convallis tempus leo eu aenean. Urna tempor pulvinar vivamus fringilla lacus nec metus. Iaculis massa nisl malesuada lacinia integer nunc posuere. Semper vel class aptent taciti sociosqu ad litora. Conubia nostra inceptos himenaeos orci varius natoque penatibus. Dis parturient montes nascetur ridiculus mus donec rhoncus. Nulla molestie mattis scelerisque maximus eget fermentum odio. Purus est efficitur laoreet mauris pharetra vestibulum fusce."
-    },
-    {
-        "id": 4,
-        "clientName": "Прізвище Ім'я",
-        "clientImage": "client1.jpg",
-        "location": "Країна, Місто",
-        "hotel": "Готель",
-        "rating": 1,
-        "reviewText": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Elit quisque faucibus ex sapien vitae pellentesque sem. Sem placerat in id cursus mi pretium tellus. Tellus duis convallis tempus leo eu aenean sed. Sed diam urna tempor pulvinar vivamus fringilla lacus. Lacus nec metus bibendum egestas iaculis massa nisl. Nisl malesuada lacinia integer nunc posuere ut hendrerit."
+        "reviewText": "La Perlas дуже класні. Дуже задоволені сервісом, готель дуже клієнтоорієнтовний. Пляшку вина ставлять в номер в якості welcome drink. Дякуємо вам і теплий привіт із Санторії"
     }
 ]

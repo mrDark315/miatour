@@ -1,9 +1,12 @@
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/css';
 
-const reviewData = '/data/review.json';
-const starsRating = '/review_stars/';
-const clientImage = '/clients/';
+const basePath = import.meta.env.BASE_URL || '/';
+
+// !!! ИСПРАВЛЕНО: используем basePath для создания правильных путей !!!
+const reviewData = `${basePath}data/review.json`;
+const starsRating = `${basePath}review_stars/`;
+const clientImage = `${basePath}clients/`;
 
 function generateStarsHtml(rating) {
     const starSvgPath = `${starsRating}stars_${rating}.svg`;
@@ -41,7 +44,6 @@ export async function initializeReviewsSplide() {
 
     reviewsListElement.innerHTML = reviewsHtml;
 
-    // create splide
     const reviewSplideElement = document.querySelector('.splide[aria-label="Відгуки клієнтів"]');
 
     if (reviewSplideElement) {
@@ -56,11 +58,6 @@ export async function initializeReviewsSplide() {
             pagination: false,
             paginationKeyboard: false,
             autoHeight: true,
-            // breakpoints: {
-            //     1024: { perPage: 2, gap: '1rem' },
-            //     768: { perPage: 1, gap: '.7rem' },
-            //     480: { perPage: 1, gap: '.5rem', arrows: false, pagination: true },
-            // },
         });
         splideInstance.mount();
     }
