@@ -1,5 +1,6 @@
 import '../scss/countries.scss'
 import "flag-icons/css/flag-icons.min.css";
+import { initializeCountrySplide } from './splide_country.js';
 
 // Асинхронна функція для завантаження JSON-файлу
 async function loadCountries() {
@@ -25,8 +26,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const overlayWindow = document.querySelector('.overlay_window');
     const overlay_content = document.querySelector('.overlay_content');
-
-    // basePath объявлен здесь, чтобы быть доступным всем функциям
     const basePath = import.meta.env.BASE_URL || '/';
 
     if (!countries || countries.length === 0) {
@@ -75,18 +74,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (countryData && overlay_content) {
                 const photosHTML = countryData.photo.map(photoName => {
-                    return `<img src="${basePath}countries/${photoName}" alt="Фото ${countryData.name}">`;
+                    return `
+                        <li class="splide__slide">
+                            <img src="${basePath}countries/${photoName}" alt="Фото ${countryData.name}">
+                        </li>
+                    `;
                 }).join('');
 
                 overlay_content.innerHTML = `
-                    <h2>${countryData.name}</h2>
-                    <p><b>Описание:</b> ${countryData.description}</p>
-                    <div class="country-photos">
-                        ${photosHTML}
+                    <div class="splide country-splide">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                ${photosHTML}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <h2>${countryData.name}</h2>
+                        <div>
+                            <h5>Чи потрібна віза?</h5>
+                            <h6>${countryData.visa}</h6>
+                        </div>
+                        <p>${countryData.description}</p>
                     </div>
                 `;
+
                 overlayWindow.classList.add('active');
                 document.body.classList.add('body_no_scroll');
+
+                setTimeout(() => {
+                    initializeCountrySplide('.country-splide');
+                }, 20);
             }
         }
     });
@@ -96,6 +114,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (event.target.closest('.fa-xmark') || event.target.classList.contains('background')) {
             overlayWindow.classList.remove('active');
             document.body.classList.remove('body_no_scroll');
+            initializeCountrySplide('.country-splide');
         }
     });
 
