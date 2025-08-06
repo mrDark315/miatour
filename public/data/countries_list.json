@@ -11,5 +11,1002 @@
         ],
         "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
         "visa": "none"
+    },
+    {
+        "id": 2,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-al\"></span>",
+        "name": "Албанія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 3,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-ad\"></span>",
+        "name": "Андора",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 4,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-be\"></span>",
+        "name": "Бельгія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 5,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-bg\"></span>",
+        "name": "Болгарія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 6,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-gb\"></span>",
+        "name": "Велика Британія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 7,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-gr\"></span>",
+        "name": "Греція",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 8,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-dk\"></span>",
+        "name": "Данія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 9,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-ee\"></span>",
+        "name": "Естонія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 10,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-ie\"></span>",
+        "name": "Ірландія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 11,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-is\"></span>",
+        "name": "Ісландія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 12,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-es\"></span>",
+        "name": "Іспанія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 13,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-it\"></span>",
+        "name": "Італія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 14,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-cy\"></span>",
+        "name": "Кіпр",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 15,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-lv\"></span>",
+        "name": "Латвія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 16,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-lt\"></span>",
+        "name": "Литва",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 17,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-nl\"></span>",
+        "name": "Надерланди (Голландія)",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 18,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-de\"></span>",
+        "name": "Німеччина",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 19,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-no\"></span>",
+        "name": "Норвегія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 20,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-pl\"></span>",
+        "name": "Польща",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 21,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-pt\"></span>",
+        "name": "Португалія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 22,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-ro\"></span>",
+        "name": "Румунія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 23,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-sk\"></span>",
+        "name": "Словаччина",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 24,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-si\"></span>",
+        "name": "Словенія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 25,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-hu\"></span>",
+        "name": "Угорщина",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 26,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-ua\"></span>",
+        "name": "Україна",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 27,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-fi\"></span>",
+        "name": "Фінляндія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 28,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-fr\"></span>",
+        "name": "Франція",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 29,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-hr\"></span>",
+        "name": "Хорватія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 30,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-cz\"></span>",
+        "name": "Чехія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 31,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-me\"></span>",
+        "name": "Чорногорія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 32,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-ch\"></span>",
+        "name": "Швейцарія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 33,
+        "region": "europe",
+        "flag": "<span class=\"fi fi-se\"></span>",
+        "name": "Швеція",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+
+
+    {
+        "id": 34,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-az\"></span>",
+        "name": "Азербайджан",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 35,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-vn\"></span>",
+        "name": "В'єтнам",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 36,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-hk\"></span>",
+        "name": "Гонконг",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 37,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-ge\"></span>",
+        "name": "Грузія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 38,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-il\"></span>",
+        "name": "Ізраїль",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 39,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-in\"></span>",
+        "name": "Індія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 40,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-id\"></span>",
+        "name": "Індонезія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 41,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-kh\"></span>",
+        "name": "Камбоджа",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 42,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-cn\"></span>",
+        "name": "Китай",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 43,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-my\"></span>",
+        "name": "Малайзія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 44,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-mv\"></span>",
+        "name": "Мальдівські острови",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 45,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-mm\"></span>",
+        "name": "М'янма",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 46,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-np\"></span>",
+        "name": "Непал",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 47,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-ae\"></span>",
+        "name": "ОАЕ",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 48,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-kr\"></span>",
+        "name": "Південна Корея",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 49,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-sg\"></span>",
+        "name": "Сінгапур",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 50,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-th\"></span>",
+        "name": "Таїланд",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 51,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-tr\"></span>",
+        "name": "Туреччина",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 52,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-lk\"></span>",
+        "name": "Шрі-Ланка",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 53,
+        "region": "asia",
+        "flag": "<span class=\"fi fi-jp\"></span>",
+        "name": "Японія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+
+    {
+        "id": 54,
+        "region": "north_america",
+        "flag": "<span class=\"fi fi-ca\"></span>",
+        "name": "Канада",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 55,
+        "region": "north_america",
+        "flag": "<span class=\"fi fi-mx\"></span>",
+        "name": "Мексика",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 56,
+        "region": "north_america",
+        "flag": "<span class=\"fi fi-us\"></span>",
+        "name": "США",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+
+    {
+        "id": 57,
+        "region": "central_america",
+        "flag": "<span class=\"fi fi-cr\"></span>",
+        "name": "Коста-Рика",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+
+    {
+        "id": 58,
+        "region": "south_america",
+        "flag": "<span class=\"fi fi-ar\"></span>",
+        "name": "Аргентина",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 59,
+        "region": "south_america",
+        "flag": "<span class=\"fi fi-br\"></span>",
+        "name": "Бразилія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 60,
+        "region": "south_america",
+        "flag": "<span class=\"fi fi-ec\"></span>",
+        "name": "Еквадор",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 61,
+        "region": "south_america",
+        "flag": "<span class=\"fi fi-co\"></span>",
+        "name": "Колумбія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 62,
+        "region": "south_america",
+        "flag": "<span class=\"fi fi-pe\"></span>",
+        "name": "Перу",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 63,
+        "region": "south_america",
+        "flag": "<span class=\"fi fi-cl\"></span>",
+        "name": "Чилі",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+    {
+        "id": 64,
+        "region": "africa",
+        "flag": "<span class=\"fi fi-eg\"></span>",
+        "name": "Єгипет",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 65,
+        "region": "africa",
+        "flag": "<span class=\"fi fi-ke\"></span>",
+        "name": "Кенія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 66,
+        "region": "africa",
+        "flag": "<span class=\"fi fi-mu\"></span>",
+        "name": "Маврикій",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 67,
+        "region": "africa",
+        "flag": "<span class=\"fi fi-ma\"></span>",
+        "name": "Марокко",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 68,
+        "region": "africa",
+        "flag": "<span class=\"fi fi-sc\"></span>",
+        "name": "Сейшельські острови",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 69,
+        "region": "africa",
+        "flag": "<span class=\"fi fi-tz\"></span>",
+        "name": "Танзанія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+
+    {
+        "id": 70,
+        "region": "australia_oceania",
+        "flag": "<span class=\"fi fi-au\"></span>",
+        "name": "австралія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 71,
+        "region": "australia_oceania",
+        "flag": "<span class=\"fi fi-nz\"></span>",
+        "name": "Нова Зедандія",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+
+
+
+
+
+    {
+        "id": 72,
+        "region": "caribbean",
+        "flag": "<span class=\"fi fi-dm\"></span>",
+        "name": "Домініка",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 74,
+        "region": "caribbean",
+        "flag": "<span class=\"fi fi-do\"></span>",
+        "name": "Домініканська республіка",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 75,
+        "region": "caribbean",
+        "flag": "<span class=\"fi fi-cu\"></span>",
+        "name": "Куба",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
+    },
+    {
+        "id": 76,
+        "region": "caribbean",
+        "flag": "<span class=\"fi fi-jm\"></span>",
+        "name": "Ямайка",
+        "photo": [
+            "1.jpeg",
+            "2.jpeg",
+            "3.jpeg"
+        ],
+        "description": "Velit culpa do voluptate sit nostrud elit ut in ea mollit deserunt cupidatat. Pariatur elit non enim qui officia excepteur nulla in adipisicing ex deserunt esse enim aliquip. Dolor aliqua aliquip anim veniam voluptate laborum dolore sit laborum. Ad nisi mollit proident velit ut est. Amet minim dolore laborum et velit incididunt elit nisi ipsum fugiat qui. Ex deserunt dolore non consequat mollit excepteur nisi irure in.",
+        "visa": "none"
     }
 ]

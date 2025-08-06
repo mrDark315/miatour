@@ -3,7 +3,6 @@ import '@splidejs/splide/css';
 
 const basePath = import.meta.env.BASE_URL || '/';
 
-// !!! ИСПРАВЛЕНО: используем basePath для создания правильных путей !!!
 const reviewData = `${basePath}data/review.json`;
 const starsRating = `${basePath}review_stars/`;
 const clientImage = `${basePath}clients/`;

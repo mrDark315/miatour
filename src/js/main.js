@@ -1,13 +1,10 @@
 import '../scss/style.scss'
-import '../scss/countries.scss'
 import './air-datepicker.js'
 import '../scss/splide-js.scss'
 import { initializeReviewsSplide } from './splide_review.js'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Swal from 'sweetalert2'
-import './fuse_search.js'
-import "flag-icons/css/flag-icons.min.css";
 
 // HEADER ANCHOR LIMKS SCROLL
 document.addEventListener('DOMContentLoaded', () => {

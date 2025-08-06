@@ -2,8 +2,81 @@
 @use "sass:color";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:wght@400..900&family=Playfair:opsz,wght@5..1200,300..900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+html {width: 100%;}
+
+body {
+    position: relative;
+    font-family: 'Playfair', serif;
+    font-size: 20px;
+    font-weight: 400;
+    background: vars.$color-black;
+    color: vars.$color-white;
+    overflow-x: hidden;
+}
+body.body_no_scroll {overflow: hidden;}
+
+.wrapper {margin: 0 5%;}
+
+@media (max-width: 767.98px ) {
+    .wrapper {margin: 0 10%;}
+}
+
+@media (max-width: 575.98px ) {
+    .wrapper {margin: 0 8%;}
+}
+
+h5 {
+        font-family: 'Playfair Display';
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 1px;
+}
+
+@media (max-width: 575.98px) {
+    h5 {font-size: 24px;}
+}
+
+a {all: unset; cursor: pointer;}
+
+// HEADER
+@keyframes SlideFromTop {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
 
 .header_countries {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    z-index: 3;
+    background: vars.$color-header-black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    animation: SlideFromTop 1s ease-out forwards;
+    .logo {
+        display: block;
+        height: 50px;
+        width: 195px;
+    }
     nav {
         display: flex;
         justify-content: space-between;
@@ -66,5 +139,44 @@
                 }}
             }
         }
+    }
+}
+
+.countries_all {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 140px;
+    .country {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            &:last-of-type {margin-bottom: 25px;}
+            span {
+                width: 100px;
+                height: 75px;
+                border-radius: 24px;
+                border: 1px vars.$color-gray solid;
+            }
+            h5 {
+                font-size: 24px;
+                margin-left: 20px;
+                width: 200px;
+            }
+    }
+    h1 {
+        font-family: 'Playfair Display DC';
+        font-size: 36px;
+        text-wrap: wrap;
+        width: 350px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .america {
+        .south_america {
+            .country {&:last-of-type {margin-bottom: 80px;}}}
     }
 }

@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start-php": "php -S localhost:8000 -t ./server",
-    "dev": "concurrently \"npm:start-php\" \"vite\"",
+    "dev": "concurrently \"npm:start-php\" \"vite --host\"",
     "build": "vite build",
     "preview": "vite preview"
   },
