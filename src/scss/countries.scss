@@ -1,0 +1,70 @@
+@use 'vars';
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:wght@400..900&family=Playfair:opsz,wght@5..1200,300..900&display=swap');
+
+
+.header_countries {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30vw;
+        .filter {
+            display: flex;
+            width: 60px;
+            height: 40px;
+            background: vars.$color-purple;
+            border-radius: 20px;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .search {
+            position: relative;
+            i {
+                position: absolute;
+                color: vars.$color-gray;
+                z-index: 2;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                font-size: 24px;
+            }
+            input {
+                position: relative;
+                height: 40px;
+                padding: 0 40px 0 50px;
+                background: vars.$color-input-gray;
+                border-radius: 20px;
+                z-index: 1;
+                font-size: 18px;
+                color: vars.$color-dark-gray;
+
+                &::placeholder {
+                    font-size: 18px;
+                    color: vars.$color-gray;
+                }
+            }
+        }
+
+        a {
+            font-size: 32px;
+            position: relative;
+            i {
+                font-size: 18px;
+                position: relative;
+                top: -2px;
+                right: -5px;
+                transition: right 0.3s ease, color 0.3s ease;
+            }
+
+            @media (pointer: fine) {
+                &:hover{i {
+                    right: 0;
+                    color: vars.$color-purple;
+                }}
+            }
+        }
+    }
+}

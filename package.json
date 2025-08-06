@@ -19,6 +19,8 @@
     "air-datepicker": "^3.6.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "flag-icons": "^7.5.0",
+    "fuse.js": "^7.1.0",
     "sweetalert2": "^11.22.2"
   }
 }

@@ -1,10 +1,13 @@
 import '../scss/style.scss'
+import '../scss/countries.scss'
 import './air-datepicker.js'
 import '../scss/splide-js.scss'
 import { initializeReviewsSplide } from './splide_review.js'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Swal from 'sweetalert2'
+import './fuse_search.js'
+import "flag-icons/css/flag-icons.min.css";
 
 // HEADER ANCHOR LIMKS SCROLL
 document.addEventListener('DOMContentLoaded', () => {
@@ -154,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (error) {
         console.error('Помилка при відправці:', error);
         Swal.fire({
-            // title: 'Помилка!',
             title: 'Виникла помилка під час відправлення запиту',
             text: 'Якщо помилка не зникне - зв\'яжіться з нами',
             icon: 'error',
@@ -176,23 +178,27 @@ AOS.init({
 });
 
 //INITIALIZE SWEET ALERT 2
-Swal.fire({
-    title: 'Сайт ще в розробці!',
-    text: 'Деякі функції або стронінки можуть не працювати',
-    icon: 'info',
-    confirmButtonText: 'Закрити',
-    theme: 'dark',
-    input: "checkbox",
-    inputValue: 0,
-    inputPlaceholder: `Я згоден/згодна`,
-    preConfirm: (result) => {
-        if (result) {return true;}
-            else {
-            Swal.showValidationMessage('Будь ласка, прийміть тимчасові умови.');
-            return false;
+if (!localStorage.getItem('isFirstVisit')) {
+    Swal.fire({
+        title: 'Сайт ще в розробці!',
+        text: 'Деякі функції або стронінки можуть не працювати',
+        icon: 'info',
+        confirmButtonText: 'Закрити',
+        theme: 'dark',
+        input: "checkbox",
+        inputValue: 0,
+        inputPlaceholder: `Я згоден/згодна`,
+        preConfirm: (result) => {
+            if (result) {
+                localStorage.setItem('isFirstVisit', 'true');
+                return true;
+            } else {
+                Swal.showValidationMessage('Будь ласка, прийміть тимчасові умови.');
+                return false;
             }
-    }
-});
+        }
+    });
+}
 
 // SWEET ALERT 2 IN FOOTER (EMAIL CONTACT)
 document.addEventListener('DOMContentLoaded', () => {
