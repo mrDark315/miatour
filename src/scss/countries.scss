@@ -144,8 +144,10 @@ a {all: unset; cursor: pointer;}
 
 .countries_all {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 140px;
+    position: relative;
+    z-index: 2;
     .country {
             display: flex;
             align-items: center;
@@ -178,5 +180,48 @@ a {all: unset; cursor: pointer;}
     .america {
         .south_america {
             .country {&:last-of-type {margin-bottom: 80px;}}}
+    }
+}
+
+.overlay_window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    &.open {display: block;}
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: vars.$color-overlay-black;
+        backdrop-filter: blur(1px);
+        z-index: 10;
+    }
+
+    .overlay {
+        position: relative;
+        top: 53%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 80vh;
+        background: vars.$color-dark-gray;
+        border-radius: 24px;
+        z-index: 20;
+
+        i{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+            cursor: pointer;
+            color: vars.$color-gray;
+        }
     }
 }

@@ -1,12 +1,7 @@
 import '../scss/countries.scss'
-import '../scss/splide-js.scss'
-import { initializeReviewsSplide } from './splide_review.js'
 import "flag-icons/css/flag-icons.min.css";
 
-// INITIALIZE REVIEW SLIDER FROM splide.js
-// document.addEventListener('DOMContentLoaded', () => {initializeReviewsSplide();});
-
-// OUTPUT COUNTRY FROM JSON
+// Асинхронна функція для завантаження JSON-файлу
 async function loadCountries() {
     const basePath = import.meta.env.BASE_URL || '/';
     const countriesDataPath = `${basePath}data/countries_list.json`;
@@ -24,8 +19,13 @@ async function loadCountries() {
     }
 }
 
+// Запускаємо код після повного завантаження сторінки
 document.addEventListener('DOMContentLoaded', async () => {
     const countries = await loadCountries();
+
+    const overlayWindow = document.querySelector('.overlay_window');
+    const overlay_content = document.querySelector('.overlay_content');
+    const closeButton = document.querySelector('.fa-xmark');
 
     const regionMapping = {
         'europe': '.europe',
@@ -38,6 +38,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         'caribbean': '.caribbean'
     };
 
+    if (!countries || countries.length === 0) {
+        console.error('No countries data loaded.');
+        return;
+    }
+
     for (const regionName in regionMapping) {
         const containerSelector = regionMapping[regionName];
         const container = document.querySelector(containerSelector);
@@ -48,6 +53,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             regionCountries.forEach(country => {
                 const countryDiv = document.createElement('div');
                 countryDiv.classList.add('country');
+                countryDiv.dataset.countryId = country.id;
 
                 countryDiv.innerHTML = `
                     ${country.flag}
@@ -58,4 +64,30 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         }
     }
+
+    document.addEventListener('click', (event) => {
+        const clickedCountry = event.target.closest('.country');
+        if (clickedCountry) {
+            const countryId = parseInt(clickedCountry.dataset.countryId);
+            const countryData = countries.find(c => c.id === countryId);
+
+            if (countryData && overlay_content) {
+                overlay_content.innerHTML = `
+                    <h2>${countryData.name}</h2>
+                    <p>${countryData.description}</p>
+                    `;
+
+                overlayWindow.classList.add('open');
+                document.body.classList.add('body_no_scroll');
+            }
+        }
+    });
+
+    // Обработчик для закрытия окна по клику на крестик или фон
+    document.addEventListener('click', (event) => {
+        if (event.target.closest('.fa-xmark') || event.target.classList.contains('background')) {
+            overlayWindow.classList.remove('open');
+            document.body.classList.remove('body_no_scroll');
+        }
+    });
 });
