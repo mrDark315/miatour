@@ -25,7 +25,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const overlayWindow = document.querySelector('.overlay_window');
     const overlay_content = document.querySelector('.overlay_content');
-    const closeButton = document.querySelector('.fa-xmark');
+
+    // basePath объявлен здесь, чтобы быть доступным всем функциям
+    const basePath = import.meta.env.BASE_URL || '/';
+
+    if (!countries || countries.length === 0) {
+        console.error('No countries data loaded.');
+        return;
+    }
 
     const regionMapping = {
         'europe': '.europe',
@@ -37,11 +44,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         'australia_oceania': '.australia_oceania',
         'caribbean': '.caribbean'
     };
-
-    if (!countries || countries.length === 0) {
-        console.error('No countries data loaded.');
-        return;
-    }
 
     for (const regionName in regionMapping) {
         const containerSelector = regionMapping[regionName];
@@ -59,12 +61,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                     ${country.flag}
                     <h5>${country.name}</h5>
                 `;
-
                 container.appendChild(countryDiv);
             });
         }
     }
 
+    // open overlay
     document.addEventListener('click', (event) => {
         const clickedCountry = event.target.closest('.country');
         if (clickedCountry) {
@@ -72,21 +74,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             const countryData = countries.find(c => c.id === countryId);
 
             if (countryData && overlay_content) {
+                const photosHTML = countryData.photo.map(photoName => {
+                    return `<img src="${basePath}countries/${photoName}" alt="Фото ${countryData.name}">`;
+                }).join('');
+
                 overlay_content.innerHTML = `
                     <h2>${countryData.name}</h2>
-                    <p>${countryData.description}</p>
-                    `;
-
-                overlayWindow.classList.add('open');
+                    <p><b>Описание:</b> ${countryData.description}</p>
+                    <div class="country-photos">
+                        ${photosHTML}
+                    </div>
+                `;
+                overlayWindow.classList.add('active');
                 document.body.classList.add('body_no_scroll');
             }
         }
     });
 
-    // Обработчик для закрытия окна по клику на крестик или фон
+    // close overlay
     document.addEventListener('click', (event) => {
         if (event.target.closest('.fa-xmark') || event.target.classList.contains('background')) {
-            overlayWindow.classList.remove('open');
+            overlayWindow.classList.remove('active');
+            document.body.classList.remove('body_no_scroll');
+        }
+    });
+
+    // close overlay with ESC key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && overlayWindow.classList.contains('active')) {
+            overlayWindow.classList.remove('active');
             document.body.classList.remove('body_no_scroll');
         }
     });
