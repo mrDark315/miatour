@@ -183,80 +183,80 @@ a {all: unset; cursor: pointer;}
     }
 }
 
-.overlay_window {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    display: none;
-    &.active {display: block;}
+// .overlay_window {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1000;
+//     display: none;
+//     &.active {display: block;}
 
-    .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: vars.$color-overlay-black;
-        backdrop-filter: blur(0.5px);
-        z-index: 10;
-    }
+//     .background {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background: vars.$color-overlay-black;
+//         backdrop-filter: blur(0.5px);
+//         z-index: 10;
+//     }
 
-    .overlay {
-        position: relative;
-        top: 53%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 60%;
-        width: 65%;
-        background: vars.$color-dark-gray;
-        border-radius: 24px;
-        z-index: 20;
+//     .overlay {
+//         position: relative;
+//         top: 53%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         height: 60%;
+//         width: 65%;
+//         background: vars.$color-dark-gray;
+//         border-radius: 24px;
+//         z-index: 20;
 
-        i{
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 40px;
-            cursor: pointer;
-            color: vars.$color-gray;
-        }
+//         i{
+//             position: absolute;
+//             top: 20px;
+//             right: 20px;
+//             font-size: 40px;
+//             cursor: pointer;
+//             color: vars.$color-gray;
+//         }
 
-        .overlay_content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 100%;
-            padding: 0 5%;
-            .splide {
-                .splide__track {
-                    border-radius: 24px;
-                    overflow: hidden;
-                    .splide__list {
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-            }
-            .info {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 75%;
-                margin-left: 5%;
-                color: vars.$color-light-gray;
-                h2 {font-size: 40px;}
-                div {
-                    h5 {font-size: 30px;}
-                    h6 {font-size: 28px;}
-                }
-                p {font-size: 22px;}
-            }
-        }
-    }
-}
+//         .overlay_content {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             height: 100%;
+//             padding: 0 5%;
+//             .splide {
+//                 .splide__track {
+//                     border-radius: 24px;
+//                     overflow: hidden;
+//                     .splide__list {
+//                         img {
+//                             width: 100%;
+//                             height: 100%;
+//                             object-fit: cover;
+//                         }
+//                     }
+//                 }
+//             }
+//             .info {
+//                 display: flex;
+//                 flex-direction: column;
+//                 justify-content: space-between;
+//                 height: 75%;
+//                 margin-left: 5%;
+//                 color: vars.$color-light-gray;
+//                 h2 {font-size: 40px;}
+//                 div {
+//                     h5 {font-size: 30px;}
+//                     h6 {font-size: 28px;}
+//                 }
+//                 p {font-size: 22px;}
+//             }
+//         }
+//     }
+// }

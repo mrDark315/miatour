@@ -1,4 +1,5 @@
 import '../scss/countries.scss'
+import '../scss/overlay.scss';
 import "flag-icons/css/flag-icons.min.css";
 import { initializeCountrySplide } from './splide_country.js';
 
