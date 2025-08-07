@@ -98,7 +98,6 @@
 @media (max-width: 575.98px ) {
     .splide {
         margin-top: 20px;
-
         .splide__track {
             width: 90%;
             .splide__list {
@@ -112,17 +111,16 @@
         .review_header {
         p {font-size: 18px;}
         }
-
         .review_info {
             .hotel_name {font-size: 20px;}
             .review_text {font-size: 20px;}
         }
-
         .splide__arrows {
+            position: relative;
+            top: 190px;
             .splide__arrow {
                 width: 50px;
                 height: 50px;
-
                 i {font-size: 20px;}
             }
         }
@@ -156,15 +154,11 @@
                 }
             }
         }
-
         .splide__arrows {
-            position: relative;
-            top: 205px;
             .splide__arrow {
             width: 35px;
             height: 35px;
-            opacity: 1;
             }
+        }
     }
-}
 }

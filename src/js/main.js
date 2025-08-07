@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const logoLink = document.getElementById('logo_link');
+    const logoLink = document.getElementById9('logo_link');
 
     if (logoLink) {
         logoLink.addEventListener('click', (event) => {
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {initializeReviewsSplide();}
 AOS.init({
     duration: 1200,
     anchorPlacement: 'center-bottom',
-    disable: 'mobile'
+    // disable: 'mobile'
 });
 
 //INITIALIZE SWEET ALERT 2
