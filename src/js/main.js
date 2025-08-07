@@ -30,6 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const logoLink = document.getElementById('logo_link');
+
+    if (logoLink) {
+        logoLink.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+
 // HEADER BURGER MENU
 const menu = document.querySelector('.hamburger')
 const navMenu = document.querySelector('.nav_menu')

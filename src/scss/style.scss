@@ -183,7 +183,10 @@ header {
 @media (max-width: 424.98px) {
     header {
         padding: 10px 8%;
-        .nav_menu {width: 55vw;}
+        .nav_menu {
+            top: 70px;
+            width: 55vw;
+        }
     }
 }
 
