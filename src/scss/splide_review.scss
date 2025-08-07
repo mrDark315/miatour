@@ -1,6 +1,7 @@
 @use 'vars';
 
-.splide {
+.review {
+    .splide {
         margin-top: 50px;
 
         .splide__track {
@@ -73,6 +74,7 @@
             }
     }
 }
+}
 
 @media (max-width: 767.98px ) {
     .splide {
@@ -96,7 +98,8 @@
 }
 
 @media (max-width: 575.98px ) {
-    .splide {
+    .review {
+        .splide {
         margin-top: 20px;
         .splide__track {
             width: 90%;
@@ -124,11 +127,13 @@
                 i {font-size: 20px;}
             }
         }
+        }
     }
 }
 
 @media (max-width: 424.98px) {
-    .splide {
+    .review {
+        .splide {
         .splide__track {
             width: 95%;
             margin: 0 auto;
@@ -160,5 +165,6 @@
             height: 35px;
             }
         }
+    }
     }
 }

@@ -83,15 +83,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 }).join('');
 
                 overlay_content.innerHTML = `
-                    <div class="splide country-splide">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                ${photosHTML}
-                            </ul>
+                    <div class="info_left">
+                    <h2>${countryData.name}</h2>
+                        <div class="splide country-splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    ${photosHTML}
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    <div class="info">
-                        <h2>${countryData.name}</h2>
+                    <div class="info_right">
                         <div>
                             <h5>Чи потрібна віза?</h5>
                             <h6>${countryData.visa}</h6>

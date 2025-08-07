@@ -306,10 +306,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                         </div>
                     </div>
                     <div class="info_right">
-                        <div>
-                            <h5>Чи потрібна віза?</h5>
-                            <h6>${countryData.visa}</h6>
-                        </div>
                         <p>${countryData.description}</p>
                     </div>
                 `;
