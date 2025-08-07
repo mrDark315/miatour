@@ -1,4 +1,5 @@
 import '../scss/style.scss'
+import '../scss/splide_review.scss'
 import './air-datepicker.js'
 import { initializeReviewsSplide } from './splide_review.js'
 import AOS from 'aos'
