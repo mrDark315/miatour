@@ -31,8 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    const logoLink = document.getElementById9('logo_link');
+    const logoLink = document.getElementById('logo_link');
 
     if (logoLink) {
         logoLink.addEventListener('click', (event) => {
