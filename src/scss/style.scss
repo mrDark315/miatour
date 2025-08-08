@@ -214,11 +214,11 @@ header {
     }
 
     .travel_title {
-        text-align: left;
+        text-align: center;
         animation: SlideFromLeft 1s ease-out forwards;
         h1{
             font-family: "Playfair Display", serif;
-            font-size: 90px;
+            font-size: 6vw;
             line-height: 150px;
             letter-spacing: 3px;
             max-width: 750px;
@@ -242,14 +242,16 @@ header {
     }
 
     .travel_request {
-        margin-top: 210px;
         animation: SlideFromRight 1s ease-out forwards;
         .request_title {
-            color: var(--text);
             text-align: center;
-            h4 {font-size: 28px;}
+            h4 {
+                color: var(--text);
+                font-size: 1.6vw;
+            }
             h6 {
-                font-size: 18px;
+                color: var(--text-secondary);
+                font-size: 1.2vw;
                 margin-top: 5px;
             }
         }
@@ -330,7 +332,6 @@ header {
 
                 .info {
                     grid-column: span 2;
-
                     .info_area {
                         resize: none;
                         overflow: auto;
@@ -338,17 +339,25 @@ header {
                         text-align: left;
                         text-wrap: wrap;
                         padding-top: 10px;
+                        box-sizing: border-box;
                     }
                 }
 
-                button {
+                .inp_btn {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100px;
+                    button {
                     height: 40px;
+                    width: 100%;
                     color: var(--text-button);
                     background: var(--purple);
                     border-radius: 15px;
                     cursor: pointer;
                     transition: background 0.3s ease;
                     font-size: 16px;
+                }
                 }
             }
 
@@ -391,18 +400,6 @@ header {
         }
     }
 }
-
-// @media (max-width: 874.98px) {
-//     .travel {
-//         .travel_request {
-//             .request_input {
-//                 form {
-//                     grid-template-columns: repeat(2, 1fr);
-//                 }
-//             }
-//         }
-//     }
-// }
 
 @media (max-width: 767.98px) {
         .travel {
