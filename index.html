@@ -65,7 +65,7 @@
                             <input type="text" id="country" name="country" class="check_input" inputmode="text">
                             <label for="country">Країна*</label>
                         </div>
-                        <div class="input_wrapper">
+                        <div class="input_wrapper not_mobile">
                             <input type="text" id="city" name="city" inputmode="text">
                             <label for="city">Місто</label>
                         </div>
@@ -73,11 +73,15 @@
                             <input type="text" id="finish_date" name="date" class="check_input" autocomplete="off" readonly>
                             <label for="date">Дата закінчення туру</label>
                         </div>
+                        <div class="input_wrapper mobile">
+                            <input type="text" id="city" name="city" inputmode="text">
+                            <label for="city">Місто</label>
+                        </div>
                         <div class="input_wrapper info">
                             <textarea class="info_area"  name="info_area" id="info_area" maxlength="100"></textarea>
                             <label for="info_area">Додаткова інформація</label>
                         </div>
-                        <div>
+                        <div class="inp_btn">
                             <div class="input_wrapper">
                                 <input type="text" id="people_num" name="people_num" pattern="\d*" inputmode="numeric" autocomplete="off" maxlength="2">
                                 <label for="people_num">Кількість осіб</label>
@@ -89,8 +93,6 @@
                 </div>
             </div>
         </main>
-
-        <img class="image-bg" src="src/img/main-image-bg.png" alt="Планета Земля Фонове Зображення">
 
         <main class="countries" id="countries">
             <div class="countries_header">
@@ -227,8 +229,6 @@
                     </div>
                 </div>
             </footer>
-
-            <img class="footer_bg" src="/src/img/footer-image-bg.png" alt="Планета Земля Фонове Зображення">
         </div>
     </div>
 

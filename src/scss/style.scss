@@ -154,7 +154,7 @@ header {
         flex-direction: column;
         right: -100%;
         transition: right .4s ease;
-        top: 90px;
+        top: 79px;
         margin: 0;
         background: var(--bg-header-aside);
         width: 45vw;
@@ -162,7 +162,7 @@ header {
         justify-content: flex-start;
         a {
             font-size: 30px;
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         .language_mobile {
             display: block;
@@ -176,15 +176,21 @@ header {
 }
 
 @media (max-width: 575.98px) {
-    header {padding: 20px 8%;}
+    header {
+        padding: 20px 8%;
+        .nav_menu {
+            a, .language_mobile {font-size: 28px;}
+        }
+    }
 }
 
 @media (max-width: 424.98px) {
     header {
         padding: 10px 8%;
         .nav_menu {
-            top: 70px;
+            top: 60px;
             width: 55vw;
+            a, .language_mobile {font-size: 24px;}
         }
     }
 }
@@ -268,8 +274,9 @@ header {
                     box-sizing: border-box;
                     font-size: 14px;
                     color: var(--text-secondary);
-                    // text-align: center;
                     }
+
+                    &.mobile {display: none;}
 
                     // fix styles in browser autofill (Chrome, Edge, Safari)
                     input:-webkit-autofill,
@@ -401,7 +408,6 @@ header {
         .travel {
             display: flex;
             flex-direction: column;
-
             .travel_title {
                 text-align: center;
                 h1 {
@@ -415,20 +421,20 @@ header {
                     margin-top: 5px;
                 }
             }
-
             .travel_request {
                 margin-top: 70px;
                 .request_title {
                     h4 {font-size: 26px;}
                     h6 {font-size: 16px;}
                 }
-
                 .request_input {
                     form {
                         grid-template-columns: repeat(2, 1fr);
-                        button {
+                        .inp_btn {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
                             grid-column: span 2;
-                            height: 40px;
+                            column-gap: 10%;
                         }
                     }
                 }
@@ -451,44 +457,28 @@ header {
         }
         .request_input {
             form {
+                display: flex;
+                flex-direction: column;
                 .input_wrapper {
+                    input, .info_area {text-align: center;}
                     label {
                         font-size: 14px;
-                        top: 15px;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
                     }
                     &.is-focused label,
                     &.has-value label {
-                        top: -15px;
                         font-size: 14px;
                         color: var(--purple);
                     }
+                    &.mobile {display: block;}
+                    &.not_mobile {display: none;}
                 }
-
-            .input_warning {
-                margin-top: 10px;
-                color: var(--red);
-                font-size: 18px;
-                opacity: 0;
-                transition: opacity 0.2s ease
-            }
-
-            .visible{opacity: 1;}
             }
         }
         }
     }
-}
-
-// IMAGE BACKGROUND
-.image-bg {
-    position: relative;
-    margin-top: 100px;
-    z-index: 2;
-    max-width: 100% ;
-}
-
-@media (max-width: 424.98px) {
-    .image-bg {margin-top: 20px;}
 }
 
 // MAIN COUNTRIES & HOTELS (HEADER)
@@ -975,15 +965,6 @@ header {
     .about_us {
         p {&:last-of-type {margin-top: 30px;}}
     }
-}
-
-// FOOTER IMAGE BACKGROUND
-.footer_bg {
-    position: absolute;
-    left: 0px;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
 }
 
 // FOOTER (CONTACTS)
