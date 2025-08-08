@@ -8,6 +8,7 @@
     list-style: none;
     border: none;
     outline: none;
+    letter-spacing: 1px;
 }
 
 html {width: 100%;}
@@ -37,7 +38,6 @@ h5 {
         font-family: 'Playfair Display';
         font-size: 28px;
         font-weight: 600;
-        letter-spacing: 1px;
 }
 
 @media (max-width: 575.98px) {
@@ -238,40 +238,37 @@ header {
     .travel_request {
         margin-top: 210px;
         animation: SlideFromRight 1s ease-out forwards;
-
         .request_title {
             color: var(--text);
             text-align: center;
-            letter-spacing: 1px;
             h4 {font-size: 28px;}
             h6 {
                 font-size: 18px;
                 margin-top: 5px;
             }
         }
-
         .request_input {
             margin-top: 30px;
-
             form {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 row-gap: 20px;
-                column-gap: 30px;
+                column-gap: 20px;
 
                 .input_wrapper {
                     position: relative;
                     input, .info_area {
                     width: 100%;
+                    min-width: 140px;
                     height: 40px;
                     border: 1px solid var(--border);
                     border-radius: 13px;
                     background: transparent;
                     padding: 0 15px;
                     box-sizing: border-box;
-                    font-size: 16px;
+                    font-size: 14px;
                     color: var(--text-secondary);
-                    text-align: center;
+                    // text-align: center;
                     }
 
                     // fix styles in browser autofill (Chrome, Edge, Safari)
@@ -313,6 +310,7 @@ header {
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
                         font-size: 16px;
+                        letter-spacing: 0.5px;
                     }
 
                     &.is-focused label,
@@ -331,6 +329,7 @@ header {
                         overflow: auto;
                         height: 100px;
                         text-align: left;
+                        text-wrap: wrap;
                     }
                 }
 
@@ -385,17 +384,17 @@ header {
     }
 }
 
-@media (max-width: 874.98px) {
-    .travel {
-        .travel_request {
-            .request_input {
-                form {
-                    // grid-template-columns: repeat(2, 1fr);
-                }
-            }
-        }
-    }
-}
+// @media (max-width: 874.98px) {
+//     .travel {
+//         .travel_request {
+//             .request_input {
+//                 form {
+//                     grid-template-columns: repeat(2, 1fr);
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @media (max-width: 767.98px) {
         .travel {
@@ -406,14 +405,12 @@ header {
                 text-align: center;
                 h1 {
                     font-size: 40px;
-                    letter-spacing: 1px;
                     line-height: 70px;
                     text-align: center;
                     margin-top: 10px;
                 }
                 p {
                     font-size: 24px;
-                    letter-spacing: 1px;
                     margin-top: 5px;
                 }
             }
@@ -660,7 +657,6 @@ header {
                 font-family: 'Playfair Display';
                 font-size: 20px;
                 font-weight: 500;
-                letter-spacing: 1px;
                 margin-top: 5px;
                 margin-left: 3px;
             }
@@ -673,7 +669,6 @@ header {
                 h6 {
                     font-size: 18px;
                     color: var(--text-secondary);
-                    letter-spacing: 1px;
 
                     i {
                         color: var(--purple);
@@ -806,7 +801,6 @@ header {
                     position: absolute;
                     max-width: 260px;
                     font-size: 24px;
-                    letter-spacing: 0.5px;
                     text-wrap: nowrap;
                 }
             }

@@ -81,34 +81,36 @@ document.addEventListener("click", (event) => {
 });
 
 // TRAVEL REQUEST INPUT ANIMATION
+// TRAVEL REQUEST INPUT ANIMATION
 document.addEventListener('DOMContentLoaded', () => {
     const inputWrappers = document.querySelectorAll('.input_wrapper');
 
     inputWrappers.forEach(wrapper => {
-        const input = wrapper.querySelector('input');
+        const field = wrapper.querySelector('input, textarea');
 
-        if (!input) return;
+        if (!field) return;
 
         const updateState = () => {
-            if (input.value.length > 0) {
+            if (field.value.trim().length > 0) {
                 wrapper.classList.add('has-value');
             } else {
                 wrapper.classList.remove('has-value');
             }
         };
 
-        input.addEventListener('input', updateState)
-        input.addEventListener('focus', () => {
+        field.addEventListener('input', updateState);
+        field.addEventListener('focus', () => {
             wrapper.classList.add('is-focused');
         });
-        input.addEventListener('blur', () => {
+        field.addEventListener('blur', () => {
             wrapper.classList.remove('is-focused');
             updateState();
         });
 
         updateState();
-    })
-})
+    });
+});
+
 
 // REQUEST TRAVEL INPUT FIELDS
 document.addEventListener('DOMContentLoaded', () => {
