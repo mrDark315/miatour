@@ -70,7 +70,7 @@ header {
     width: 100vw;
     box-sizing: border-box;
     animation: SlideFromTop 1s ease-out forwards;
-    background: var(--bg-header);
+    background: var(--bg-header-aside);
     .logo {
         display: block;
         height: 40px;
@@ -156,7 +156,7 @@ header {
         transition: right .4s ease;
         top: 90px;
         margin: 0;
-        background: var(--bg);
+        background: var(--bg-header-aside);
         width: 45vw;
         height: 100vh;
         justify-content: flex-start;
@@ -256,24 +256,25 @@ header {
             form {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
-                row-gap: 30px;
+                row-gap: 20px;
                 column-gap: 30px;
 
                 .input_wrapper {
                     position: relative;
-                    input {
+                    input, .info_area {
                     width: 100%;
-                    height: 45px;
-                    border-bottom: 2px solid var(--border);
+                    height: 40px;
+                    border: 1px solid var(--border);
+                    border-radius: 13px;
                     background: transparent;
                     padding: 0 15px;
                     box-sizing: border-box;
-                    font-size: 18px;
+                    font-size: 16px;
                     color: var(--text-secondary);
                     text-align: center;
                     }
 
-                    // исправление стилей при автозаполнении браузера (Chrome, Edge, Safari)
+                    // fix styles in browser autofill (Chrome, Edge, Safari)
                     input:-webkit-autofill,
                     input:-webkit-autofill:hover,
                     input:-webkit-autofill:focus,
@@ -283,22 +284,18 @@ header {
                         -webkit-text-fill-color: var(--text-secondary) !important;
                         color: var(--text-secondary) !important;
                         background: transparent !important;
-                        border-bottom: 1px solid var(--text-secondary) !important;
-                        border-bottom-left-radius: 15px !important;
-                        border-bottom-right-radius: 15px !important;
+                        border-bottom: 2px solid var(--border) !important;
                         transition: var(--bg) 9999s ease-out 9999s, color 9999s ease-out 9999s;
                         -webkit-transition: background-color 9999s ease-out 9999s, color 9999s ease-out 9999s;
                     }
-                    // исправление стилей при автозаполнении браузера (Firefox)
+                    // fix styles in browser autofill (Firefox)
                     input:-moz-autofill {
                     background: transparent !important;
                     color: var(--text-secondary) !important;
-                    border-bottom: 1px solid var(--text-secondary) !important;
-                    border-bottom-left-radius: 15px !important;
-                    border-bottom-right-radius: 15px !important;
+                    border-bottom: 2px solid var(--border) !important;
                     }
 
-                    // скрытие стрелочек input number (Chrome, Safari, Edge)
+                    // hide arrows input number (Chrome, Safari, Edge)
                     input[type="number"]::-webkit-outer-spin-button,
                     input[type="number"]::-webkit-inner-spin-button {
                         -webkit-appearance: none;
@@ -307,36 +304,44 @@ header {
 
                     label {
                         position: absolute;
-                        top: 10px;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        color: var(--text);
+                        left: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        color: var(--placeholder);
+                        background: var(--bg);
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
+                        font-size: 16px;
                     }
 
                     &.is-focused label,
                     &.has-value label {
-                        top: -15px;
-                        font-size: 18px;
+                        top: 0;
+                        font-size: 14px;
                         color: var(--purple);
                     }
                 }
 
-                .info {grid-column: span 2;}
+                .info {
+                    grid-column: span 2;
+
+                    .info_area {
+                        resize: none;
+                        overflow: auto;
+                        height: 100px;
+                        text-align: left;
+                    }
+                }
 
                 button {
-                    color: var(--text);
+                    height: 40px;
+                    color: var(--text-button);
                     background: var(--purple);
                     border-radius: 15px;
                     cursor: pointer;
                     transition: background 0.3s ease;
                     font-size: 16px;
-
-                    // @media (pointer: fine) {
-                    //     &:hover {background: color.adjust(vars.$color-purple, $lightness: -4%);}
-                    // }
                 }
             }
 
@@ -375,6 +380,18 @@ header {
 
             .request_title {
                 letter-spacing: 1.5px;
+            }
+        }
+    }
+}
+
+@media (max-width: 874.98px) {
+    .travel {
+        .travel_request {
+            .request_input {
+                form {
+                    // grid-template-columns: repeat(2, 1fr);
+                }
             }
         }
     }

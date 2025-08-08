@@ -1,11 +1,13 @@
 // LIGHT THEME COLORS
 $light-theme: (
-    "bg-header": rgba(246, 246, 249, 0.9),
+    "bg-header-aside": rgba(246, 246, 249, 0.96),
+    "bg-overlay": rgba(246, 246, 249, 0.3),
     "bg": #F6F6F9,
     "bg-secondary": #FCFCFF,
     "text": #1B1A22,
     "text-secondary": #5A5A66,
-    "border": #E6E6EF,
+    "text-button": #FDFDFE,
+    "border": #93939E,
     "placeholder": #A3A3AD,
     "input-bg": #FDFDFE,
     "red": #FF0000,
@@ -14,6 +16,8 @@ $light-theme: (
 
 // DARK THEME COLORS
 $dark-theme: (
+    "bg-header-aside": rgba(20, 20, 20, 0.96),
+    "bg-overlay": rgba(20, 20, 20, 0.3),
     "bg": #141414,
     "bg-secondary": #1E1B22,
     "text": #E4E4E8,
@@ -25,13 +29,14 @@ $dark-theme: (
     "purple": #7B61FF
 );
 
+// DEFAULT LIGHT THEME
 :root {
     @each $key, $value in $light-theme {
         --#{$key}: #{$value};
     }
 }
 
-// Темна — коли у body є клас .dark-theme
+// DARK THEME WHEN body.dark-theme
 body.dark-theme {
     @each $key, $value in $dark-theme {
         --#{$key}: #{$value};
