@@ -1,5 +1,4 @@
-@use 'vars';
-@use "sass:color";
+@use './_vars.scss';
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:wght@400..900&family=Playfair:opsz,wght@5..1200,300..900&display=swap');
 
 * {
@@ -18,8 +17,8 @@ body {
     font-family: 'Playfair', serif;
     font-size: 20px;
     font-weight: 400;
-    background: vars.$color-black;
-    color: vars.$color-white;
+    background: var(--bg);
+    color: var(--text);
     overflow-x: hidden;
 }
 body.body_no_scroll {overflow: hidden;}
@@ -62,20 +61,19 @@ a {all: unset; cursor: pointer;}
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
     padding: 20px 5%;
     z-index: 3;
-    background: vars.$color-header-black;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     box-sizing: border-box;
     animation: SlideFromTop 1s ease-out forwards;
+    background: var(--bg-header);
     .logo {
         display: block;
-        height: 50px;
-        width: 195px;
+        height: 40px;
     }
     .nav_menu {
         display: flex;
@@ -84,8 +82,9 @@ header {
         width: 100%;
         max-width: 650px;
         margin: 0 30px;
+        font-size: 22px;
         a {
-            color: vars.$color-white;
+            color: var(--text);
             position: relative;
             display: inline-block;
 
@@ -97,7 +96,7 @@ header {
                 transform: translateX(-50%);
                 width: 0;
                 height: 2px;
-                background: vars.$color-purple;
+                background: var(--purple);
                 transition: width 0.3s ease, transform 0.3s ease;
                 border-radius: 24px;
             }
@@ -118,7 +117,7 @@ header {
         cursor: pointer;
         i {transition: color 0.3s ease;}
         @media (pointer: fine) {
-            &:hover {i {color: vars.$color-purple;}}
+            &:hover {i {color: var(--purple);}}
         }
     }
     .hamburger {
@@ -129,7 +128,7 @@ header {
             width: 30px;
             height: 4px;
             margin: 6px 0;
-            background: vars.$color-white;
+            background: var(--text);
             border-radius: 24px;
             transition: all 0.3s ease-in-out;
         }
@@ -157,7 +156,7 @@ header {
         transition: right .4s ease;
         top: 90px;
         margin: 0;
-        background: vars.$color-header-black;
+        background: var(--bg);
         width: 45vw;
         height: 100vh;
         justify-content: flex-start;
@@ -221,7 +220,7 @@ header {
         p {
             margin-top: 20px;
             font-size: 32px;
-            color: vars.$color-light-gray;
+            color: var(--text-secondary);
         }
     }
 
@@ -241,7 +240,7 @@ header {
         animation: SlideFromRight 1s ease-out forwards;
 
         .request_title {
-            color: vars.$color-light-gray;
+            color: var(--text);
             text-align: center;
             letter-spacing: 1px;
             h4 {font-size: 28px;}
@@ -265,14 +264,12 @@ header {
                     input {
                     width: 100%;
                     height: 45px;
-                    border-bottom: 1px solid vars.$color-input-gray;
-                    border-bottom-left-radius: 15px;
-                    border-bottom-right-radius: 15px;
+                    border-bottom: 2px solid var(--border);
                     background: transparent;
                     padding: 0 15px;
                     box-sizing: border-box;
                     font-size: 18px;
-                    color: vars.$color-gray;
+                    color: var(--text-secondary);
                     text-align: center;
                     }
 
@@ -283,20 +280,20 @@ header {
                     input:-webkit-autofill:active {
                         box-shadow: 0 0 0px 1000px transparent inset !important;
                         -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
-                        -webkit-text-fill-color: vars.$color-gray !important;
-                        color: vars.$color-gray !important;
+                        -webkit-text-fill-color: var(--text-secondary) !important;
+                        color: var(--text-secondary) !important;
                         background: transparent !important;
-                        border-bottom: 1px solid vars.$color-input-gray !important;
+                        border-bottom: 1px solid var(--text-secondary) !important;
                         border-bottom-left-radius: 15px !important;
                         border-bottom-right-radius: 15px !important;
-                        transition: background-color 9999s ease-out 9999s, color 9999s ease-out 9999s;
+                        transition: var(--bg) 9999s ease-out 9999s, color 9999s ease-out 9999s;
                         -webkit-transition: background-color 9999s ease-out 9999s, color 9999s ease-out 9999s;
                     }
                     // исправление стилей при автозаполнении браузера (Firefox)
                     input:-moz-autofill {
                     background: transparent !important;
-                    color: vars.$color-gray !important;
-                    border-bottom: 1px solid vars.$color-input-gray !important;
+                    color: var(--text-secondary) !important;
+                    border-bottom: 1px solid var(--text-secondary) !important;
                     border-bottom-left-radius: 15px !important;
                     border-bottom-right-radius: 15px !important;
                     }
@@ -313,7 +310,7 @@ header {
                         top: 10px;
                         left: 50%;
                         transform: translateX(-50%);
-                        color: vars.$color-gray;
+                        color: var(--text);
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
@@ -323,29 +320,29 @@ header {
                     &.has-value label {
                         top: -15px;
                         font-size: 18px;
-                        color: vars.$color-purple;
+                        color: var(--purple);
                     }
                 }
 
                 .info {grid-column: span 2;}
 
                 button {
-                    color: vars.$color-white;
-                    background: vars.$color-purple;
+                    color: var(--text);
+                    background: var(--purple);
                     border-radius: 15px;
                     cursor: pointer;
                     transition: background 0.3s ease;
                     font-size: 16px;
 
-                    @media (pointer: fine) {
-                        &:hover {background: color.adjust(vars.$color-purple, $lightness: -4%);}
-                    }
+                    // @media (pointer: fine) {
+                    //     &:hover {background: color.adjust(vars.$color-purple, $lightness: -4%);}
+                    // }
                 }
             }
 
             .input_warning {
                 margin-top: 10px;
-                color: vars.$color-red;
+                color: var(--red);
                 font-size: 18px;
                 opacity: 0;
                 transition: opacity 0.2s ease
@@ -448,13 +445,13 @@ header {
                     &.has-value label {
                         top: -15px;
                         font-size: 14px;
-                        color: vars.$color-purple;
+                        color: var(--purple);
                     }
                 }
 
             .input_warning {
                 margin-top: 10px;
-                color: vars.$color-red;
+                color: var(--red);
                 font-size: 18px;
                 opacity: 0;
                 transition: opacity 0.2s ease
@@ -489,8 +486,8 @@ header {
 
     .next_page {
         display: flex;
-        color: vars.$color-white;
-        background: vars.$color-purple;
+        color: var(--text-secondary);
+        background: var(--purple);
         padding: 10px 25px;
         border-radius: 15px;
         align-items: center;
@@ -556,7 +553,7 @@ header {
                 width: 100%;
                 font-size: 18px;
                 text-align: center;
-                color: vars.$color-light-gray;
+                color: var(--text-secondary);
                 margin-top: 5px;
             }
     }
@@ -658,11 +655,11 @@ header {
 
                 h6 {
                     font-size: 18px;
-                    color: vars.$color-light-gray;
+                    color: var(--text-secondary);
                     letter-spacing: 1px;
 
                     i {
-                        color: vars.$color-purple;
+                        color: var(--purple);
                         margin-right: 3px;
                     }
                 }
@@ -742,7 +739,7 @@ header {
     margin-top: 100px;
     p {
         margin-top: 50px;
-        color: vars.$color-light-gray;
+        color: var(--text-secondary);
         line-height: 36px;
         font-size: 24px;
 
@@ -766,7 +763,7 @@ header {
                 position: absolute;
                 width: 100%;
                 height: 4px;
-                background: vars.$color-purple;
+                background: var(--purple);
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: -1;
@@ -783,7 +780,7 @@ header {
                 .timeline-circle {
                     width: 10px;
                     height: 10px;
-                    background: vars.$color-purple;
+                    background: var(--purple);
                     border-radius: 50%;
                     z-index: 1;
                 }
@@ -821,7 +818,7 @@ header {
 
             h6 {
                 margin-top: 10px;
-                color: vars.$color-light-gray;
+                color: var(--text-secondary);
                 text-align: center;
                 font-size: 28px;
             }
@@ -862,7 +859,7 @@ header {
                     position: absolute;
                     width: 4px;
                     height: 100%;
-                    background: vars.$color-purple;
+                    background: var(--purple);
                     left: 50%;
                     top: 0;
                     transform: translateX(-50%);
@@ -995,7 +992,7 @@ header {
             height: 100%;
             justify-content: space-between;
             text-align: center;
-            color: vars.$color-light-gray;
+            color: var(--text-secondary);
             .footer_top_row {
                 display: flex;
                 justify-content: space-between;
@@ -1015,7 +1012,7 @@ header {
                     display: flex;
                     gap: 100px;
                     i {
-                        color: vars.$color-purple;
+                        color: var(--purple);
                         font-size: 40px;
                         cursor: pointer;
                     }

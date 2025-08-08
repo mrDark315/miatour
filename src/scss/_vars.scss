@@ -1,3 +1,43 @@
+// LIGHT THEME COLORS
+$light-theme: (
+    "bg-header": rgba(246, 246, 249, 0.9),
+    "bg": #F6F6F9,
+    "bg-secondary": #FCFCFF,
+    "text": #1B1A22,
+    "text-secondary": #5A5A66,
+    "border": #E6E6EF,
+    "placeholder": #A3A3AD,
+    "input-bg": #FDFDFE,
+    "red": #FF0000,
+    "purple": #7B61FF
+);
+
+// DARK THEME COLORS
+$dark-theme: (
+    "bg": #141414,
+    "bg-secondary": #1E1B22,
+    "text": #E4E4E8,
+    "text-secondary": #A6A6B0,
+    "border": #2A2730,
+    "placeholder": #7F7E88,
+    "input-bg": #1B1A1F,
+    "red": #FF0000,
+    "purple": #7B61FF
+);
+
+:root {
+    @each $key, $value in $light-theme {
+        --#{$key}: #{$value};
+    }
+}
+
+// Темна — коли у body є клас .dark-theme
+body.dark-theme {
+    @each $key, $value in $dark-theme {
+        --#{$key}: #{$value};
+    }
+}
+
 // COLORS
 $color-header-black: rgba(0, 0, 0, 0.9);
 $color-overlay-black: rgba(0, 0, 0, 0.3);
@@ -9,10 +49,3 @@ $color-light-gray: #DDDDDD;
 $color-input-gray: #C9C9C9;
 $color-red: #FF0000;
 $color-purple: #7B61FF;
-
-// FONT WEIGHT
-$font-normal: 400;
-$font-medium: 500;
-$font-semi-bold: 600;
-$font-bold: 700;
-$font-extrra-bold: 800;
