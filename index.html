@@ -58,7 +58,7 @@
                             <label for="email">Пошта*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="date" name="date" class="check_input" autocomplete="off" readonly>
+                            <input type="text" id="start_date" name="date" class="check_input" autocomplete="off" readonly>
                             <label for="date">Дата початку туру*</label>
                         </div>
                         <div class="input_wrapper">
@@ -70,14 +70,20 @@
                             <label for="city">Місто</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="people_num" name="people_num" pattern="\d*" inputmode="numeric" autocomplete="off" maxlength="2">
-                            <label for="people_num">Кількість осіб</label>
+                            <input type="text" id="finish_date" name="date" class="check_input" autocomplete="off" readonly>
+                            <label for="date">Дата закінчення туру</label>
                         </div>
                         <div class="input_wrapper info">
                             <textarea class="info_area"  name="info_area" id="info_area" maxlength="100"></textarea>
                             <label for="info_area">Додаткова інформація</label>
                         </div>
-                        <button type="button" id="send_request">Відправити запит</button>
+                        <div>
+                            <div class="input_wrapper">
+                                <input type="text" id="people_num" name="people_num" pattern="\d*" inputmode="numeric" autocomplete="off" maxlength="2">
+                                <label for="people_num">Кількість осіб</label>
+                            </div>
+                            <button type="button" id="send_request">Відправити запит</button>
+                        </div>
                     </form>
                     <div class="input_warning">Поля з зірочкою (*) обов’язкові до заповнення</div>
                 </div>
