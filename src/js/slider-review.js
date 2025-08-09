@@ -1,3 +1,5 @@
+// src/js/slider-review.js
+
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
 
@@ -6,78 +8,118 @@ const reviewData = `${basePath}data/review.json`;
 const starsRating = `${basePath}review_stars/`;
 const clientImage = `${basePath}clients/`;
 
+// CREATE ARROWS & PAGINATIONS
+function navigationPlugin(slider) {
+    let wrapper, dots, arrowLeft, arrowRight;
+
+    // Вспомогательная функция для создания div-элементов
+    function createDiv(className) {
+        const div = document.createElement("div");
+        div.className = className;
+        return div;
+    }
+
+    // Функция для создания всей разметки
+    function createMarkup() {
+        // 1. Создаем общую обертку
+        wrapper = createDiv("navigation-wrapper");
+        slider.container.parentNode.appendChild(wrapper);
+        wrapper.appendChild(slider.container);
+
+        // 2. Создаем стрелки
+        arrowLeft = createDiv("arrow arrow--left");
+        arrowLeft.innerHTML = '<i class="fa-solid fa-chevron-left fa-2xl"></i>';
+        arrowLeft.addEventListener("click", () => slider.prev());
+
+        arrowRight = createDiv("arrow arrow--right");
+        arrowRight.innerHTML = '<i class="fa-solid fa-chevron-right fa-2xl"></i>';
+        arrowRight.addEventListener("click", () => slider.next());
+
+        wrapper.appendChild(arrowLeft);
+        wrapper.appendChild(arrowRight);
+
+        // 3. Создаем точки
+        dots = createDiv("dots");
+        slider.track.details.slides.forEach((_e, idx) => {
+            const dot = document.createElement("button");
+            dot.classList.add("dot");
+            dot.addEventListener("click", () => slider.moveToIdx(idx));
+            dots.appendChild(dot);
+        });
+        wrapper.appendChild(dots);
+    }
+
+    // Функция для обновления активных классов
+    function updateClasses() {
+        const slide = slider.track.details.rel;
+
+        // Обновляем активную точку
+        Array.from(dots.children).forEach((dot, idx) => {
+            dot.classList.toggle("dot--active", idx === slide);
+        });
+    }
+
+    // Вешаем обработчики на события слайдера
+    slider.on("created", () => {
+        createMarkup();
+        updateClasses();
+    });
+    slider.on("slideChanged", updateClasses);
+}
+
+
+// --- ГЛАВНАЯ ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ ---
+export async function initializeReviewsSlider() {
+    const track = document.getElementById('reviewsSlider');
+    if (!track) return;
+
+    // Сначала, как и раньше, рендерим слайды
+    await renderSlides(track);
+
+    // Затем инициализируем Keen Slider, передавая ему наш плагин
+    new KeenSlider(track, {
+        loop: true,
+        renderMode: 'performance',
+        drag: true,
+    }, [
+        // Вот здесь магия: подключаем плагин
+        navigationPlugin,
+    ]);
+}
+
+
+// --- Функции для рендеринга (остаются без изменений) ---
 function starsHtml(rating) {
     return `<img src="${starsRating}stars_${rating}.svg" alt="${rating} зірок" class="review-rating-svg">`;
 }
 
 async function renderSlides(container) {
-    const res = await fetch(reviewData);
-    const reviews = await res.json();
+    try {
+        const res = await fetch(reviewData);
+        if (!res.ok) throw new Error('Failed to fetch reviews');
+        const reviews = await res.json();
 
-    container.innerHTML = reviews
-        .map((r) => {
-        const img = r.clientImage ? `<img src="${clientImage}${r.clientImage}" alt="${r.clientName || ''}">` : '';
-
-        return `
-            <div class="keen-slider__slide">
-            <div class="review_item">
-                <div class="review_header">
-                <p>${r.clientName || ''}</p>
-                ${img}
-                <p>${r.location || ''}</p>
-                </div>
-                <div class="review_info">
-                <p class="hotel_name">${r.hotel || ''}</p>
-                <div class="review-rating-container">${starsHtml(r.rating)}</div>
-                <p class="review_text">${r.reviewText || ''}</p>
-                </div>
-            </div>
-            </div>
-        `;
-        })
-        .join('');
-}
-
-export async function initializeReviewsSplide() {
-    const section = document.querySelector('.reviews-slider');
-    const track = document.getElementById('reviewsSlider');
-    if (!section || !track) return;
-
-    await renderSlides(track);
-
-    // keen slider initialization
-    const slider = new KeenSlider(track, {
-        loop: true,
-        renderMode: 'performance',
-        drag: true,
-
-    });
-
-    // arrows
-    const prevBtn = section.querySelector('.ks-arrow--prev');
-    const nextBtn = section.querySelector('.ks-arrow--next');
-    if (prevBtn) prevBtn.addEventListener('click', () => slider.prev());
-    if (nextBtn) nextBtn.addEventListener('click', () => slider.next());
-
-    // 5) точки (опционально)
-    const dotsRoot = document.getElementById('reviewsDots');
-    if (dotsRoot) {
-        const makeDots = () => {
-        dotsRoot.innerHTML = '';
-        slider.track.details.slides.forEach((_, idx) => {
-            const dot = document.createElement('button');
-            dot.className = 'ks-dot';
-            dot.type = 'button';
-            dot.addEventListener('click', () => slider.moveToIdx(idx));
-            dotsRoot.appendChild(dot);
-        });
-        };
-        const setActive = () => {
-        const rel = slider.track.details.rel;
-        [...dotsRoot.children].forEach((d, i) => d.classList.toggle('is-active', i === rel));
-        };
-        slider.on('created', () => { makeDots(); setActive(); });
-        slider.on('slideChanged', setActive);
-        slider.on('updated', setActive);
+        container.innerHTML = reviews.map((r) => {
+            const img = r.clientImage ? `<img src="${clientImage}${r.clientImage}" alt="${r.clientName || ''}">` : '';
+            return `
+                <div class="keen-slider__slide">
+                    <div class="review_item">
+                        <div class="review_header">
+                            <p>${r.clientName || ''}</p>
+                            ${img}
+                            <p>${r.location || ''}</p>
+                        </div>
+                        <div class="review_info">
+                            <p class="hotel_name">${r.hotel || ''}</p>
+                            <div class="review-rating-container">
+                                <img src="/src/img/hotel_stars/stars_${r.rating}.svg" alt="${r.rating} зірок">
+                            </div>
+                            <p class="review_text">${r.reviewText || ''}</p>
+                        </div>
+                    </div>
+                </div>`;
+        }).join('');
+    } catch (error) {
+        console.error('Error rendering slides:', error);
     }
 }

@@ -3,7 +3,7 @@ import './header.js'
 import '../scss/style.scss'
 import '../scss/overlay.scss';
 import './air-datepicker.js'
-import { initializeReviewsSplide } from './slider-review.js';
+import { initializeReviewsSlider } from './slider-review.js';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Swal from 'sweetalert2'
@@ -16,7 +16,7 @@ AOS.init({
 
 // INITIALIZE REVIEW KEEN-SLIDER
 document.addEventListener('DOMContentLoaded', () => {
-    initializeReviewsSplide();
+    initializeReviewsSlider();
 });
 
 //INITIALIZE SWEET ALERT 2

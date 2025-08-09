@@ -1,26 +1,26 @@
 // HEADER ANCHOR LIMKS SCROLL
-document.addEventListener('DOMContentLoaded', () => {
-    const anchorLinks = document.querySelectorAll('.anchor-link');
-    const scrollOffset = 130;
+// document.addEventListener('DOMContentLoaded', () => {
+//     const anchorLinks = document.querySelectorAll('.anchor-link');
+//     const scrollOffset = 0;
 
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
+//     anchorLinks.forEach(link => {
+//         link.addEventListener('click', (event) => {
+//             event.preventDefault();
 
-            const targetId = link.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+//             const targetId = link.getAttribute('href');
+//             const targetElement = document.querySelector(targetId);
 
-            if (targetElement) {
-                const targetPosition = targetElement.offsetTop - scrollOffset;
+//             if (targetElement) {
+//                 const targetPosition = targetElement.offsetTop - scrollOffset;
 
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-});
+//                 window.scrollTo({
+//                     top: targetPosition,
+//                     behavior: 'smooth'
+//                 });
+//             }
+//         });
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const logoLink = document.getElementById('logo_link');
