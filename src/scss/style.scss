@@ -9,6 +9,7 @@
     border: none;
     outline: none;
     letter-spacing: 1px;
+    // outline: 1px var(--red) solid;
 }
 
 html {width: 100%;}
@@ -278,8 +279,6 @@ header {
                     color: var(--text-secondary);
                     }
 
-                    &.mobile {display: none;}
-
                     // fix styles in browser autofill (Chrome, Edge, Safari)
                     input:-webkit-autofill,
                     input:-webkit-autofill:hover,
@@ -438,7 +437,7 @@ header {
                             display: grid;
                             grid-template-columns: repeat(2, 1fr);
                             grid-column: span 2;
-                            column-gap: 10%;
+                            column-gap: 15px;
                         }
                     }
                 }
@@ -476,8 +475,6 @@ header {
                         font-size: 14px;
                         color: var(--purple);
                     }
-                    &.mobile {display: block;}
-                    &.not_mobile {display: none;}
                 }
             }
         }
