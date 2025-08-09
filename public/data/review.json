@@ -7,5 +7,14 @@
         "hotel": "La Perla Villas and Suites",
         "rating": 5,
         "reviewText": "La Perlas дуже класні. Дуже задоволені сервісом, готель дуже клієнтоорієнтовний. Пляшку вина ставлять в номер в якості welcome drink. Дякуємо вам і теплий привіт із Санторії"
+    },
+    {
+        "id": 2,
+        "clientName": "Саша",
+        "clientImage": "avatar1.png",
+        "location": "Країна, місто",
+        "hotel": "La Perla Villas and Suites",
+        "rating": 4,
+        "reviewText": "La Perlas дуже класні. Дуже задоволені сервісом, готель дуже клієнтоорієнтовний. Пляшку вина ставлять в номер в якості welcome drink. Дякуємо вам і теплий привіт із Санторії"
     }
 ]

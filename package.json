@@ -21,6 +21,7 @@
     "aos": "^2.3.4",
     "flag-icons": "^7.5.0",
     "fuse.js": "^7.1.0",
+    "keen-slider": "^6.8.6",
     "sweetalert2": "^11.22.2"
   }
 }

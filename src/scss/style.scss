@@ -98,7 +98,7 @@ header {
                 height: 2px;
                 background: var(--purple);
                 transition: width 0.3s ease, transform 0.3s ease;
-                border-radius: 24px;
+                border-radius: 15px;
             }
 
             @media (pointer: fine) {
@@ -129,7 +129,7 @@ header {
             height: 4px;
             margin: 6px 0;
             background: var(--text);
-            border-radius: 24px;
+            border-radius: 15px;
             transition: all 0.3s ease-in-out;
         }
     }
@@ -270,7 +270,7 @@ header {
                     min-width: 140px;
                     height: 40px;
                     border: 1px solid var(--border);
-                    border-radius: 13px;
+                    border-radius: 15px;
                     background: transparent;
                     padding: 0 15px;
                     box-sizing: border-box;
@@ -487,26 +487,14 @@ header {
     align-items: center;
 
     .next_page {
-        display: flex;
         color: var(--text-button);
         background: var(--purple);
-        padding: 10px 25px;
+        padding: 10px 20px;
         border-radius: 15px;
         align-items: center;
         justify-content: center;
         font-size: 15px;
         box-sizing: border-box;
-        position: relative;
-        i {
-            position: absolute;
-            top: 13px;
-            left: 91px;
-            transition: left .3s ease ;
-            font-size: 14px;
-        }
-        @media (pointer: fine) {
-            &:hover {i {left: 95px;}}
-        }
     }
 }
 
@@ -538,7 +526,7 @@ header {
                 width: 100%;
                 height: 80%;
                 overflow: hidden;
-                border-radius: 24px;
+                border-radius: 15px;
 
                 img {
                 width: 100%;
@@ -630,7 +618,7 @@ header {
 
             .img_container {
                 overflow: hidden;
-                border-radius: 24px;
+                border-radius: 15px;
 
                 img {
                     width: 100%;
@@ -718,21 +706,75 @@ header {
 // MAIN REVIEW
 .review {
     margin-top: 100px;
-
     h5 {text-align: center;}
+
+    .reviews-slider {
+        .reviews-slider__wrapper{
+            display: flex;
+            gap: 10px;
+            max-width: 60vw;
+            min-width: 30vw;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: relative;
+            .keen-slider {
+                &__slide {height: 100%;}
+                background: var(--bg-secondary);
+                border-radius: 15px;
+                .review_item {
+                    margin: 30px 5%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    .review_header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        p {
+                            line-height: 35px;
+                            width: 120px;
+                            &:last-of-type {text-align: right;}
+                        }
+                        // img {width: 100px; height: 100px;}
+                    }
+                    .review_info {
+                        .hotel_name {}
+                        .review-rating-container {
+                            img {}
+                        }
+                        // .review_text {width: 100%; height: 100%;}
+                    }
+                }
+            }
+        }
+
+        .ks-arrow {
+            // position: absolute;
+            // left: 0;
+            // right: 0;
+            // top: 50%;
+            // transform: translateY(-50%);
+            z-index: 2;
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            // &--prev {margin-right: 1vw;}
+            // &--next {margin-left: 1vw;}
+            i {
+            }
+        }
+
+        .ks-dots {
+        .ks-dot {
+            &.is-active {
+            }
+        }
+        }
+    }
 }
 
-@media (max-width: 991.98px) {
-    .review {margin-top: 150px;}
-}
 
-@media (max-width: 575.98px) {
-    .review {margin-top: 200px;}
-}
-
-@media (max-width: 424.98px) {
-    .review {margin-top: 170px;}
-}
 
 // MAIN ABOUT US
 .about_us {
@@ -767,7 +809,7 @@ header {
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: -1;
-                border-radius: 24px;
+                border-radius: 50px;
             }
 
             .timeline-item {
@@ -863,7 +905,7 @@ header {
                     top: 0;
                     transform: translateX(-50%);
                     z-index: -1;
-                    border-radius: 24px;
+                    border-radius: 15px;
                 }
 
                 .timeline-item {

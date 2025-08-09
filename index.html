@@ -58,8 +58,8 @@
                             <label for="email">Пошта*</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="start_date" name="date" class="check_input" autocomplete="off" readonly>
-                            <label for="date">Дата початку туру*</label>
+                            <input type="text" id="start_date" name="start_date" class="check_input" autocomplete="off" readonly>
+                            <label for="start_date">Дата початку туру*</label>
                         </div>
                         <div class="input_wrapper">
                             <input type="text" id="country" name="country" class="check_input" inputmode="text">
@@ -70,8 +70,8 @@
                             <label for="city">Місто</label>
                         </div>
                         <div class="input_wrapper">
-                            <input type="text" id="finish_date" name="date" autocomplete="off" readonly>
-                            <label for="date">Дата закінчення туру</label>
+                            <input type="text" id="finish_date" name="finish_date" autocomplete="off" readonly>
+                            <label for="finish_date">Дата закінчення туру</label>
                         </div>
                         <div class="input_wrapper mobile">
                             <input type="text" id="city" name="city" inputmode="text">
@@ -154,18 +154,19 @@
 
         <main class="review" id="reviews">
             <h5 data-aos="fade-down">Відгуки</h5>
-            <section class="splide" aria-label="Відгуки клієнтів">
-                <div class="splide__arrows">
-                    <button class="splide__arrow splide__arrow--prev" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
-                        <i class="fa-solid fa-chevron-left fa-2xl"></i>
-                    </button>
-                    <button class="splide__arrow splide__arrow--next" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">
-                        <i class="fa-solid fa-chevron-right fa-2xl"></i>
-                    </button>
+
+            <section class="reviews-slider" aria-label="Відгуки клієнтів">
+                <div class="reviews-slider__wrapper">
+                    <button class="ks-arrow ks-arrow--prev" type="button" aria-label="Попередній">
+                    <i class="fa-solid fa-chevron-left fa-2xl"></i></button>
+
+                    <div class="keen-slider" id="reviewsSlider"></div>
+
+                    <button class="ks-arrow ks-arrow--next" type="button" aria-label="Наступний">
+                    <i class="fa-solid fa-chevron-right fa-2xl"></i></button>
                 </div>
-                <div class="splide__track" data-aos="zoom-in-up">
-                    <ul class="splide__list" id="reviews_list"></ul>
-                </div>
+
+                <div class="ks-dots" id="reviewsDots"></div>
             </section>
         </main>
 

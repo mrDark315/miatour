@@ -1,10 +1,11 @@
 import '../scss/style.scss'
-import '../scss/splide_review.scss'
+// import '../scss/splide_review.scss'
 import '../scss/overlay.scss';
 import './air-datepicker.js'
+import './slider-review.js'
 import './input.js'
-import { initializeReviewsSplide } from './splide_review.js'
-import { initializeCountrySplide } from './splide_country.js';
+// import { initializeReviewsSplide } from './splide_review.js'
+// import { initializeCountrySplide } from './splide_country.js';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Swal from 'sweetalert2'

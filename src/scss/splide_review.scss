@@ -2,42 +2,42 @@
 
 .review {
     .splide {
+        width: 50%;
+        max-width: 800px;
+        min-width: 250px;
+        margin: 0 auto;
         margin-top: 50px;
-
         .splide__track {
-            width: 75%;
-            margin: 0 auto;
             .splide__list {
                 .splide__slide {
-
                     .review_item {
+                        align-items: center;
                         color: vars.$color-gray;
                         background: vars.$color-dark-gray;
-                        border-radius: 24px;
+                        border-radius: 15px;
                         padding: 0 5%;
                         font-family: 'Playfair Display';
                         font-size: 24px;
                         font-weight: 700;
-
                         .review_header {
                             display: flex;
                             justify-content: space-between;
                             padding-top: 30px;
 
-                            p {
-                                display: flex;
-                                align-items: center;
-                                line-height: 35px;
-                                width: 120px;
-                                text-wrap: balance;
+                            // p {
+                            //     display: flex;
+                            //     align-items: center;
+                            //     line-height: 35px;
+                            //     width: 120px;
+                            //     text-wrap: balance;
 
-                                &:last-of-type {text-align: right;}
-                            }
+                            //     &:last-of-type {text-align: right;}
+                            // }
 
-                            img {
-                                width: 100px;
-                                height: 100px;
-                            }
+                            // img {
+                            //     width: 100px;
+                            //     height: 100px;
+                            // }
                         }
 
                         .review_info {
@@ -65,6 +65,7 @@
         }
 
         .splide__arrows {
+            width: 100%;
             .splide__arrow {
             background: vars.$color-purple;
             color: vars.$color-white;
@@ -72,8 +73,8 @@
             height: 70px;
             opacity: 1;
             }
+        }
     }
-}
 }
 
 @media (max-width: 767.98px ) {
@@ -161,8 +162,8 @@
         }
         .splide__arrows {
             .splide__arrow {
-            width: 35px;
-            height: 35px;
+                width: 35px;
+                height: 35px;
             }
         }
     }
