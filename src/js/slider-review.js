@@ -38,17 +38,6 @@ async function renderSlides(container) {
         .join('');
 }
 
-function autoHeight(slider, container) {
-    const set = () => {
-        const rel = slider.track.details.rel;
-        const current = container.children[rel];
-        if (current) container.style.height = `${current.offsetHeight}px`;
-    };
-    slider.on('created', set);
-    slider.on('slideChanged', set);
-    slider.on('updated', set);
-}
-
 export async function initializeReviewsSplide() {
     const section = document.querySelector('.reviews-slider');
     const track = document.getElementById('reviewsSlider');
@@ -61,15 +50,8 @@ export async function initializeReviewsSplide() {
         loop: true,
         renderMode: 'performance',
         drag: true,
-        slides: { perView: 1, spacing: 0 }
+
     });
-
-    // autoHeight(slider, track);
-
-    // slider.on("slideChanged", () => {
-    //     const currentSlide = slider.slides[slider.track.details.rel];
-    //     slider.container.style.height = currentSlide.offsetHeight + "px";
-    // });
 
     // arrows
     const prevBtn = section.querySelector('.ks-arrow--prev');
@@ -99,7 +81,3 @@ export async function initializeReviewsSplide() {
         slider.on('updated', setActive);
     }
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    initializeReviewsSplide();
-});

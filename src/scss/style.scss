@@ -706,11 +706,13 @@ header {
 // MAIN REVIEW
 .review {
     margin-top: 100px;
+    position: relative;
     h5 {text-align: center;}
 
     .reviews-slider {
         .reviews-slider__wrapper{
             display: flex;
+            align-items: center;
             gap: 10px;
             max-width: 60vw;
             min-width: 30vw;
@@ -718,9 +720,9 @@ header {
             box-sizing: border-box;
             position: relative;
             .keen-slider {
-                &__slide {height: 100%;}
                 background: var(--bg-secondary);
                 border-radius: 15px;
+                &__slide {height: 100%;}
                 .review_item {
                     margin: 30px 5%;
                     display: flex;
@@ -746,30 +748,42 @@ header {
                     }
                 }
             }
-        }
 
-        .ks-arrow {
-            // position: absolute;
-            // left: 0;
-            // right: 0;
-            // top: 50%;
-            // transform: translateY(-50%);
-            z-index: 2;
+            .ks-arrow {
             cursor: pointer;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            // &--prev {margin-right: 1vw;}
-            // &--next {margin-left: 1vw;}
-            i {
+            background: transparent;
+            box-sizing: border-box;
+            flex-shrink: 0;
+            i {font-size: 30px;}
             }
         }
 
         .ks-dots {
-        .ks-dot {
-            &.is-active {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+
+            .ks-dot {
+                width: 12px;
+                height: 12px;
+                cursor: pointer;
+                border: none;
+
+                // --- Стилизация ---
+                border-radius: 50%; // Делаем точки круглыми
+                background: var(--text-secondary); // Цвет неактивной точки
+                opacity: 0.5;
+                transition: opacity 0.3s ease, background 0.3s ease;
+
+                // Убираем лишние отступы, которые могут быть у кнопок
+                padding: 0;
+
+                &.is-active {
+                    background: var(--purple); // Цвет активной точки
+                    opacity: 1;
+                }
             }
-        }
         }
     }
 }
