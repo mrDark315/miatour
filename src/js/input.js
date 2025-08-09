@@ -125,3 +125,27 @@ function autoResizeLabels() {
 
 document.addEventListener('DOMContentLoaded', autoResizeLabels);
 window.addEventListener('resize', autoResizeLabels);
+
+// SYMBOLS COUNTER FOR TEXTAREA
+document.addEventListener('DOMContentLoaded', () => {
+    const textArea = document.getElementById('info_area');
+    const charCounter = document.getElementById('char_counter');
+
+    if (textArea && charCounter) {
+        const maxLength = textArea.getAttribute('maxlength');
+
+        const updateCounter = () => {
+            const currentLength = textArea.value.length;
+            charCounter.textContent = `${currentLength}/${maxLength}`;
+
+            if (currentLength >= maxLength) {
+                charCounter.classList.add('char_limit');
+            } else {
+                charCounter.classList.remove('char_limit');
+            }
+        };
+
+        textArea.addEventListener('input', updateCounter);
+        updateCounter();
+    }
+});

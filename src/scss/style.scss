@@ -261,7 +261,7 @@ header {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 row-gap: 20px;
-                column-gap: 20px;
+                column-gap: 15px;
 
                 .input_wrapper {
                     position: relative;
@@ -274,7 +274,7 @@ header {
                     background: transparent;
                     padding: 0 15px;
                     box-sizing: border-box;
-                    font-size: 14px;
+                    font-size: 16px;
                     color: var(--text-secondary);
                     }
 
@@ -338,8 +338,16 @@ header {
                         height: 100px;
                         text-align: left;
                         text-wrap: wrap;
-                        padding-top: 10px;
+                        padding-top: 15px;
                         box-sizing: border-box;
+                    }
+                    .char-counter {
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+                        color: var(--placeholder);
+
+                        &.char_limit {color: var(--red);}
                     }
                 }
 
