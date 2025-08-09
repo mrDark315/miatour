@@ -290,7 +290,7 @@ header {
                         -webkit-text-fill-color: var(--text-secondary) !important;
                         color: var(--text-secondary) !important;
                         background: transparent !important;
-                        border-bottom: 2px solid var(--border) !important;
+                        border: 1px solid var(--border) !important;
                         transition: var(--bg) 9999s ease-out 9999s, color 9999s ease-out 9999s;
                         -webkit-transition: background-color 9999s ease-out 9999s, color 9999s ease-out 9999s;
                     }
@@ -298,7 +298,7 @@ header {
                     input:-moz-autofill {
                     background: transparent !important;
                     color: var(--text-secondary) !important;
-                    border-bottom: 2px solid var(--border) !important;
+                    border: 1px solid var(--border) !important;
                     }
 
                     // hide arrows input number (Chrome, Safari, Edge)
@@ -318,7 +318,7 @@ header {
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
-                        font-size: 16px;
+                        font-size: 14px;
                         letter-spacing: 0.5px;
                     }
 
@@ -488,7 +488,7 @@ header {
 
     .next_page {
         display: flex;
-        color: var(--text-secondary);
+        color: var(--text-button);
         background: var(--purple);
         padding: 10px 25px;
         border-radius: 15px;

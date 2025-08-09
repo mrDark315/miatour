@@ -40,7 +40,6 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 $to_email = 'mia@miatour.com.ua';
-// $to_email = 'ashykhmin04@gmail.com';
 $currentDateTime = date('d.m.Y H:i');
 $subject = '('. $currentDateTime .')';
 
@@ -70,7 +69,7 @@ try {
 
     // Відправник і одержувач
     $mail->setFrom('mia@miatour.com.ua', 'Запит на подорож');
-    $mail->addAddress($to_email, 'Mia Tour');
+    $mail->addAddress($to_email, 'Miatour');
 
     // Зміст листа
     $mail->CharSet = 'UTF-8';
