@@ -1,7 +1,7 @@
 import '../scss/countries.scss'
 import '../scss/overlay.scss';
 import "flag-icons/css/flag-icons.min.css";
-import { initializeCountrySplide } from './splide_country.js';
+import { initializeReviewsSlider } from './slider-review.js';
 
 // Асинхронна функція для завантаження JSON-файлу
 async function loadCountries() {
