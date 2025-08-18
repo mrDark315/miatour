@@ -169,24 +169,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
-
-
-// AUTORESIZE BUTTONS & LINKS FONT SIZE
-function autoResizeTextForButtonsAndLinks() {
-    const elements = document.querySelectorAll('button, .next_page');
-
-    elements.forEach(el => {
-        const width = el.offsetWidth;
-        const minFont = 14;
-        const maxFont = 20;
-        const scaleFactor = 0.08;
-
-        let fontSize = width * scaleFactor;
-        fontSize = Math.max(minFont, Math.min(maxFont, fontSize));
-
-        el.style.fontSize = `${fontSize}px`;
-    });
-}
-
-document.addEventListener('DOMContentLoaded', autoResizeTextForButtonsAndLinks);
-window.addEventListener('resize', autoResizeTextForButtonsAndLinks);
