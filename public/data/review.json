@@ -16,5 +16,23 @@
         "hotel": "La Perla Villas and Suites",
         "rating": 4,
         "reviewText": "Dolor adipisicing adipisicing deserunt consectetur cillum culpa non laborum aute reprehenderit veniam cillum reprehenderit. Eu nulla dolor aliquip officia velit excepteur irure adipisicing cillum. Id nisi exercitation eu irure fugiat dolore. Ad reprehenderit Lorem dolore voluptate aute incididunt adipisicing velit consequat."
+    },
+    {
+        "id": 2,
+        "clientName": "123",
+        "clientImage": "avatar1.png",
+        "location": "Країна, місто",
+        "hotel": "La Perla Villas and Suites",
+        "rating": 4,
+        "reviewText": "Dolor adipisicing adipisicing deserunt consectetur cillum culpa non laborum aute reprehenderit veniam cillum reprehenderit. Eu nulla dolor aliquip officia velit excepteur irure adipisicing cillum. Id nisi exercitation eu irure fugiat dolore. Ad reprehenderit Lorem dolore voluptate aute incididunt adipisicing velit consequat."
+    },
+    {
+        "id": 2,
+        "clientName": "lksadfnga;swjd",
+        "clientImage": "avatar1.png",
+        "location": "Країна, місто",
+        "hotel": "La Perla Villas and Suites",
+        "rating": 4,
+        "reviewText": "Dolor adipisicing adipisicing deserunt consectetur cillum culpa non laborum aute reprehenderit veniam cillum reprehenderit. Eu nulla dolor aliquip officia velit excepteur irure adipisicing cillum. Id nisi exercitation eu irure fugiat dolore. Ad reprehenderit Lorem dolore voluptate aute incididunt adipisicing velit consequat."
     }
 ]

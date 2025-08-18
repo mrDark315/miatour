@@ -5,7 +5,6 @@ import KeenSlider from 'keen-slider';
 
 const basePath = import.meta.env.BASE_URL || '/';
 const reviewData = `${basePath}data/review.json`;
-const starsRating = `${basePath}review_stars/`;
 const clientImage = `${basePath}clients/`;
 
 // CREATE ARROWS & PAGINATIONS
@@ -89,10 +88,6 @@ export async function initializeReviewsSlider() {
 
 
 // --- Функции для рендеринга (остаются без изменений) ---
-function starsHtml(rating) {
-    return `<img src="${starsRating}stars_${rating}.svg" alt="${rating} зірок" class="review-rating-svg">`;
-}
-
 async function renderSlides(container) {
     try {
         const res = await fetch(reviewData);
@@ -100,7 +95,7 @@ async function renderSlides(container) {
         const reviews = await res.json();
 
         container.innerHTML = reviews.map((r) => {
-            const img = r.clientImage ? `<img src="${clientImage}${r.clientImage}" alt="${r.clientName || ''}">` : '';
+            const img = r.clientImage ? `<img src="${clientImage}${r.clientImage}" alt="${r.clientName+" фото" || ''}">` : '';
             return `
                 <div class="keen-slider__slide">
                     <div class="review_item">
