@@ -11,7 +11,7 @@ if (startInput) {
 
     function initializeDatepicker() {
         const screenWidth = window.innerWidth;
-        const position = screenWidth <= 575.98 ? 'bottom left' : 'bottom center';
+        const position = screenWidth <= 575.98 ? 'bottom center' : 'bottom center';
 
         if (datepickerStart) {
             datepickerStart.destroy();

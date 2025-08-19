@@ -1,59 +1,63 @@
+@use './_vars.scss';
+
 .air-datepicker {
-    background: #C9C9C9;
-    color: #000;
+    background: var(--bg-secondary);
+    color: var(--text);
+    border: 1px var(--border) solid;
     border-radius: 15px;
     box-shadow: 9px 9px 18px 0 rgb(156, 154, 154, 0.6);
     width: 260px;
     font-size: 18px;
 }
 
-.air-datepicker-body--day-name {color: #7B61FF;}
+.air-datepicker-body--day-name {color: var(--purple);}
 
 .air-datepicker-cell.-selected-,
 .air-datepicker-cell.-selected-.-focus- {
-    background-color: #7B61FF;
-    color: #fff;
+    background-color: var(--purple);
+    color: var(--text-button);
 }
 
-.air-datepicker-cell.-focus- {background-color: rgba(123,97,255, 0.2);}
-
-.air-datepicker-cell.-current- {color: #fff;
+.air-datepicker-cell.-focus- {
+    background-color: var(--purple);
+    color: var(--text-button);
 }
+
+.air-datepicker-cell.-current- {color: var(--purple);}
 
 .air-datepicker-nav {border-bottom: none;}
 
-.air-datepicker--nav-action path {fill: #9C9A9A;}
-
-.air-datepicker-nav--title i {color: #000;}
+.air-datepicker-nav--title i {color: var(--text);}
 
 .air-datepicker-button {
-    color: #7B61FF;
-    background: #DDDDDD;
+    color: var(--purple);
+    background: var(--bg-secondary);
     border-radius: 15px;
     font-size: 15px;
+    border: 1px var(--border) solid;
 }
 
 .air-datepicker-button:hover {
-    color: #7B61FF;
-    background: #fff;
+    color: var(--purple);
+    background: var(--bg-overlay);
 }
 
 .air-datepicker--buttons {border-top: none;}
 
 .air-datepicker-cell.-other-month- {
-    color: #7B61FF;
+    color: var(--purple);
     opacity: 0.6;
 }
 
 .air-datepicker-cell.-disabled- {
     background: none;
-    color: #000;
+    color: var(--text);
     opacity: 0.12;
-    &:hover {color: #000;}
+    &:hover {color: var(--text);}
 }
 
 .air-datepicker--pointer::after {
-    background: #C9C9C9;
-    border-top-color: #C9C9C9;
-    margin-top: 2px;
+    background: var(--placeholder);
+    border-color: var(--border);
+    margin-top: 1px;
 }
