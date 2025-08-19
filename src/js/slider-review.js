@@ -5,25 +5,22 @@ const basePath = import.meta.env.BASE_URL || '/';
 const reviewData = `${basePath}data/review.json`;
 const clientImage = `${basePath}clients/`;
 
-// CREATE ARROWS & PAGINATIONS
+// CREATE ARROWS & PAGINATIONS DOTS
 function navigationPlugin(slider) {
     let wrapper, dots, arrowLeft, arrowRight;
 
-    // Вспомогательная функция для создания div-элементов
     function createDiv(className) {
         const div = document.createElement("div");
         div.className = className;
         return div;
     }
 
-    // Функция для создания всей разметки
     function createMarkup() {
-        // 1. Создаем общую обертку
         wrapper = createDiv("navigation-wrapper");
         slider.container.parentNode.appendChild(wrapper);
         wrapper.appendChild(slider.container);
 
-        // 2. Создаем стрелки
+        // create arrows
         arrowLeft = createDiv("arrow arrow--left");
         arrowLeft.innerHTML = '<i class="fa-solid fa-chevron-left fa-2xl"></i>';
         arrowLeft.addEventListener("click", () => slider.prev());
@@ -35,7 +32,7 @@ function navigationPlugin(slider) {
         wrapper.appendChild(arrowLeft);
         wrapper.appendChild(arrowRight);
 
-        // 3. Создаем точки
+        // create dots
         dots = createDiv("dots");
         slider.track.details.slides.forEach((_e, idx) => {
             const dot = document.createElement("button");
@@ -46,17 +43,16 @@ function navigationPlugin(slider) {
         wrapper.appendChild(dots);
     }
 
-    // Функция для обновления активных классов
+    // update active classes
     function updateClasses() {
         const slide = slider.track.details.rel;
 
-        // Обновляем активную точку
+        // update active dot
         Array.from(dots.children).forEach((dot, idx) => {
             dot.classList.toggle("dot--active", idx === slide);
         });
     }
 
-    // Вешаем обработчики на события слайдера
     slider.on("created", () => {
         createMarkup();
         updateClasses();
@@ -65,15 +61,13 @@ function navigationPlugin(slider) {
 }
 
 
-// --- ГЛАВНАЯ ФУНКЦИЯ ИНИЦИАЛИЗАЦИИ ---
+// KEEN SLIDER INITIALIZATION
 export async function initializeReviewsSlider() {
     const track = document.getElementById('reviewsSlider');
     if (!track) return;
 
-    // Сначала, как и раньше, рендерим слайды
     await renderSlides(track);
 
-    // Затем инициализируем Keen Slider, передавая ему наш плагин
     new KeenSlider(track, {
         loop: true,
         renderMode: 'performance',
@@ -95,8 +89,7 @@ export async function initializeReviewsSlider() {
     }, [navigationPlugin,]);
 }
 
-
-// --- Функции для рендеринга (остаются без изменений) ---
+// CREATE SLIDES
 async function renderSlides(container) {
     try {
         const res = await fetch(reviewData);
