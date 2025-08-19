@@ -820,6 +820,14 @@ header {
     }
 }
 
+@media (max-width: 991.98px) {
+    .review {
+        .reviews-slider {
+            .arrow {display: none;}
+        }
+    }
+}
+
 // MAIN ABOUT US
 .about_us {
     margin-top: 130px;

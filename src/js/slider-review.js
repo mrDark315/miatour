@@ -83,6 +83,15 @@ export async function initializeReviewsSlider() {
             spacing: 30,
             origin: "center",
         },
+        breakpoints: {
+            '(max-width: 991.98px)': {
+                slides: {
+                    perView: 1,
+                    spacing: 15,
+                    origin: "auto"
+                }
+            }
+        }
     }, [navigationPlugin,]);
 }
 
