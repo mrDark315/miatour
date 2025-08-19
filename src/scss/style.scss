@@ -354,6 +354,7 @@ header {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
+
                     button {
                     height: 40px;
                     width: 100%;
@@ -362,8 +363,8 @@ header {
                     border-radius: 15px;
                     cursor: pointer;
                     transition: background 0.3s ease;
-                    font-size: clamp(14px, 2vw, 18px);
-                }
+                    font-size: clamp(14px, 2vw, 20px);
+                    }
                 }
             }
 
@@ -489,14 +490,16 @@ header {
     justify-content: space-between;
     margin-top: 100px;
     align-items: center;
+    height: 40px;
 
     .next_page {
+        display: flex;
         color: var(--text-button);
         background: var(--purple);
-        padding: 10px 20px;
+        padding: 0 20px;
+        height: 100%;
         border-radius: 15px;
         align-items: center;
-        justify-content: center;
         box-sizing: border-box;
         font-size: clamp(14px, 2vw, 20px);
     }
@@ -712,54 +715,46 @@ header {
         }
 
         .keen-slider {
+            max-width: 70vw;
+            min-width: 30vw;
+
+            .review_item {
             background: var(--bg-secondary);
             border-radius: 15px;
-            max-width: 60vw;
-            min-width: 30vw;
-        }
+            padding: 20px 30px;
+            box-sizing: border-box;
 
-        .review_item {
-            text-align: center;
-            margin: 30px 20px;
-        }
+                .review_header {
+                    color: var(--text-secondary);
+                    .hotel_name {margin-top: 10px;}
+                }
 
-        .review_header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-secondary);
-            p {
-                width: 120px;
-                line-height: 35px;
-                &:last-of-type {text-align: right;}
+                .review_text {margin-top: 20px;}
+
+                .review_footer {
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    img {margin-right: 20px;}
+
+                    div {
+                        .review-rating-container {
+                        margin-top: 10px;
+                        img {height: 20px;}
+                        }
+                    }
+                }
             }
-            img {width: 100px; height: 100px;}
-        }
-
-        .review_info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .hotel_name {
-            font-size: 22px;
-            color: var(--text-secondary);
-        }
-
-        .review-rating-container {
-            margin-top: 10px;
-            img {height: 20px;}
         }
 
         .review_text {
             font-family: "Playfair Display SC";
             line-height: 35px;
             margin-top: 15px;
+            font-size: clamp(14px, 1.2vw, 18px);
         }
 
-        // --- Стили для навигации ---
+        // dots pagination
         .dots {
             display: flex;
             justify-content: center;
@@ -790,6 +785,7 @@ header {
             height: 13px;
         }
 
+        // arrow navidation
         .arrow {
             width: 70px;
             height: 70px;

@@ -1,5 +1,3 @@
-// src/js/slider-review.js
-
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
 
@@ -80,10 +78,12 @@ export async function initializeReviewsSlider() {
         loop: true,
         renderMode: 'performance',
         drag: true,
-    }, [
-        // Вот здесь магия: подключаем плагин
-        navigationPlugin,
-    ]);
+        slides: {
+            perView: 2,
+            spacing: 30,
+            origin: "center",
+        },
+    }, [navigationPlugin,]);
 }
 
 
@@ -99,17 +99,22 @@ async function renderSlides(container) {
             return `
                 <div class="keen-slider__slide">
                     <div class="review_item">
+
                         <div class="review_header">
-                            <p>${r.clientName || ''}</p>
-                            ${img}
-                            <p>${r.location || ''}</p>
-                        </div>
-                        <div class="review_info">
+                            <p class="location">${r.location || ''}</p>
                             <p class="hotel_name">${r.hotel || ''}</p>
-                            <div class="review-rating-container">
+                        </div>
+
+                        <p class="review_text">${r.reviewText || ''}</p>
+
+                        <div class="review_footer">
+                            ${img}
+                            <div>
+                                <p>${r.clientName || ''}</p>
+                                <div class="review-rating-container">
                                 <img src="/src/img/hotel_stars/stars_${r.rating}.svg" alt="${r.rating} зірок">
+                                </div>
                             </div>
-                            <p class="review_text">${r.reviewText || ''}</p>
                         </div>
                     </div>
                 </div>`;
