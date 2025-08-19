@@ -73,7 +73,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
     animation: SlideFromTop 1s ease-out forwards;
     background: var(--bg-header-aside);
@@ -502,7 +502,6 @@ header {
         color: var(--text-button);
         background: var(--purple);
         padding: 0 20px;
-        height: 100%;
         border-radius: 15px;
         align-items: center;
         box-sizing: border-box;
@@ -822,7 +821,9 @@ header {
 
 @media (max-width: 991.98px) {
     .review {
+        margin-top: 150px;
         .reviews-slider {
+            margin-top: 20px;
             .arrow {display: none;}
         }
     }
@@ -922,7 +923,7 @@ header {
 
 @media (max-width: 991.98px) {
     .about_us {
-        margin-top: 5%;
+        margin-top: 90px;
         p {margin-top: 30px;}
 
         .timeline_container {
@@ -1055,7 +1056,7 @@ header {
 
 // FOOTER (CONTACTS)
 footer {
-    margin: 100px 0 50px;
+    margin: 100px 0 30px;
     display: flex;
     justify-content: space-between;
 
@@ -1069,7 +1070,7 @@ footer {
             font-size: clamp(14px, 2vw, 24px);
         }
         i {
-            font-size: 34px;
+            font-size: 36px;
             color: var(--purple);
             cursor: pointer;
         }
@@ -1086,6 +1087,7 @@ footer {
 @media (max-width: 424.98px) {
     footer {
         .contact_us {
+            align-items: flex-end;
             h4 {display: none;}
         }
     }
