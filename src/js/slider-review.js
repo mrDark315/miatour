@@ -101,8 +101,11 @@ async function renderSlides(container) {
                     <div class="review_item">
 
                         <div class="review_header">
-                            <p class="location">${r.location || ''}</p>
-                            <p class="hotel_name">${r.hotel || ''}</p>
+                            <div>
+                                <p class="location">${r.location || ''}</p>
+                                <p class="hotel_name">${r.hotel || ''}</p>
+                            </div>
+                            <i class="fa-solid fa-quote-right"></i>
                         </div>
 
                         <p class="review_text">${r.reviewText || ''}</p>
