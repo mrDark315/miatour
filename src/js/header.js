@@ -1,70 +1,94 @@
-// HEADER ANCHOR LIMKS SCROLL
-// document.addEventListener('DOMContentLoaded', () => {
-//     const anchorLinks = document.querySelectorAll('.anchor-link');
-//     const scrollOffset = 0;
+// HEADER BURGER MENU (with scrollbar compensation)
+const menu = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav_menu');
+const navLinks = document.querySelectorAll('.nav_menu .anchor-link');
+const body = document.body;
+const htmlEl = document.documentElement;
 
-//     anchorLinks.forEach(link => {
-//         link.addEventListener('click', (event) => {
-//             event.preventDefault();
+const OPEN_CLASS = 'is-menu-open';      // service class on <html>
+const NO_SCROLL_CLASS = 'body_no_scroll'; // your existing class on <body>
 
-//             const targetId = link.getAttribute('href');
-//             const targetElement = document.querySelector(targetId);
+/* Get OS scrollbar width so we can compensate layout shift */
+function getScrollbarWidth() {
+  return window.innerWidth - htmlEl.clientWidth;
+}
 
-//             if (targetElement) {
-//                 const targetPosition = targetElement.offsetTop - scrollOffset;
+/* Lock page scroll without shifting layout */
+function lockScroll() {
+  const sbw = getScrollbarWidth();
+  body.classList.add(NO_SCROLL_CLASS);         // your CSS likely sets overflow:hidden here
+  if (sbw > 0) body.style.paddingRight = sbw + 'px'; // compensate lost scrollbar
+  htmlEl.style.overflowX = 'hidden';           // avoid horizontal scroll while menu is open
+}
 
-//                 window.scrollTo({
-//                     top: targetPosition,
-//                     behavior: 'smooth'
-//                 });
-//             }
-//         });
-//     });
-// });
+/* Restore scroll and cleanup inline styles */
+// В header.js — замените только эту функцию
+function unlockScroll() {
+  body.classList.remove(NO_SCROLL_CLASS);
+  body.style.paddingRight = '';
+  // Оставляем горизонтальный скролл клипнутым после закрытия
+  // (безопасно для лендинга; если нужно — можно потом вернуть '')
+  htmlEl.style.overflowX = 'clip';
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-    const logoLink = document.getElementById('logo_link');
 
-    if (logoLink) {
-        logoLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
+/* Open/close helpers keep state centralized */
+function openMenu() {
+  menu.classList.add('active');
+  navMenu.classList.add('active');
+  htmlEl.classList.add(OPEN_CLASS);
+  lockScroll();
+}
+
+function closeMenu() {
+  menu.classList.remove('active');
+  navMenu.classList.remove('active');
+  htmlEl.classList.remove(OPEN_CLASS);
+  unlockScroll();
+}
+
+function toggleMenu() {
+  if (htmlEl.classList.contains(OPEN_CLASS)) closeMenu();
+  else openMenu();
+}
+
+/* Click on hamburger toggles menu */
+if (menu) {
+  menu.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+}
+
+/* Click on anchor inside menu closes it */
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (htmlEl.classList.contains(OPEN_CLASS)) closeMenu();
+  });
 });
 
-// HEADER BURGER MENU
-const menu = document.querySelector('.hamburger')
-const navMenu = document.querySelector('.nav_menu')
-const navLinks = document.querySelectorAll('.nav_menu .anchor-link')
-const body = document.body
-
-menu.addEventListener("click", () => {
-    menu.classList.toggle("active")
-    navMenu.classList.toggle("active")
-    body.classList.toggle("body_no_scroll");
-})
-
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        if (navMenu.classList.contains("active")) {
-            menu.classList.remove("active");
-            navMenu.classList.remove("active");
-            body.classList.remove("body_no_scroll");
-        }
-    });
+/* Click outside menu closes it */
+document.addEventListener('click', (event) => {
+  const clickInsideMenu = navMenu && navMenu.contains(event.target);
+  const clickOnHamburger = menu && menu.contains(event.target);
+  if (!clickInsideMenu && !clickOnHamburger && htmlEl.classList.contains(OPEN_CLASS)) {
+    closeMenu();
+  }
 });
 
-document.addEventListener("click", (event) => {
-    const isClickInsideMenu = navMenu.contains(event.target);
-    const isClickOnHamburger = menu.contains(event.target);
+/* ESC closes menu */
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && htmlEl.classList.contains(OPEN_CLASS)) {
+    closeMenu();
+  }
+});
 
-    if (!isClickInsideMenu && !isClickOnHamburger && navMenu.classList.contains("active")) {
-        menu.classList.remove("active");
-        navMenu.classList.remove("active");
-        body.classList.remove("body_no_scroll");
-    }
+/* Recompute compensation on resize while open */
+window.addEventListener('resize', () => {
+  if (htmlEl.classList.contains(OPEN_CLASS)) {
+    // refresh padding-right according to new scrollbar width
+    body.style.paddingRight = '';
+    const sbw = getScrollbarWidth();
+    if (sbw > 0) body.style.paddingRight = sbw + 'px';
+  }
 });

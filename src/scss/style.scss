@@ -12,7 +12,7 @@
     // outline: 1px var(--red) solid;
 }
 
-html {width: 100%; scroll-behavior: smooth;}
+html {width: 100vw; scroll-behavior: smooth;}
 
 body {
     position: relative;
@@ -73,7 +73,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     box-sizing: border-box;
     animation: SlideFromTop 1s ease-out forwards;
     background: var(--bg-header-aside);
