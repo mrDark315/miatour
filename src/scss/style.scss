@@ -1045,12 +1045,6 @@ header {
     }
 }
 
-@media (max-width: 575.98px) {
-    .about_us {
-        p {&:last-of-type {margin-top: 30px;}}
-    }
-}
-
 // FOOTER (CONTACTS)
 footer {
     margin: 100px 0 50px;
@@ -1064,13 +1058,27 @@ footer {
         align-items: center;
         gap: 20px;
         h4 {
-            min-width: 250px;
             font-size: clamp(14px, 2vw, 24px);
         }
         i {
             font-size: 34px;
             color: var(--purple);
             cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    footer {
+        .logo {display: none;}
+        .logo-mini {display: block;}
+    }
+}
+
+@media (max-width: 424.98px) {
+    footer {
+        .contact_us {
+            h4 {display: none;}
         }
     }
 }
