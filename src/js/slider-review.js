@@ -23,11 +23,11 @@ function navigationPlugin(slider) {
 
         // create arrows
         arrowLeft = createDiv('arrow arrow--left');
-        arrowLeft.innerHTML = '<i class="fa-solid fa-chevron-left fa-2xl"></i>';
+        arrowLeft.innerHTML = '<i class="fa-solid fa-chevron-left fa-2xl" data-aos="fade-right"></i>';
         arrowLeft.addEventListener('click', () => slider.prev());
 
         arrowRight = createDiv('arrow arrow--right');
-        arrowRight.innerHTML = '<i class="fa-solid fa-chevron-right fa-2xl"></i>';
+        arrowRight.innerHTML = '<i class="fa-solid fa-chevron-right fa-2xl" data-aos="fade-left"></i>';
         arrowRight.addEventListener('click', () => slider.next());
 
         wrapper.appendChild(arrowLeft);
@@ -189,27 +189,27 @@ async function renderSlides(container) {
             : '';
             return `
             <div class="keen-slider__slide">
-                <div class="review_item">
+                <div class="review_item" data-aos="zoom-in-up">
 
-                <div class="review_header">
-                    <div>
-                    <p class="location">${r.location || ''}</p>
-                    <p class="hotel_name">${r.hotel || ''}</p>
+                    <div class="review_header">
+                        <div>
+                            <p class="location">${r.location || ''}</p>
+                            <p class="hotel_name">${r.hotel || ''}</p>
+                        </div>
+                        <i class="fa-solid fa-quote-right"></i>
                     </div>
-                    <i class="fa-solid fa-quote-right"></i>
-                </div>
 
-                <p class="review_text">${r.reviewText || ''}</p>
+                    <p class="review_text">${r.reviewText || ''}</p>
 
-                <div class="review_footer">
-                    ${img}
-                    <div>
-                    <p>${r.clientName || ''}</p>
-                    <div class="review-rating-container">
-                        <img src="/src/img/hotel_stars/stars_${r.rating}.svg" alt="${r.rating} зірок">
+                    <div class="review_footer">
+                        ${img}
+                        <div>
+                            <p>${r.clientName || ''}</p>
+                            <div class="review-rating-container">
+                                <img src="/src/img/hotel_stars/stars_${r.rating}.svg" alt="${r.rating} зірок">
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>`;
         })

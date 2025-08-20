@@ -627,8 +627,6 @@ header {
         box-sizing: border-box;
 
         .hotel {
-            cursor: pointer;
-
             .img_container {
                 overflow: hidden;
                 border-radius: 15px;
@@ -653,7 +651,7 @@ header {
             div {
                 display: flex;
                 justify-content: space-between;
-                margin-top: 5px;
+                padding-top: 5px;
 
                 h6 {
                     font-size: 18px;
@@ -745,23 +743,28 @@ header {
                 .review_header {
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     color: var(--text-secondary);
                     font-size: clamp(14px, 2vw, 20px);
                     .hotel_name {margin-top: 10px;}
-                    i {font-size: clamp(20px, 3vw, 40px);}
+                    i {
+                        font-size: clamp(20px, 3vw, 40px);
+                        transition: color .4s ease;
+                    }
                 }
 
                 .review_text {
                     font-family: "Playfair Display SC";
-                    line-height: 33px;
+                    line-height: 35px;
                     font-size: clamp(14px, 1.3vw, 24px);
-                    margin-top: 20px;
+                    margin-top: 30px;
                     text-align: right;
                 }
 
                 .review_footer {
                     display: flex;
                     align-items: center;
+                    margin-top: 20px;
                     p {
                         color: var(--text-secondary);
                         font-size: clamp(14px, 2vw, 20px);
@@ -776,6 +779,8 @@ header {
                         }
                     }
                 }
+
+                &:hover {i {color: var(--purple);}}
             }
         }
 
@@ -1078,7 +1083,7 @@ footer {
     .contact_us {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 50px;
         h4 {
             font-size: clamp(14px, 2vw, 24px);
         }
