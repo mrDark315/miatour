@@ -1,5 +1,5 @@
 @use './_vars.scss';
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:wght@400..900&family=Playfair:opsz,wght@5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
     list-style: none;
     border: none;
     outline: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     // outline: 1px var(--red) solid;
 }
 
@@ -16,9 +16,10 @@ html {width: 100vw; scroll-behavior: smooth;}
 
 body {
     position: relative;
-    font-family: 'Playfair', serif;
+    font-family: 'Source Sans 3', serif;
     font-size: 20px;
     font-weight: 400;
+    font-optical-sizing: auto;
     background: var(--bg);
     color: var(--text);
     overflow-x: hidden;
@@ -39,9 +40,8 @@ body.dark-theme .logo {
 }
 
 h5 {
-        font-family: 'Playfair Display';
         font-size: 28px;
-        font-weight: 600;
+        font-weight: 500;
 }
 
 @media (max-width: 575.98px) {
@@ -122,8 +122,7 @@ header {
         .language {
             appearance: none;
             background: transparent;
-            font-size: 16px;
-            margin-bottom: 3px;
+            font-size: 18px;
             padding-right: 20px;
             cursor: pointer;
             color: var(--text);
@@ -235,7 +234,6 @@ header {
     .travel_title {
         animation: SlideFromLeft 1s ease-out forwards;
         h1{
-            font-family: "Playfair Display", serif;
             font-size: 6vw;
             line-height: 140%;
             letter-spacing: 3px;
@@ -264,10 +262,7 @@ header {
         animation: SlideFromRight 1s ease-out forwards;
         .request_title {
             text-align: center;
-            h4 {
-                color: var(--text);
-                font-size: 1.6vw;
-            }
+            h4 {font-size: 1.6vw;}
             h6 {
                 color: var(--text-secondary);
                 font-size: 1.2vw;
@@ -541,7 +536,7 @@ header {
 .popular_countries {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 2vw;
+    column-gap: 1.5vw;
     margin-top: 30px;
 
     .country {
@@ -642,8 +637,7 @@ header {
             }
 
             h4 {
-                font-family: 'Playfair Display';
-                font-size: 20px;
+                font-size: 18px;
                 font-weight: 500;
                 margin-top: 5px;
                 margin-left: 3px;
@@ -655,7 +649,8 @@ header {
                 padding-top: 5px;
 
                 h6 {
-                    font-size: 18px;
+                    font-size: 16px;
+                    font-weight: 400;
                     color: var(--text-secondary);
 
                     i {
@@ -746,7 +741,8 @@ header {
                     justify-content: space-between;
                     align-items: center;
                     color: var(--text-secondary);
-                    font-size: clamp(14px, 2vw, 20px);
+                    font-size: clamp(14px, 1.4vw, 20px);
+                    font-weight: 500;
                     .hotel_name {margin-top: 10px;}
                     i {
                         font-size: clamp(20px, 3vw, 40px);
@@ -755,9 +751,9 @@ header {
                 }
 
                 .review_text {
-                    font-family: "Playfair Display SC";
                     line-height: 35px;
-                    font-size: clamp(14px, 1.3vw, 24px);
+                    font-size: clamp(14px, 1.6vw, 24px);
+                    font-weight: 500;
                     margin-top: 30px;
                     text-align: right;
                 }
@@ -857,6 +853,8 @@ header {
         line-height: 36px;
         font-size: 24px;
         &:last-of-type {margin-top: 20px;}
+
+        span {font-weight: 500;}
     }
 
 
@@ -934,7 +932,8 @@ header {
                 margin-top: 10px;
                 color: var(--text);
                 text-align: center;
-                font-size: 28px;
+                font-size: 26px;
+                font-weight: 600;
             }
         }
     }
@@ -1087,6 +1086,7 @@ footer {
         gap: 50px;
         h4 {
             font-size: clamp(14px, 2vw, 24px);
+            font-weight: 500;
         }
         i {
             font-size: 36px;

@@ -157,7 +157,6 @@ export async function initializeReviewsSlider() {
         {
         loop: true,
         renderMode: 'performance',
-        drag: true,
         slides: {
             perView: 2,
             spacing: 30,
