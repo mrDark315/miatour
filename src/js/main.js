@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // LOAD POPULAR COUNTRIES
 async function loadCountries() {
-    const basePath = import.meta.env.BASE_URL || '/';
-    const countriesDataPath = `${basePath}data/countries_list.json`;
+    // const basePath = import.meta.env.BASE_URL || '/';
+    // const countriesDataPath = `${basePath}data/countries_list.json`;
+    const countriesDataPath = 'data/countries_list.json';
 
     try {
         const response = await fetch(countriesDataPath);
@@ -66,7 +67,7 @@ function displayPopularCountries(countries, basePath) {
         countryDiv.dataset.countryId = country.id;
 
         const firstPhoto = country.photo && country.photo[0];
-        const photoSrc = firstPhoto ? `${basePath}countries/${firstPhoto}` : '';
+        const photoSrc = firstPhoto ? `countries/${firstPhoto}` : '';
 
         countryDiv.innerHTML = `
         <div class="img_container">

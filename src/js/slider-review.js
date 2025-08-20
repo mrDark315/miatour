@@ -4,6 +4,7 @@ import KeenSlider from 'keen-slider';
 const basePath = import.meta.env.BASE_URL || '/';
 const reviewData = `${basePath}data/review.json`;
 const clientImage = `${basePath}clients/`;
+const starsDir   = `${basePath}img/hotel_stars/`;
 
 // CREATE ARROWS & DOTS
 function navigationPlugin(slider) {
@@ -116,9 +117,14 @@ function adaptiveHeightPlugin(slider) {
 
     slider.on('created', () => {
         requestAnimationFrame(() => {
-        observeImages();
-        observeVisibleBoxes();
-        measureAndSet();
+            observeImages();
+            observeVisibleBoxes();
+            // ДАДИМ AutoHeightOnce выставить стартовую высоту, затем — первый честный замер
+            setTimeout(() => {
+            const h = parseFloat(getComputedStyle(slider.container).height) || 0;
+            if (!h) measureAndSet(); // если подпорки нет — подстрахуемся
+            else measureAndSet();    // мягко синхронизируемся со стартовой высотой
+            }, 80);
         });
         window.addEventListener('resize', measureAndSet);
     });
@@ -145,14 +151,73 @@ function adaptiveHeightPlugin(slider) {
     });
 }
 
+function waitImages(el) {
+    const imgs = Array.from(el.querySelectorAll('img'));
+    return Promise.all(
+        imgs.map(img =>
+        img.complete && img.naturalHeight
+            ? Promise.resolve()
+            : new Promise(res => img.addEventListener('load', res, { once: true }))
+        )
+    );
+}
+
+// Плагин: подгоняем высоту контейнера под активный слайд
+// ставим максимальную из текущих высот один раз после created
+function AutoHeightOnce(slider) {
+    slider.on('created', () => {
+        const bootstrap = () => {
+        let maxH = 0;
+        for (const s of slider.slides) {
+            const box = s.querySelector('.review_item') || s;
+            if (!box) continue;
+            const h = box.scrollHeight;
+            if (h > maxH) maxH = h;
+        }
+        if (maxH > 0) {
+            slider.container.style.height = Math.ceil(maxH) + 'px';
+            // форсируем перерисовку:
+            void slider.container.offsetHeight;
+            slider.update();
+        }
+        };
+        // даём DOM/шрифтам примениться
+        requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            bootstrap();
+            setTimeout(bootstrap, 60);
+        });
+        });
+    });
+}
+
+
+function whenVisible(el, cb) {
+    if (!('IntersectionObserver' in window)) return cb();
+    const io = new IntersectionObserver((entries) => {
+        if (entries.some(e => e.isIntersecting)) {
+        io.disconnect();
+        cb();
+        }
+    }, { root: null, threshold: 0.15 });
+    io.observe(el);
+}
+
+
 // KEEN SLIDER INITIALIZATION
 export async function initializeReviewsSlider() {
     const track = document.getElementById('reviewsSlider');
     if (!track) return;
 
     await renderSlides(track);
+    await waitImages(track);
 
-    new KeenSlider(
+    if (document.fonts && document.fonts.ready) {
+        try { await document.fonts.ready; } catch {}
+    }
+
+    whenVisible(track, () => {
+        const slider = new KeenSlider(
         track,
         {
         loop: true,
@@ -163,16 +228,20 @@ export async function initializeReviewsSlider() {
         },
         breakpoints: {
             '(max-width: 991.98px)': {
-            slides: {
-                perView: 1,
-                spacing: 15,
-            },
+                slides: {
+                    perView: 1,
+                    spacing: 15,
+                },
             },
         },
         },
-        [navigationPlugin, adaptiveHeightPlugin]
+        [navigationPlugin, AutoHeightOnce, adaptiveHeightPlugin]
     );
-    }
+    requestAnimationFrame(() => slider.update());
+    window.addEventListener('load', () => slider.update(), { once: true });
+    window.addEventListener('resize', () => slider.update());
+    })
+}
 
 // CREATE SLIDES
 async function renderSlides(container) {
@@ -205,7 +274,7 @@ async function renderSlides(container) {
                         <div>
                             <p>${r.clientName || ''}</p>
                             <div class="review-rating-container">
-                                <img src="/src/img/hotel_stars/stars_${r.rating}.svg" alt="${r.rating} зірок">
+                                <img src="${starsDir}stars_${r.rating}.svg" alt="${r.rating} зірок">
                             </div>
                         </div>
                     </div>

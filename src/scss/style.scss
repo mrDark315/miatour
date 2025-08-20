@@ -728,7 +728,7 @@ header {
         .keen-slider {
             max-width: 70vw;
             min-width: 30vw;
-            transition: height .25s ease;
+            transition: height .3s ease;
 
             .review_item {
             background: var(--bg-secondary);
@@ -769,10 +769,9 @@ header {
                     img {margin-right: 20px;}
 
                     div {
-
                         .review-rating-container {
-                        margin-top: 10px;
-                        img {height: 20px;}
+                            margin-top: 10px;
+                            img {height: 20px;}
                         }
                     }
                 }
