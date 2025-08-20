@@ -16,19 +16,20 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: vars.$color-overlay-black;
+        background: var(--bg-overlay);
         backdrop-filter: blur(0.5px);
         z-index: 10;
     }
 
     .overlay {
         position: relative;
-        top: 53%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 3% 0;
         width: 65%;
-        background: vars.$color-dark-gray;
+        // height: 35%;
+        background: var(--bg-secondary);
         border-radius: 24px;
         z-index: 20;
 
@@ -36,17 +37,15 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            font-size: 35px;
+            font-size: 30px;
             cursor: pointer;
-            color: vars.$color-gray;
+            color: var(--text-secondary);
         }
 
         .overlay_content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 100%;
-            width: 90%;
             padding: 0 5%;
 
             .info_left {
@@ -57,46 +56,53 @@
                 width: 50%;
                 h2 {
                     font-family: "Playfair Display DC";
-                    color: vars.$color-light-gray;
-                    font-size: 2.5vw;
+                    color: var(--text);
+                    font-size: clamp(20px, 2vw, 28px);
                     font-weight: 700;
                 }
-                .splide {
-                    margin-top: 30px;
-                    .splide__track {
-                        border-radius: 24px;
-                        overflow: hidden;
-                        .splide__list {
+                .keen_gallery {
+                    margin-top: 10px;
+                display: grid;
+                gap: 10px;
+                    .main-slider {
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                    border-radius: 15px;
+                    overflow: hidden;
+                        .keen-slider__slide {
+                            display: grid;
+                            place-items: center;
                             img {
-                                width: 100%;
-                                height: 100%;
-                                object-fit: cover;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            border-radius: 15px;
                             }
                         }
                     }
-                    .splide__arrows {
-                        .splide__arrow {
-                            width: 40px;
-                            height: 40px;
-                            background: rgba(0, 0, 0, 0.5);
-                            svg {fill: #fff;}
+                    .thumb-slider {
+                        width: 100%;
+                        .keen-slider__slide {
+                            cursor: pointer;
+                            border-radius: 15px;
+                            overflow: hidden;
+
+                            img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            }
                         }
                     }
                 }
             }
 
             .info_right {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 80%;
                 width: 45%;
-                color: vars.$color-light-gray;
-                div {
-                    h5 {font-size: 2.1vw; font-weight: 700;}
-                    h6 {font-size: 1.8vw;}
-                }
-                p {font-size: 1.9vw;}
+                color: var(--text-secondary);
+                p {font-size: clamp(14px, 1.2vw, 20px); }
             }
         }
     }
