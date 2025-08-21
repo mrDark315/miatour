@@ -11,7 +11,7 @@ if (startInput) {
 
     function initializeDatepicker() {
         const screenWidth = window.innerWidth;
-        const position = screenWidth <= 575.98 ? 'bottom center' : 'bottom center';
+        const position = screenWidth <= 575.98 ? 'bottom left' : 'bottom right';
 
         if (datepickerStart) {
             datepickerStart.destroy();
@@ -56,16 +56,13 @@ if (finishInput) {
     const wrapper = finishInput.closest('.input_wrapper');
 
     function initializeDatepicker() {
-        const screenWidth = window.innerWidth;
-        const position = screenWidth <= 575.98 ? 'bottom center' : 'bottom center';
-
         if (datepickerFinish) {
             datepickerFinish.destroy();
         }
 
         datepickerFinish = new AirDatepicker(finishInput, {
             locale: localeUk,
-            position: position,
+            position: 'bottom right',
             minDate: new Date(),
             buttons: ['clear'],
             autoClose: true,
