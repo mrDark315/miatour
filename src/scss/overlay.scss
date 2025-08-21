@@ -54,7 +54,6 @@
                 text-align: center;
                 width: 50%;
                 h2 {
-                    font-family: "Playfair Display DC";
                     color: var(--text);
                     font-size: clamp(20px, 2vw, 28px);
                     font-weight: 700;
@@ -64,21 +63,21 @@
                     display: grid;
                     gap: 10px;
                     .main-slider {
-                    width: 100%;
-                    aspect-ratio: 16 / 9;
-                    border-radius: 15px;
-                    overflow: hidden;
-                        .keen-slider__slide {
-                            display: grid;
-                            place-items: center;
-                            img {
-                            display: block;
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                            border-radius: 15px;
+                        width: 100%;
+                        aspect-ratio: 16 / 9;
+                        border-radius: 15px;
+                        overflow: hidden;
+                            .keen-slider__slide {
+                                display: grid;
+                                place-items: center;
+                                img {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                                border-radius: 15px;
+                                }
                             }
-                        }
                     }
                     .thumb-slider {
                         width: 100%;
@@ -101,7 +100,17 @@
             .info_right {
                 width: 45%;
                 color: var(--text-secondary);
-                p {font-size: clamp(14px, 1.3vw, 20px); }
+                div {
+                    h5 {
+                        font-weight: 700;
+                        font-size: clamp(16px, 2vw, 24px);
+                    }
+                    h6 {
+                        margin-bottom: 15px;
+                        font-size: clamp(14px, 1.2vw, 18px);
+                    }
+                }
+                p {font-size: clamp(14px, 1.4vw, 20px); }
             }
         }
     }

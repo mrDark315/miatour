@@ -1,6 +1,5 @@
-@use 'vars';
-@use "sass:color";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Playfair+Display:wght@400..900&family=Playfair:opsz,wght@5..1200,300..900&display=swap');
+@use './_vars.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 * {
     margin: 0;
@@ -9,20 +8,24 @@
     list-style: none;
     border: none;
     outline: none;
+    // letter-spacing: 0.5px;
 }
 
 html {width: 100%;}
 
 body {
     position: relative;
-    font-family: 'Playfair', serif;
-    font-size: 20px;
+    font-family: 'Source Sans 3', serif;
     font-weight: 400;
-    background: vars.$color-black;
-    color: vars.$color-white;
+    font-optical-sizing: auto;
+    background: var(--bg);
+    color: var(--text);
     overflow-x: hidden;
 }
 body.body_no_scroll {overflow: hidden;}
+body.dark-theme .logo {
+    content: url("/src/img/miatour-logo-dark.svg");
+}
 
 .wrapper {margin: 0 5%;}
 
@@ -35,7 +38,6 @@ body.body_no_scroll {overflow: hidden;}
 }
 
 h5 {
-        font-family: 'Playfair Display';
         font-size: 28px;
         font-weight: 600;
         letter-spacing: 1px;
@@ -65,7 +67,7 @@ a {all: unset; cursor: pointer;}
     align-items: center;
     padding: 20px 5%;
     z-index: 3;
-    background: vars.$color-header-black;
+    background: var(--bg-header-aside);
     position: fixed;
     top: 0;
     left: 0;
@@ -86,7 +88,8 @@ a {all: unset; cursor: pointer;}
             display: flex;
             width: 60px;
             height: 40px;
-            background: vars.$color-purple;
+            background: var(--purple);
+            color: var(--text-button);
             border-radius: 20px;
             align-items: center;
             justify-content: center;
@@ -97,7 +100,7 @@ a {all: unset; cursor: pointer;}
             position: relative;
             i {
                 position: absolute;
-                color: vars.$color-gray;
+                color: var(--placeholder);
                 z-index: 2;
                 top: 50%;
                 transform: translateY(-50%);
@@ -108,15 +111,16 @@ a {all: unset; cursor: pointer;}
                 position: relative;
                 height: 40px;
                 padding: 0 40px 0 50px;
-                background: vars.$color-input-gray;
+                background: transparent;
+                border: 1px var(--border) solid;
                 border-radius: 20px;
                 z-index: 1;
                 font-size: 18px;
-                color: vars.$color-dark-gray;
+                color: var(--text);
 
                 &::placeholder {
                     font-size: 18px;
-                    color: vars.$color-gray;
+                    color: var(--placeholder);
                 }
             }
         }
@@ -135,7 +139,7 @@ a {all: unset; cursor: pointer;}
             @media (pointer: fine) {
                 &:hover{i {
                     right: 0;
-                    color: vars.$color-purple;
+                    color: var(--purple);
                 }}
             }
         }
@@ -153,12 +157,12 @@ a {all: unset; cursor: pointer;}
             align-items: center;
             margin-bottom: 20px;
             cursor: pointer;
-            &:last-of-type {margin-bottom: 25px;}
             span {
-                width: 100px;
-                height: 75px;
-                border-radius: 24px;
-                border: 1px vars.$color-gray solid;
+                width: 75px;
+                height: 57px;
+                border-radius: 15px;
+                border: 1px var(--border) solid;
+                box-sizing: border-box;
             }
             h5 {
                 font-size: 24px;
@@ -167,7 +171,6 @@ a {all: unset; cursor: pointer;}
             }
     }
     h1 {
-        font-family: 'Playfair Display DC';
         font-size: 36px;
         text-wrap: wrap;
         width: 350px;
@@ -182,81 +185,3 @@ a {all: unset; cursor: pointer;}
             .country {&:last-of-type {margin-bottom: 80px;}}}
     }
 }
-
-// .overlay_window {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     z-index: 1000;
-//     display: none;
-//     &.active {display: block;}
-
-//     .background {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         background: vars.$color-overlay-black;
-//         backdrop-filter: blur(0.5px);
-//         z-index: 10;
-//     }
-
-//     .overlay {
-//         position: relative;
-//         top: 53%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//         height: 60%;
-//         width: 65%;
-//         background: vars.$color-dark-gray;
-//         border-radius: 24px;
-//         z-index: 20;
-
-//         i{
-//             position: absolute;
-//             top: 20px;
-//             right: 20px;
-//             font-size: 40px;
-//             cursor: pointer;
-//             color: vars.$color-gray;
-//         }
-
-//         .overlay_content {
-//             display: flex;
-//             justify-content: space-between;
-//             align-items: center;
-//             height: 100%;
-//             padding: 0 5%;
-//             .splide {
-//                 .splide__track {
-//                     border-radius: 24px;
-//                     overflow: hidden;
-//                     .splide__list {
-//                         img {
-//                             width: 100%;
-//                             height: 100%;
-//                             object-fit: cover;
-//                         }
-//                     }
-//                 }
-//             }
-//             .info {
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: space-between;
-//                 height: 75%;
-//                 margin-left: 5%;
-//                 color: vars.$color-light-gray;
-//                 h2 {font-size: 40px;}
-//                 div {
-//                     h5 {font-size: 30px;}
-//                     h6 {font-size: 28px;}
-//                 }
-//                 p {font-size: 22px;}
-//             }
-//         }
-//     }
-// }

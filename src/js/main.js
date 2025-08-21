@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         displayPopularCountries(countries, basePath);
     }
 
-  // open overlay
+    // open overlay
     document.addEventListener('click', (event) => {
         const clickedCountry = event.target.closest('.country');
         if (!clickedCountry) return;
@@ -235,20 +235,3 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     });
-
-
-// // FONT AUTO RESIZE
-// function autoResizeTextForButtonsAndLinks() {
-//     const elements = document.querySelectorAll('button, .next_page');
-//     elements.forEach((el) => {
-//         const width = el.offsetWidth;
-//         const minFont = 14;
-//         const maxFont = 20;
-//         const scaleFactor = 0.08;
-//         let fontSize = width * scaleFactor;
-//         fontSize = Math.max(minFont, Math.min(maxFont, fontSize));
-//         el.style.fontSize = `${fontSize}px`;
-//     });
-// }
-// document.addEventListener('DOMContentLoaded', autoResizeTextForButtonsAndLinks);
-// window.addEventListener('resize', autoResizeTextForButtonsAndLinks);
