@@ -15,7 +15,7 @@ import KeenSlider from 'keen-slider';
 // INITIALIZATION AOS
 AOS.init({
     duration: 1200,
-    anchorPlacement: 'center-bottom',
+    anchorPlacement: 'top-bottom',
 });
 
 // INITIALIZATION REVIEW SLIDER
@@ -41,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // LOAD POPULAR COUNTRIES
 async function loadCountries() {
-    // const basePath = import.meta.env.BASE_URL || '/';
-    // const countriesDataPath = `${basePath}data/countries_list.json`;
     const countriesDataPath = 'data/countries_list.json';
 
     try {
@@ -239,18 +237,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 
 
-// FONT AUTO RESIZE
-function autoResizeTextForButtonsAndLinks() {
-    const elements = document.querySelectorAll('button, .next_page');
-    elements.forEach((el) => {
-        const width = el.offsetWidth;
-        const minFont = 14;
-        const maxFont = 20;
-        const scaleFactor = 0.08;
-        let fontSize = width * scaleFactor;
-        fontSize = Math.max(minFont, Math.min(maxFont, fontSize));
-        el.style.fontSize = `${fontSize}px`;
-    });
-}
-document.addEventListener('DOMContentLoaded', autoResizeTextForButtonsAndLinks);
-window.addEventListener('resize', autoResizeTextForButtonsAndLinks);
+// // FONT AUTO RESIZE
+// function autoResizeTextForButtonsAndLinks() {
+//     const elements = document.querySelectorAll('button, .next_page');
+//     elements.forEach((el) => {
+//         const width = el.offsetWidth;
+//         const minFont = 14;
+//         const maxFont = 20;
+//         const scaleFactor = 0.08;
+//         let fontSize = width * scaleFactor;
+//         fontSize = Math.max(minFont, Math.min(maxFont, fontSize));
+//         el.style.fontSize = `${fontSize}px`;
+//     });
+// }
+// document.addEventListener('DOMContentLoaded', autoResizeTextForButtonsAndLinks);
+// window.addEventListener('resize', autoResizeTextForButtonsAndLinks);

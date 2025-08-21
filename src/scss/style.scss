@@ -266,7 +266,7 @@ header {
             h6 {
                 color: var(--text-secondary);
                 font-size: 1.2vw;
-                margin-top: 5px;
+                // margin-top: 5px;
             }
         }
         .request_input {
@@ -375,8 +375,10 @@ header {
                     background: var(--purple);
                     border-radius: 15px;
                     cursor: pointer;
-                    transition: background 0.3s ease;
+                    transition: background 0.4s ease;
                     font-size: clamp(14px, 2vw, 20px);
+
+                    &:hover {background: var(--bg-button-hover);}
                     }
                 }
             }
@@ -503,7 +505,6 @@ header {
     justify-content: space-between;
     margin-top: 100px;
     align-items: center;
-    height: 40px;
 
     .next_page {
         display: flex;
@@ -513,23 +514,13 @@ header {
         border-radius: 15px;
         align-items: center;
         box-sizing: border-box;
-        font-size: clamp(14px, 2vw, 20px);
-        height: 100%;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .countries_header,
-    .hotels_header {.next_page {i {display: none;}}}
-}
-
-@media (max-width: 424.98px) {
-    .countries_header,
-    .hotels_header {.next_page {
-        font-size: 16px;
-        padding: 10px 15px;
+        font-size: clamp(14px, 1.2vw, 20px);
+        align-self: stretch;
         text-align: center;
-    }}
+        transition: background .3s ease;
+
+        &:hover {background: var(--bg-button-hover);}
+    }
 }
 
 // MAIN COUNTRIES
