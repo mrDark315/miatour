@@ -94,6 +94,9 @@ a {all: unset; cursor: pointer;}
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            transition: background .3s ease;
+
+            &:hover {background: var(--bg-button-hover);}
         }
 
         .search {
