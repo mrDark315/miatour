@@ -24,11 +24,11 @@ function navigationPlugin(slider) {
 
         // create arrows
         arrowLeft = createDiv('arrow arrow--left');
-        arrowLeft.innerHTML = '<i class="fa-solid fa-chevron-left fa-2xl" data-aos="fade-right"></i>';
+        arrowLeft.innerHTML = '<i class="fa-solid fa-chevron-left fa-2xl"></i>';
         arrowLeft.addEventListener('click', () => slider.prev());
 
         arrowRight = createDiv('arrow arrow--right');
-        arrowRight.innerHTML = '<i class="fa-solid fa-chevron-right fa-2xl" data-aos="fade-left"></i>';
+        arrowRight.innerHTML = '<i class="fa-solid fa-chevron-right fa-2xl"></i>';
         arrowRight.addEventListener('click', () => slider.next());
 
         wrapper.appendChild(arrowLeft);
@@ -257,7 +257,7 @@ async function renderSlides(container) {
             : '';
             return `
             <div class="keen-slider__slide">
-                <div class="review_item" data-aos="zoom-in-up">
+                <div class="review_item">
 
                     <div class="review_header">
                         <div>

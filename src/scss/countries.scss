@@ -79,6 +79,7 @@ a {all: unset; cursor: pointer;}
         height: 50px;
         width: 195px;
     }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -160,6 +161,37 @@ a {all: unset; cursor: pointer;}
                 }}
             }
         }
+    }
+
+    .hamburger {
+        display: none;
+        margin-left: 15px;
+        .line {
+            display: block;
+            width: 30px;
+            height: 4px;
+            margin: 6px 0;
+            background: var(--text);
+            border-radius: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}
+
+@media (max-width: 851.98px) {
+    .header_countries {
+        padding: 20px 10%;
+        nav {display: none;}
+
+        .hamburger {display: block;}
+
+        .hamburger.active .line:nth-child(1) {transform: translateY(10px) rotate(45deg);}
+
+        .hamburger.active .line:nth-child(2) {opacity: 0;}
+
+        .hamburger.active .line:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
+
+
     }
 }
 
