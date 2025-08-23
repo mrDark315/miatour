@@ -265,10 +265,27 @@ a {all: unset; cursor: pointer;}
 }
 
 @media (max-width: 991.98px) {
+    @keyframes show {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+    @keyframes hide {
+        0% {
+            transform: scaleY(1);
+        }
+        100% {
+            transform: scaleY(0);
+        }
+    }
     .countries_all {
         flex-direction: column;
         align-items: center;
-        .country {display: none;}
+
         h1 {
             i {
                 display: block;
@@ -277,9 +294,12 @@ a {all: unset; cursor: pointer;}
             }
         }
 
+        .country {display: none;}
+
         .open > .country {
             display: flex;
             align-items: center;
+            animation: show .4s ease forwards;
         }
 
         .open > h1 i {

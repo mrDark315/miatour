@@ -223,6 +223,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 //
 document.querySelectorAll('.countries_all div h1').forEach(h1 => {
     h1.addEventListener('click', () => {
-        h1.parentElement.classList.toggle('open');
+        const region = h1.parentElement;
+        region.classList.toggle('open');
+
+        const list = region.querySelector('.country');
+        if (!list) return;
     });
 });
