@@ -82,8 +82,8 @@ a {all: unset; cursor: pointer;}
     nav {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        width: 35%;
+        align-items: flex-end;
+        gap: 20px;
         .filter {
             display: flex;
             width: 60px;
@@ -98,19 +98,10 @@ a {all: unset; cursor: pointer;}
 
         .search {
             position: relative;
-            i {
-                position: absolute;
-                color: var(--placeholder);
-                z-index: 2;
-                top: 50%;
-                transform: translateY(-50%);
-                left: 10px;
-                font-size: 24px;
-            }
             input {
                 position: relative;
                 height: 40px;
-                padding: 0 40px 0 50px;
+                padding: 0 20px 0 50px;
                 background: transparent;
                 border: 1px var(--border) solid;
                 border-radius: 20px;
@@ -122,14 +113,37 @@ a {all: unset; cursor: pointer;}
                     font-size: 18px;
                     color: var(--placeholder);
                 }
+
+                &::-webkit-search-cancel-button {
+                    -webkit-appearance: none;
+                    appearance: none;
+                    display: none;
+                }
+
+                &::-moz-search-clear {
+                    display: none;
+                }
             }
+
+            i {
+                position: absolute;
+                color: var(--placeholder);
+                z-index: 2;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                font-size: 24px;
+                transition: color .3s ease;
+            }
+
+            &:focus-within i {color: var(--purple);}
         }
 
         a {
             font-size: 32px;
             position: relative;
             i {
-                font-size: 18px;
+                font-size: 20px;
                 position: relative;
                 top: -2px;
                 right: -5px;
