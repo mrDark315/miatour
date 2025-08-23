@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         .map(
             (p) => `
             <div class="keen-slider__slide">
-            <img src="${basePath}countries/${p}" alt="Thumb ${countryData.name}">
+                <img src="${basePath}countries/${p}" alt="Thumb ${countryData.name}">
             </div>`
         )
         .join('');
@@ -217,3 +217,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     });
+
+
+
+//
+document.querySelectorAll('.countries_all div h1').forEach(h1 => {
+    h1.addEventListener('click', () => {
+        h1.parentElement.classList.toggle('open');
+    });
+});

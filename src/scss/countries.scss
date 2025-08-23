@@ -200,7 +200,6 @@ a {all: unset; cursor: pointer;}
             top: 79px;
             margin: 0;
             background: var(--bg-header-aside);
-            // background: var(--text-button);
             width: 50vw;
             height: 100vh;
             justify-content: flex-start;
@@ -220,32 +219,42 @@ a {all: unset; cursor: pointer;}
     position: relative;
     z-index: 2;
     .country {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            cursor: pointer;
-            span {
-                width: 75px;
-                height: 57px;
-                border-radius: 15px;
-                border: 1px var(--border) solid;
-                box-sizing: border-box;
-            }
-            h5 {
-                font-size: 24px;
-                margin-left: 20px;
-                width: 200px;
-                font-weight: 500;
-            }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        cursor: pointer;
+        span {
+            width: 75px;
+            height: 57px;
+            border-radius: 15px;
+            border: 1px var(--border) solid;
+            box-sizing: border-box;
+        }
+        h5 {
+            font-size: 24px;
+            margin-left: 20px;
+            width: 150px;
+            font-weight: 500;
+        }
     }
+
     h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         font-size: 36px;
         text-wrap: wrap;
-        width: 350px;
-        margin-bottom: 50px;
-        text-align: center;
+        margin-bottom: 30px;
         font-style: italic;
         font-weight: 600;
+
+            i {
+                display: none;
+                font-size: 24px;
+                margin-left: 5px;
+            }
     }
 
     .central_america,
@@ -253,4 +262,35 @@ a {all: unset; cursor: pointer;}
     .australia_oceania,
     .caribbean,
     .africa {margin-top: 50px;}
+}
+
+@media (max-width: 991.98px) {
+    .countries_all {
+        flex-direction: column;
+        align-items: center;
+        .country {display: none;}
+        h1 {
+            i {
+                display: block;
+                transform: rotate(0deg);
+                transition: transform .4s ease;
+            }
+        }
+
+        .open > .country {
+            display: flex;
+            align-items: center;
+        }
+
+        .open > h1 i {
+            transform: rotate(180deg);
+            transition: transform .4s ease;
+        }
+
+        .central_america,
+        .south_america,
+        .australia_oceania,
+        .caribbean,
+        .africa {margin-top: 0}
+    }
 }
