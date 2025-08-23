@@ -97,7 +97,9 @@ a {all: unset; cursor: pointer;}
             cursor: pointer;
             transition: background .3s ease;
 
-            &:hover {background: var(--bg-button-hover);}
+            @media (pointer: fine) {
+                &:hover {background: var(--bg-button-hover);}
+            }
         }
 
         .search {
@@ -181,7 +183,6 @@ a {all: unset; cursor: pointer;}
 @media (max-width: 851.98px) {
     .header_countries {
         padding: 20px 10%;
-        nav {display: none;}
 
         .hamburger {display: block;}
 
@@ -191,7 +192,24 @@ a {all: unset; cursor: pointer;}
 
         .hamburger.active .line:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
 
+        .nav_menu {
+            position: fixed;
+            flex-direction: column;
+            right: -100%;
+            transition: right .4s ease;
+            top: 79px;
+            margin: 0;
+            background: var(--bg-header-aside);
+            // background: var(--text-button);
+            width: 50vw;
+            height: 100vh;
+            justify-content: flex-start;
 
+            .filter {order: 2;}
+            .search {order: 1; margin-top: 20px;}
+            a {display: none;}
+        }
+        .nav_menu.active {right: 0;}
     }
 }
 

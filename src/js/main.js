@@ -12,12 +12,6 @@ import Swal from 'sweetalert2';
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
 
-// INITIALIZATION AOS
-AOS.init({
-    duration: 1200,
-    anchorPlacement: 'top-bottom',
-});
-
 // INITIALIZATION REVIEW SLIDER
 document.addEventListener('DOMContentLoaded', () => {
     initializeReviewsSlider();

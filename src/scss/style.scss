@@ -172,20 +172,20 @@ header {
         .hamburger.active .line:nth-child(3) {transform: translateY(-10px) rotate(-45deg);}
 
         .nav_menu {
-        position: fixed;
-        flex-direction: column;
-        right: -100%;
-        transition: right .4s ease;
-        top: 79px;
-        margin: 0;
-        background: var(--bg-header-aside);
-        width: 45vw;
-        height: 100vh;
-        justify-content: flex-start;
-        a {
-            font-size: 30px;
-            margin-bottom: 30px;
-        }
+            position: fixed;
+            flex-direction: column;
+            right: -100%;
+            transition: right .4s ease;
+            top: 79px;
+            margin: 0;
+            background: var(--bg-header-aside);
+            width: 45vw;
+            height: 100vh;
+            justify-content: flex-start;
+            a {
+                font-size: 30px;
+                margin-bottom: 30px;
+            }
         .language_wrapper_mobile {display: block;}
         }
         .nav_menu.active {right: 0;}
@@ -379,7 +379,9 @@ header {
                     transition: background 0.4s ease;
                     font-size: clamp(14px, 2vw, 20px);
 
-                    &:hover {background: var(--bg-button-hover);}
+                        @media (pointer: fine) {
+                            &:hover {background: var(--bg-button-hover);}
+                        }
                     }
                 }
             }
@@ -520,7 +522,9 @@ header {
         text-align: center;
         transition: background .3s ease;
 
-        &:hover {background: var(--bg-button-hover);}
+        @media (pointer: fine) {
+            &:hover {background: var(--bg-button-hover);}
+        }
     }
 }
 
@@ -768,7 +772,9 @@ header {
                     }
                 }
 
-                &:hover {i {color: var(--purple);}}
+                @media (pointer: fine) {
+                    &:hover {i {color: var(--purple);}}
+                }
             }
         }
 

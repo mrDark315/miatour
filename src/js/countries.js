@@ -3,6 +3,7 @@ import '../scss/overlay.scss';
 import "flag-icons/css/flag-icons.min.css";
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
+import './header.js';
 
 // Асинхронна функція для завантаження JSON-файлу
 async function loadCountries() {
