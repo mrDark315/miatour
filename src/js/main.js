@@ -48,7 +48,7 @@ async function loadCountries() {
     }
 }
     // show popular countries
-function displayPopularCountries(countries, basePath) {
+function displayPopularCountries(countries) {
     const popularCountriesContainer = document.querySelector('.popular_countries');
     if (!popularCountriesContainer) return;
 
