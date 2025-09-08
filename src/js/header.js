@@ -81,35 +81,35 @@ window.addEventListener('resize', () => {
 });
 
 //
-// src/js/header.js
-
 export function initializeThemeSwitcher() {
-    const themeSwitcher = document.querySelector('.theme-switcher');
-    if (!themeSwitcher) return;
+    const themeSwitchers = document.querySelectorAll('.theme_switcher, .theme_switcher_mobile');
+    if (themeSwitchers.length === 0) return;
 
-    const lightIcon = document.querySelector('.light-icon');
-    const darkIcon = document.querySelector('.dark-icon');
+    const lightIcons = document.querySelectorAll('.light-icon');
+    const darkIcons = document.querySelectorAll('.dark-icon');
     const body = document.body;
 
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             body.classList.add('dark-theme');
-            lightIcon.classList.add('active');
-            darkIcon.classList.remove('active');
+            lightIcons.forEach(icon => icon.classList.add('active'));
+            darkIcons.forEach(icon => icon.classList.remove('active'));
         } else {
             body.classList.remove('dark-theme');
-            darkIcon.classList.add('active');
-            lightIcon.classList.remove('active');
+            darkIcons.forEach(icon => icon.classList.add('active'));
+            lightIcons.forEach(icon => icon.classList.remove('active'));
         }
         localStorage.setItem('theme', theme);
     };
 
-    themeSwitcher.addEventListener('click', () => {
-        const newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
-        applyTheme(newTheme);
+    themeSwitchers.forEach(switcher => {
+        switcher.addEventListener('click', () => {
+            const newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
+            applyTheme(newTheme);
+        });
     });
 
-    // Устанавливаем тему при загрузке
+    // Устанавливаем тему при первоначальной загрузке страницы
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
