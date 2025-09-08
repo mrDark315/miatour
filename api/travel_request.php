@@ -19,14 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 // Получаем и очищаем данные из POST-запроса
 $name = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : '';
 $email = isset($_POST['email']) ? filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL) : '';
-$date = isset($_POST['date']) ? htmlspecialchars(trim($_POST['date'])) : '';
+$start_date = isset($_POST['start_date']) ? htmlspecialchars(trim($_POST['start_date'])) : '';
+$finish_date = isset($_POST['finish_date']) ? htmlspecialchars(trim($_POST['finish_date'])) : '';
 $country = isset($_POST['country']) ? htmlspecialchars(trim($_POST['country'])) : '';
 $city = isset($_POST['city']) ? htmlspecialchars(trim($_POST['city'])) : '';
 $people_num = isset($_POST['people_num']) ? htmlspecialchars(trim($_POST['people_num'])) : '';
-$info = isset($_POST['info']) ? htmlspecialchars(trim($_POST['info'])) : '';
+$info = isset($_POST['info_area']) ? htmlspecialchars(trim($_POST['info_area'])) : '';
 
-// Перевірка обов'язкових input
-if (empty($name) || empty($email) || empty($date) || empty($country)) {
+// --- ИЗМЕНЕНИЕ 3: Обновляем проверку обязательных полей ---
+if (empty($name) || empty($email) || empty($start_date) || empty($country)) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Будь-ласка, заповніть обов\'язкові поля: Ім\'я, email, Дата, Країна.']);
     exit;
