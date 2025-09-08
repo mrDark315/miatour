@@ -84,9 +84,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Ми зв\'яжемось з вами найближчим часом',
                 icon: 'success',
                 confirmButtonText: 'Закрити',
-                theme: 'dark',
+                theme: 'light',
             });
             form.reset();
+
+            const inputWrappers = form.querySelectorAll('.input_wrapper');
+            inputWrappers.forEach(wrapper => {
+                wrapper.classList.remove('has-value');
+            });
+
+            // Также сбрасываем счетчик символов
+            const charCounter = document.getElementById('char_counter');
+            if(charCounter) {
+                const maxLength = document.getElementById('info_area').getAttribute('maxlength');
+                charCounter.textContent = `0/${maxLength}`;
+                charCounter.classList.remove('char_limit');
+            }
         }
     } catch (error) {
         console.error('Помилка при відправці:', error);
@@ -95,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text: 'Якщо помилка не зникне - зв\'яжіться з нами',
             icon: 'error',
             confirmButtonText: 'Закрити',
-            theme: 'dark',
+            theme: 'light',
         });
     }
 }
