@@ -162,3 +162,14 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCounter();
     }
 });
+
+// ALLOW ONLY NUMBERS IN THE 'PEOPLE_NUM' INPUT
+document.addEventListener('DOMContentLoaded', () => {
+    const peopleInput = document.getElementById('people_num');
+
+    if (peopleInput) {
+        peopleInput.addEventListener('input', function (e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    }
+});
