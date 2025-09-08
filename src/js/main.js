@@ -4,17 +4,17 @@ import '../scss/style.scss';
 import '../scss/overlay.scss';
 import './air-datepicker.js';
 import { initializeReviewsSlider } from './slider-review.js';
+import { initializeThemeSwitcher } from './header.js';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Swal from 'sweetalert2';
 
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
 
-// INITIALIZATION REVIEW SLIDER
+// INITIALIZATION REVIEW & THEME TOGGLE
 document.addEventListener('DOMContentLoaded', () => {
     initializeReviewsSlider();
+    initializeThemeSwitcher();
 });
 
 // SWEET ALERT 2 (footer email)

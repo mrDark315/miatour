@@ -9,7 +9,6 @@
     border: none;
     outline: none;
     letter-spacing: 0.5px;
-    // outline: 1px var(--red) solid;
 }
 
 html {width: 100vw; scroll-behavior: smooth;}
@@ -113,32 +112,30 @@ header {
                 }
             }
         }
-        .language_wrapper_mobile {display: none;}
+
     }
-    .language_wrapper,
-    .language_wrapper_mobile {
+
+    .theme-switcher {
         position: relative;
-        .language {
-            appearance: none;
-            background: transparent;
-            font-size: 18px;
-            padding-right: 20px;
-            cursor: pointer;
-            color: var(--text);
-        }
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        i {
+        .theme-icon {
             position: absolute;
-            right: 0px;
-            top: 40%;
-            transform: translateY(-40%);
-            font-size: 18px;
-            pointer-events: none;
-            transition: color 0.4s ease;
+            font-size: 22px;
+            color: var(--text);
+            opacity: 0;
+            transform: scale(0.8) rotate(-90deg);
+            transition: opacity 0.4s ease, transform 0.4s ease;
         }
 
-        @media (pointer: fine) {
-            .language:hover + i {color: var(--purple);}
+        .theme-icon.active {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
         }
     }
 
@@ -186,7 +183,6 @@ header {
                 font-size: 30px;
                 margin-bottom: 30px;
             }
-        .language_wrapper_mobile {display: block;}
         }
         .nav_menu.active {right: 0;}
     }
@@ -196,7 +192,7 @@ header {
     header {
         padding: 20px 8%;
         .nav_menu {
-            a, .language_mobile {font-size: 28px;}
+            a {font-size: 28px;}
         }
     }
 }
@@ -207,7 +203,7 @@ header {
         .nav_menu {
             top: 60px;
             width: 55vw;
-            a, .language_mobile {font-size: 24px;}
+            a {font-size: 24px;}
         }
     }
 }

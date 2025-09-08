@@ -79,3 +79,45 @@ window.addEventListener('resize', () => {
         if (sbw > 0) body.style.paddingRight = sbw + 'px';
     }
 });
+
+//
+// src/js/header.js
+
+export function initializeThemeSwitcher() {
+    const themeSwitcher = document.querySelector('.theme-switcher');
+    if (!themeSwitcher) return;
+
+    const lightIcon = document.querySelector('.light-icon');
+    const darkIcon = document.querySelector('.dark-icon');
+    const body = document.body;
+
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            body.classList.add('dark-theme');
+            lightIcon.classList.add('active');
+            darkIcon.classList.remove('active');
+        } else {
+            body.classList.remove('dark-theme');
+            darkIcon.classList.add('active');
+            lightIcon.classList.remove('active');
+        }
+        localStorage.setItem('theme', theme);
+    };
+
+    themeSwitcher.addEventListener('click', () => {
+        const newTheme = body.classList.contains('dark-theme') ? 'light' : 'dark';
+        applyTheme(newTheme);
+    });
+
+    // Устанавливаем тему при загрузке
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else if (prefersDark) {
+        applyTheme('dark');
+    } else {
+        applyTheme('light');
+    }
+}
