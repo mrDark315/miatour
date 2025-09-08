@@ -4,7 +4,7 @@ import '../scss/style.scss';
 import '../scss/overlay.scss';
 import './air-datepicker.js';
 import { initializeReviewsSlider } from './slider-review.js';
-import { initializeThemeSwitcher } from './header.js';
+// import { initializeThemeSwitcher } from './header.js';
 
 import Swal from 'sweetalert2';
 
@@ -14,7 +14,7 @@ import KeenSlider from 'keen-slider';
 // INITIALIZATION REVIEW & THEME TOGGLE
 document.addEventListener('DOMContentLoaded', () => {
     initializeReviewsSlider();
-    initializeThemeSwitcher();
+    // initializeThemeSwitcher();
 });
 
 // SWEET ALERT 2 (footer email)

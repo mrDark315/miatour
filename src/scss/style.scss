@@ -13,6 +13,10 @@
 
 html {width: 100vw; scroll-behavior: smooth;}
 
+html.dark-theme .logo {
+    content: url("/src/img/miatour-logo-dark.svg");
+}
+
 body {
     position: relative;
     font-family: 'Source Sans 3', serif;
@@ -23,9 +27,7 @@ body {
     overflow-x: hidden;
 }
 body.body_no_scroll {overflow: hidden;}
-body.dark-theme .logo {
-    content: url("/src/img/miatour-logo-dark.svg");
-}
+
 
 .wrapper {margin: 0 5%;}
 
