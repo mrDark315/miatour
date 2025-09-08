@@ -3,7 +3,7 @@ $light-theme: (
     "bg-header-aside": rgba(246, 246, 249, 0.96),
     "bg-overlay": rgba(246, 246, 249, 0.3),
     "bg": #F6F6F9,
-    "bg-secondary": #ECECEF,
+    "bg-secondary": #ececef,
     "bg-button-hover": #7156f8,
     "text": #1B1A22,
     "text-secondary": #5A5A66,
@@ -44,15 +44,3 @@ html.dark-theme {
         --#{$key}: #{$value};
     }
 }
-
-// COLORS
-$color-header-black: rgba(0, 0, 0, 0.9);
-$color-overlay-black: rgba(0, 0, 0, 0.3);
-$color-black: #000;
-$color-white: #fff;
-$color-dark-gray: #212121;
-$color-gray: #9C9A9A;
-$color-light-gray: #DDDDDD;
-$color-input-gray: #C9C9C9;
-$color-red: #FF0000;
-$color-purple: #7B61FF;
