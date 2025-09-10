@@ -12,7 +12,6 @@ function getScrollbarWidth() {
     return window.innerWidth - htmlEl.clientWidth;
 }
 
-/* Lock page scroll without shifting layout */
 function lockScroll() {
     const sbw = getScrollbarWidth();
     body.classList.add(NO_SCROLL_CLASS);

@@ -14,7 +14,7 @@
 html {width: 100vw; scroll-behavior: smooth;}
 
 html.dark-theme .logo {
-    content: url("/src/img/miatour-logo-dark.svg");
+    content: url("/img/logo/miatour-logo-dark.svg");
 }
 
 body {
@@ -339,7 +339,7 @@ header {
                     border: 1px solid var(--border) !important;
                     }
 
-                    // hide arrows input number (Chrome, Safari, Edge)
+                    // hide arrows input number (chrome, safari, edge)
                     input[type="number"]::-webkit-outer-spin-button,
                     input[type="number"]::-webkit-inner-spin-button {
                         -webkit-appearance: none;
@@ -356,14 +356,14 @@ header {
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
-                        font-size: 14px;
+                        font-size: clamp(10px, 1.6vw, 14px);
                         letter-spacing: 0.5px;
                     }
 
                     &.is-focused label,
                     &.has-value label {
                         top: 0;
-                        font-size: 14px;
+                        font-size: clamp(10px, 1.5vw, 16px);
                         color: var(--purple);
                     }
                 }

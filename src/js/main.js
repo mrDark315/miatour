@@ -4,31 +4,29 @@ import '../scss/style.scss';
 import '../scss/overlay.scss';
 import './air-datepicker.js';
 import { initializeReviewsSlider } from './slider-review.js';
-// import { initializeThemeSwitcher } from './header.js';
-
 import Swal from 'sweetalert2';
-
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
 
 // INITIALIZATION REVIEW & THEME TOGGLE
 document.addEventListener('DOMContentLoaded', () => {
     initializeReviewsSlider();
-    // initializeThemeSwitcher();
 });
 
 // SWEET ALERT 2 (footer email)
 document.addEventListener('DOMContentLoaded', () => {
     const myButton = document.getElementById('myButton');
+
     if (myButton) {
         myButton.addEventListener('click', () => {
-        Swal.fire({
-            title: 'mia@miatour.com.ua',
-            text: 'Якщо виникнуть питання/пропозиції щодо сайту - website@miatour.com.ua',
-            icon: 'info',
-            confirmButtonText: 'Добре',
-            theme: 'light',
-        });
+            const currentTheme = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
+            Swal.fire({
+                title: 'mia@miatour.com.ua',
+                text: 'Якщо виникнуть питання/пропозиції щодо сайту - website@miatour.com.ua',
+                icon: 'info',
+                confirmButtonText: 'Добре',
+                theme: currentTheme,
+            });
         });
     }
 });
@@ -47,7 +45,8 @@ async function loadCountries() {
         return [];
     }
 }
-    // show popular countries
+
+// SHOW POPULAR COUNTRIES
 function displayPopularCountries(countries) {
     const popularCountriesContainer = document.querySelector('.popular_countries');
     if (!popularCountriesContainer) return;
@@ -108,7 +107,7 @@ function initializeCountryKeen(mainSel, thumbsSel) {
         },
     });
 
-    // Main slider (sync with thumbs)
+    // main slider (sync with thumbs)
     overlayMainKeen = new KeenSlider(mainEl, {
         loop: true,
         renderMode: 'performance',
@@ -163,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const countryData = countries.find((c) => c.id === countryId);
         if (!countryData || !overlay_content) return;
 
-        // Build slides from JSON photos
+        // build slides from JSON photos
         const photos = Array.isArray(countryData.photo) ? countryData.photo : [];
         const mainSlides = photos
         .map(
@@ -182,7 +181,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         )
         .join('');
 
-        // Inject overlay content: info_left (keen gallery) + info_right (description)
+        // overlay content
         overlay_content.innerHTML = `
         <div class="info_left">
             <h2>${countryData.name}</h2>
@@ -200,20 +199,20 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
         `;
 
-        // Show overlay & lock scroll
+        // show overlay & lock scroll
         overlayWindow?.classList.add('active');
         document.body.classList.add('body_no_scroll');
 
-        // Init keen after DOM injection
+        // init keen after DOM
         initializeCountryKeen('.main-slider', '.thumb-slider');
     });
 
-    // CLOSE overlay helpers (background / close icon / ESC)
+    // close overlay helpers (background click / close icon / ESC)
     function closeOverlay() {
         if (overlayWindow) {
         overlayWindow.classList.remove('active');
         document.body.classList.remove('body_no_scroll');
-        destroyCountryKeen(); // destroy instances when closing
+        destroyCountryKeen();
         }
     }
 

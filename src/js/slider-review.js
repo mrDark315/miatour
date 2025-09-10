@@ -17,7 +17,6 @@ function navigationPlugin(slider) {
     }
 
     function createMarkup() {
-
         wrapper = createDiv('navigation-wrapper');
         slider.container.parentNode.appendChild(wrapper);
         wrapper.appendChild(slider.container);
@@ -48,7 +47,7 @@ function navigationPlugin(slider) {
     function updateActiveDot() {
         const rel = slider.track.details.rel;
         Array.from(dots.children).forEach((dot, idx) => {
-        dot.classList.toggle('dot--active', idx === rel);
+            dot.classList.toggle('dot--active', idx === rel);
         });
     }
 
@@ -80,27 +79,27 @@ function adaptiveHeightPlugin(slider) {
 
         let maxH = 0;
         indexes.forEach((i) => {
-        const slide = slider.slides[i];
-        if (!slide) return;
-        const box = slide.querySelector('.review_item') || slide;
-        const h = box.getBoundingClientRect().height;
-        if (h > maxH) maxH = h;
+            const slide = slider.slides[i];
+            if (!slide) return;
+            const box = slide.querySelector('.review_item') || slide;
+            const h = box.getBoundingClientRect().height;
+            if (h > maxH) maxH = h;
         });
 
         if (maxH > 0) {
-        c.style.height = Math.ceil(maxH) + 'px';
+            c.style.height = Math.ceil(maxH) + 'px';
         } else {
-        c.style.removeProperty('height');
+            c.style.removeProperty('height');
         }
     };
 
     const observeImages = () => {
         const imgs = slider.container.querySelectorAll('img');
         imgs.forEach((img) => {
-        if (!img.complete) {
-            img.addEventListener('load', measureAndSet, { once: true });
-            img.addEventListener('error', measureAndSet, { once: true });
-        }
+            if (!img.complete) {
+                img.addEventListener('load', measureAndSet, { once: true });
+                img.addEventListener('error', measureAndSet, { once: true });
+            }
         });
     };
 
@@ -109,9 +108,9 @@ function adaptiveHeightPlugin(slider) {
         ro = new ResizeObserver(measureAndSet);
         const idxs = getVisibleIndexes();
         idxs.forEach((i) => {
-        const slide = slider.slides[i];
-        const box = slide && (slide.querySelector('.review_item') || slide);
-        if (box) ro.observe(box);
+            const slide = slider.slides[i];
+            const box = slide && (slide.querySelector('.review_item') || slide);
+            if (box) ro.observe(box);
         });
     };
 
@@ -119,11 +118,10 @@ function adaptiveHeightPlugin(slider) {
         requestAnimationFrame(() => {
             observeImages();
             observeVisibleBoxes();
-            // ДАДИМ AutoHeightOnce выставить стартовую высоту, затем — первый честный замер
             setTimeout(() => {
-            const h = parseFloat(getComputedStyle(slider.container).height) || 0;
-            if (!h) measureAndSet(); // если подпорки нет — подстрахуемся
-            else measureAndSet();    // мягко синхронизируемся со стартовой высотой
+                const h = parseFloat(getComputedStyle(slider.container).height) || 0;
+                if (!h) measureAndSet();
+                else measureAndSet();
             }, 80);
         });
         window.addEventListener('resize', measureAndSet);
@@ -145,8 +143,8 @@ function adaptiveHeightPlugin(slider) {
     slider.on('destroyed', () => {
         window.removeEventListener('resize', measureAndSet);
         if (ro) {
-        ro.disconnect();
-        ro = null;
+            ro.disconnect();
+            ro = null;
         }
     });
 }
@@ -162,8 +160,7 @@ function waitImages(el) {
     );
 }
 
-// Плагин: подгоняем высоту контейнера под активный слайд
-// ставим максимальную из текущих высот один раз после created
+// PLUGIN: HEIGHT UNDER ACTIVE SLIDE
 function AutoHeightOnce(slider) {
     slider.on('created', () => {
         const bootstrap = () => {
@@ -176,17 +173,15 @@ function AutoHeightOnce(slider) {
         }
         if (maxH > 0) {
             slider.container.style.height = Math.ceil(maxH) + 'px';
-            // форсируем перерисовку:
             void slider.container.offsetHeight;
             slider.update();
         }
         };
-        // даём DOM/шрифтам примениться
         requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-            bootstrap();
-            setTimeout(bootstrap, 60);
-        });
+            requestAnimationFrame(() => {
+                bootstrap();
+                setTimeout(bootstrap, 60);
+            });
         });
     });
 }
@@ -196,8 +191,8 @@ function whenVisible(el, cb) {
     if (!('IntersectionObserver' in window)) return cb();
     const io = new IntersectionObserver((entries) => {
         if (entries.some(e => e.isIntersecting)) {
-        io.disconnect();
-        cb();
+            io.disconnect();
+            cb();
         }
     }, { root: null, threshold: 0.15 });
     io.observe(el);
@@ -217,23 +212,21 @@ export async function initializeReviewsSlider() {
     }
 
     whenVisible(track, () => {
-        const slider = new KeenSlider(
-        track,
-        {
-        loop: true,
-        renderMode: 'performance',
-        slides: {
-            perView: 2,
-            spacing: 30,
-        },
-        breakpoints: {
-            '(max-width: 991.98px)': {
-                slides: {
-                    perView: 1,
-                    spacing: 15,
+        const slider = new KeenSlider(track, {
+            loop: true,
+            renderMode: 'performance',
+            slides: {
+                perView: 2,
+                spacing: 30,
+            },
+            breakpoints: {
+                '(max-width: 991.98px)': {
+                    slides: {
+                        perView: 1,
+                        spacing: 15,
+                    },
                 },
             },
-        },
         },
         [navigationPlugin, AutoHeightOnce, adaptiveHeightPlugin]
     );

@@ -6,7 +6,7 @@ import KeenSlider from 'keen-slider';
 import './header.js';
 import './search.js';
 
-// Асинхронна функція для завантаження JSON-файлу
+// LOAD COUNTRIES FROM JSON
 async function loadCountries() {
     const basePath = import.meta.env.BASE_URL || '/';
     const countriesDataPath = `${basePath}data/countries_list.json`;
@@ -39,12 +39,6 @@ function initializeCountryKeen(mainSel, thumbsSel) {
         });
     };
 
-    const setActiveDot = (rel, dots) => {
-        dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === rel);
-        });
-    };
-
     overlayThumbsKeen = new KeenSlider(thumbsEl, {
         renderMode: 'performance',
         drag: true,
@@ -61,7 +55,7 @@ function initializeCountryKeen(mainSel, thumbsSel) {
         },
     });
 
-    // Main slider (sync with thumbs)
+    // main slider (sync with thumbs)
     overlayMainKeen = new KeenSlider(mainEl, {
         loop: true,
         renderMode: 'performance',
@@ -149,7 +143,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const countryData = countries.find((c) => c.id === countryId);
         if (!countryData || !overlay_content) return;
 
-        // Build slides from JSON photos
+        // build slides from JSON photos
         const photos = Array.isArray(countryData.photo) ? countryData.photo : [];
         const mainSlides = photos
         .map(
@@ -189,20 +183,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
         `;
 
-        // Show overlay & lock scroll
+        // show overlay & lock scroll
         overlayWindow?.classList.add('active');
         document.body.classList.add('body_no_scroll');
 
-        // Init keen after DOM injection
+        // init keen after DOM
         initializeCountryKeen('.main-slider', '.thumb-slider');
     });
 
-    // CLOSE overlay helpers (background / close icon / ESC)
+    // close overlay (background click / close icon / ESC)
     function closeOverlay() {
         if (overlayWindow) {
         overlayWindow.classList.remove('active');
         document.body.classList.remove('body_no_scroll');
-        destroyCountryKeen(); // destroy instances when closing
+        destroyCountryKeen();
         }
     }
 
@@ -221,7 +215,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 
-//
+// CLICK HANDLER FOR ADAPTIVE (OPEN COUNTRIS)
 document.querySelectorAll('.countries_all div h1').forEach(h1 => {
     h1.addEventListener('click', () => {
         const region = h1.parentElement;

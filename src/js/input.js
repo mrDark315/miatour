@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const warningMessage = document.querySelector('.input_warning');
     const form = document.querySelector('#travel_request_form');
 
-    // CHECK INPUT VALUE
+    // check input value
     if (sendRequestButton && checkInputs.length > 0 && warningMessage && form) {
         sendRequestButton.addEventListener('click', function(event) {
             event.preventDefault();
@@ -61,10 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // SEND DATA FROM INPUT
+    // send data from input fields
     async function sendFormData() {
     const formData = new FormData(form);
     const url = '/api/travel_request.php';
+
+    const currentTheme = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
 
     try {
         const response = await fetch(url, {
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error(`Помилка мережі: ${response.status} ${response.statusText}`);
         }
 
+        // sweat alert 2
         const result = await response.json();
 
         if (result.success) {
@@ -84,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 text: 'Ми зв\'яжемось з вами найближчим часом',
                 icon: 'success',
                 confirmButtonText: 'Закрити',
-                theme: 'light',
+                theme: currentTheme,
             });
             form.reset();
 
@@ -93,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 wrapper.classList.remove('has-value');
             });
 
-            // Также сбрасываем счетчик символов
             const charCounter = document.getElementById('char_counter');
             if(charCounter) {
                 const maxLength = document.getElementById('info_area').getAttribute('maxlength');
@@ -101,43 +103,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 charCounter.classList.remove('char_limit');
             }
         }
-    } catch (error) {
-        console.error('Помилка при відправці:', error);
-        Swal.fire({
-            title: 'Виникла помилка під час відправлення запиту',
-            text: 'Якщо помилка не зникне - зв\'яжіться з нами',
-            icon: 'error',
-            confirmButtonText: 'Закрити',
-            theme: 'light',
-        });
+        } catch (error) {
+            console.error('Помилка при відправці:', error);
+            Swal.fire({
+                title: 'Виникла помилка під час відправлення запиту',
+                text: 'Якщо помилка не зникне - зв\'яжіться з нами',
+                icon: 'error',
+                confirmButtonText: 'Закрити',
+                theme: currentTheme,
+            });
+        }
     }
-}
 });
-
-//AUTORESIZE LABEL FONT SIZE
-function autoResizeLabels() {
-    const wrappers = document.querySelectorAll('.input_wrapper');
-
-    wrappers.forEach(wrapper => {
-        const input = wrapper.querySelector('input, textarea');
-        const label = wrapper.querySelector('label');
-
-        if (!input || !label) return;
-
-        const width = input.offsetWidth;
-        const minFont = 10;
-        const maxFont = 18;
-        const scaleFactor = 0.08;
-
-        let fontSize = width * scaleFactor / 1;
-        fontSize = Math.max(minFont, Math.min(maxFont, fontSize));
-
-        label.style.fontSize = `${fontSize}px`;
-    });
-}
-
-document.addEventListener('DOMContentLoaded', autoResizeLabels);
-window.addEventListener('resize', autoResizeLabels);
 
 // SYMBOLS COUNTER FOR TEXTAREA
 document.addEventListener('DOMContentLoaded', () => {
