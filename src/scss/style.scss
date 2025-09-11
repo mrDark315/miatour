@@ -40,12 +40,8 @@ body.body_no_scroll {overflow: hidden;}
 }
 
 h5 {
-        font-size: 28px;
+        font-size: clamp(21px, 3vw, 26px);
         font-weight: 500;
-}
-
-@media (max-width: 575.98px) {
-    h5 {font-size: 24px;}
 }
 
 a {all: unset; cursor: pointer;}
@@ -241,6 +237,7 @@ header {
 .travel {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 100px;
     overflow: hidden;
 
@@ -257,16 +254,19 @@ header {
 
     .travel_title {
         animation: SlideFromLeft 1s ease-out forwards;
+
         h1{
-            font-size: 6vw;
+            font-size: clamp(30px, 6vw, 64px);
             line-height: 140%;
             letter-spacing: 3px;
             max-width: 800px;
             font-weight: 600;
         }
+
         p {
             margin-top: 20px;
             font-size: 32px;
+            font-size: clamp(22px, 2.8vw, 32px);
             color: var(--text-secondary);
             font-weight: 400;
         }
@@ -284,15 +284,17 @@ header {
     }
 
     .travel_request {
-        margin: auto 0;
         animation: SlideFromRight 1s ease-out forwards;
         .request_title {
             text-align: center;
-            h4 {font-size: 1.6vw; font-weight: 700;}
+            h4 {
+                font-size: clamp(24px, 2vw, 28px);
+                font-weight: 600;
+            }
             h6 {
                 color: var(--text-secondary);
-                font-size: 1.2vw;
-                font-weight: 600;
+                font-size: clamp(18px, 1.2vw, 22px);
+                font-weight: 500;
             }
         }
         .request_input {
@@ -314,11 +316,11 @@ header {
                     background: transparent;
                     padding: 0 15px;
                     box-sizing: border-box;
-                    font-size: 16px;
+                    font-size: clamp(14px, 2vw, 16px);
                     color: var(--text-secondary);
                     }
 
-                    // fix styles in browser autofill (Chrome, Edge, Safari)
+                    // fix styles in browser autofill (fhrome, edge, safari)
                     input:-webkit-autofill,
                     input:-webkit-autofill:hover,
                     input:-webkit-autofill:focus,
@@ -332,7 +334,7 @@ header {
                         transition: var(--bg) 9999s ease-out 9999s, color 9999s ease-out 9999s;
                         -webkit-transition: background-color 9999s ease-out 9999s, color 9999s ease-out 9999s;
                     }
-                    // fix styles in browser autofill (Firefox)
+                    // fix styles in browser autofill (firefox)
                     input:-moz-autofill {
                     background: transparent !important;
                     color: var(--text-secondary) !important;
@@ -356,14 +358,14 @@ header {
                         pointer-events: none;
                         transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease;
                         white-space: nowrap;
-                        font-size: clamp(10px, 1.6vw, 14px);
+                        font-size: clamp(14px, 1.6vw, 14px);
                         letter-spacing: 0.5px;
                     }
 
                     &.is-focused label,
                     &.has-value label {
                         top: 0;
-                        font-size: clamp(10px, 1.5vw, 16px);
+                        font-size: clamp(14px, 1.5vw, 16px);
                         color: var(--purple);
                     }
                 }
@@ -414,7 +416,7 @@ header {
             .input_warning {
                 margin-top: 5px;
                 color: var(--red);
-                font-size: 18px;
+                font-size: clamp(14px, 2vw, 18px);
                 opacity: 0;
                 transition: opacity 0.3s ease
             }
@@ -431,23 +433,10 @@ header {
 
         .travel_title {
             text-align: center;
-            h1 {
-                font-size: 50px;
-                line-height: 80px;
-            }
-            p {
-                margin-top: 10px;
-                font-size: 26px;
-            }
+            p {margin-top: 5px;}
         }
 
-        .travel_request {
-            margin-top: 50px;
-            .request_title {
-                h4 {font-size: 24px;}
-                h6 {font-size: 17px;}
-            }
-        }
+        .travel_request {margin-top: 50px;}
     }
 }
 
@@ -455,25 +444,7 @@ header {
         .travel {
             display: flex;
             flex-direction: column;
-            .travel_title {
-                text-align: center;
-                h1 {
-                    font-size: 40px;
-                    line-height: 70px;
-                    text-align: center;
-                    margin-top: 10px;
-                }
-                p {
-                    font-size: 24px;
-                    margin-top: 5px;
-                }
-            }
             .travel_request {
-                margin-top: 50px;
-                .request_title {
-                    h4 {font-size: 26px;}
-                    h6 {font-size: 16px;}
-                }
                 .request_input {
                     form {
                         grid-template-columns: repeat(2, 1fr);
@@ -493,35 +464,27 @@ header {
     .travel {
         margin-top: 70px;
         .travel_title {
-            h1 {font-size: 35px;}
             p {display: none;}
         }
         .travel_request {
-        .request_title {
-            margin-top: -40px;
-            h4 {font-size: 24px; font-weight: 700;}
-            h6 {font-size: 18px;}
-        }
-        .request_input {
-            form {
-                display: flex;
-                flex-direction: column;
-                .input_wrapper {
-                    input, .info_area {text-align: center;}
-                    label {
-                        font-size: 14px;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-50%, -50%);
-                    }
-                    &.is-focused label,
-                    &.has-value label {
-                        font-size: 14px;
-                        color: var(--purple);
+            .request_input {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    .input_wrapper {
+                        input, .info_area {text-align: center;}
+                        label {
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        &.is-focused label,
+                        &.has-value label {
+                            color: var(--purple);
+                        }
                     }
                 }
             }
-        }
         }
     }
 }
@@ -553,36 +516,43 @@ header {
     }
 }
 
+@media (max-width: 991.98px) {
+    .countries_header,
+    .hotels_header {
+        margin-top: 50px;
+    }
+}
+
 // MAIN COUNTRIES
 .popular_countries {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    column-gap: 1.5vw;
-    margin-top: 30px;
+    column-gap: 2vw;
+    margin-top: 20px;
 
     .country {
             cursor: pointer;
 
             .img_container {
-                width: 100%;
-                height: 80%;
                 overflow: hidden;
                 border-radius: 15px;
+                aspect-ratio: 4 / 2.5;
+                margin-top: 10px;
 
                 img {
-                width: 100%;
-                height: 100%;
-                transition: transform 0.3s ease-in-out;
-                @media (pointer: fine) {
-                    &:hover {transform: scale(1.2);}
-                }
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.3s ease-in-out;
+                    @media (pointer: fine) {
+                        &:hover {transform: scale(1.1);}
+                    }
                 }
 
             }
 
             p {
                 width: 100%;
-                font-size: 18px;
+                font-size: clamp(18px, 2vw, 22px);
                 text-align: center;
                 color: var(--text-secondary);
                 margin-top: 5px;
@@ -590,7 +560,7 @@ header {
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1277.98px) {
     .popular_countries {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -601,23 +571,12 @@ header {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3vw;
         row-gap: 2vw;
-        .country {
-            p {
-                font-size: 24px;
-            }
-        }
     }
 }
 
 @media (max-width: 575.98px) {
     .popular_countries {
         grid-template-columns: repeat(1, 1fr);
-
-        .country {
-            p {
-                font-size: 28px;
-            }
-        }
     }
 }
 
@@ -640,25 +599,26 @@ header {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         margin-top: 30px;
-        gap: 5%;
-        box-sizing: border-box;
+        gap: 3vw;
 
         .hotel {
             .img_container {
                 overflow: hidden;
                 border-radius: 15px;
+                aspect-ratio: 3/3.5;
 
                 img {
                     width: 100%;
+                    height: 100%;
                     transition: transform 0.3s ease-in-out;
                     @media (pointer: fine) {
-                        &:hover {transform: scale(1.2);}
+                        &:hover {transform: scale(1.1);}
                     }
                 }
             }
 
             h4 {
-                font-size: 18px;
+                font-size: clamp(18px, 2vw, 22px);
                 font-weight: 500;
                 margin-top: 5px;
                 margin-left: 3px;
@@ -670,7 +630,7 @@ header {
                 padding-top: 5px;
 
                 h6 {
-                    font-size: 16px;
+                    font-size: clamp(18px, 2vw, 20px);
                     font-weight: 400;
                     color: var(--text-secondary);
 
@@ -684,33 +644,18 @@ header {
     }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1215.98px) {
     .hotels {
         .hotels_inpection {
             grid-template-columns: repeat(2, 1fr);
-
-            .hotel {
-                h4 {font-size: 18px;}
-                div {
-                    h6 {font-size: 16px;}
-                }
-            }
+            gap: 5vw;
         }
     }
 }
 
 @media (max-width: 767.98px) {
     .hotels {
-        .hotels_inpection {
-            grid-template-columns: repeat(2, 1fr);
-
-            .hotel {
-                h4 {font-size: 18px;}
-                div {
-                    h6 {font-size: 16px;}
-                }
-            }
-        }
+        .hotels_inpection {grid-template-columns: repeat(2, 1fr);}
     }
 }
 
@@ -719,14 +664,7 @@ header {
         .hotels_header {margin-top: 30px;}
         .hotels_inpection {
             grid-template-columns: repeat(1, 1fr);
-            gap: 2%;
-
-            .hotel {
-                h4 {font-size: 20px;}
-                div {
-                    h6 {font-size: 18px;}
-                }
-            }
+            gap: 10vw;
         }
     }
 }
@@ -858,7 +796,7 @@ header {
 
 @media (max-width: 991.98px) {
     .review {
-        margin-top: 150px;
+        margin-top: 70px;
         .reviews-slider {
             margin-top: 20px;
             .arrow {display: none;}
@@ -870,15 +808,14 @@ header {
 .about_us {
     margin-top: 130px;
     p {
-        margin-top: 50px;
+        margin-top: 30px;
         color: var(--text-secondary);
         line-height: 36px;
-        font-size: 24px;
+        font-size: clamp(18px, 2vw, 24px);
         &:last-of-type {margin-top: 20px;}
 
         span {font-weight: 500;}
     }
-
 
     .timeline_container {
         position: relative;
@@ -922,7 +859,7 @@ header {
                 .timeline-text {
                     position: absolute;
                     max-width: 260px;
-                    font-size: 24px;
+                    font-size: clamp(20px, 2vw, 24px);
                     text-wrap: nowrap;
                     color: var(--text);
                 }
@@ -954,7 +891,7 @@ header {
                 margin-top: 10px;
                 color: var(--text);
                 text-align: center;
-                font-size: 26px;
+                font-size: clamp(18px, 3vw, 24px);
                 font-weight: 600;
             }
         }
@@ -966,14 +903,7 @@ header {
         margin-top: 90px;
         p {margin-top: 30px;}
 
-        .timeline_container {
-            margin-top: 50px;
-            .timeline {
-                .timeline-item {
-                    .timeline-text {font-size: 22px;}
-                }
-            }
-        }
+        .timeline_container {margin-top: 50px;}
     }
 }
 
@@ -1041,19 +971,11 @@ header {
 
 @media (max-width: 767.98px) {
     .about_us {
-        .timeline_container {
-            .timeline {
-                .timeline-item {
-                    .timeline-text {font-size: 20px;}
-                }
-            }
-        }
         .our_team {
             margin-top: 50px;
             .team {
                 margin-top: 30px;
-                gap: 15%;
-                h6 {font-size: 24px;}
+                gap: 10vw;
             }
         }
     }
@@ -1084,11 +1006,6 @@ header {
                     top: 0px;
                     text-align: left;
                 }
-            }
-        }
-        .our_team {
-            .team {
-                h6 {font-size: 20px;}
             }
         }
     }
