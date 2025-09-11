@@ -13,6 +13,10 @@
 
 html {width: 100%;}
 
+html.dark-theme .logo {
+    content: url("/img/logo/miatour-logo-dark.svg");
+}
+
 body {
     position: relative;
     font-family: 'Source Sans 3', serif;

@@ -40,7 +40,7 @@ body.body_no_scroll {overflow: hidden;}
 }
 
 h5 {
-        font-size: clamp(21px, 3vw, 26px);
+        font-size: clamp(21px, 3vw, 28px);
         font-weight: 500;
 }
 
@@ -526,7 +526,7 @@ header {
 // MAIN COUNTRIES
 .popular_countries {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 2vw;
     margin-top: 20px;
 
@@ -557,12 +557,6 @@ header {
                 color: var(--text-secondary);
                 margin-top: 5px;
             }
-    }
-}
-
-@media (max-width: 1277.98px) {
-    .popular_countries {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 

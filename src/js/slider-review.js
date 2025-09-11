@@ -3,7 +3,7 @@ import KeenSlider from 'keen-slider';
 
 const basePath = import.meta.env.BASE_URL || '/';
 const reviewData = `${basePath}data/review.json`;
-const clientImage = `${basePath}clients/`;
+const clientImage = `${basePath}img/clients/`;
 const starsDir   = `${basePath}img/hotel_stars/`;
 
 // CREATE ARROWS & DOTS

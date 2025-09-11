@@ -24,7 +24,7 @@ async function loadCountries() {
     }
 }
 
-// OVERLAY POPULAR COUNTRIES
+// OVERLAY
 let overlayMainKeen = null;
 let overlayThumbsKeen = null;
 
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         .map(
             (p) => `
             <div class="keen-slider__slide">
-                <img src="${basePath}countries/${p}" alt="Фото ${countryData.name}">
+                <img src="${basePath}img/countries/${p}" alt="Фото ${countryData.name}">
             </div>`
         )
         .join('');
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         .map(
             (p) => `
             <div class="keen-slider__slide">
-                <img src="${basePath}countries/${p}" alt="Thumb ${countryData.name}">
+                <img src="${basePath}img/countries/${p}" alt="Thumb ${countryData.name}">
             </div>`
         )
         .join('');

@@ -58,7 +58,7 @@ function displayPopularCountries(countries) {
         countryDiv.dataset.countryId = country.id;
 
         const firstPhoto = country.photo && country.photo[0];
-        const photoSrc = firstPhoto ? `countries/${firstPhoto}` : '';
+        const photoSrc = firstPhoto ? `/img/countries/${firstPhoto}` : '';
 
         countryDiv.innerHTML = `
         <div class="img_container">
@@ -82,12 +82,6 @@ function initializeCountryKeen(mainSel, thumbsSel) {
     const setActiveThumb = (rel) => {
         Array.from(thumbsEl.children).forEach((slide, idx) => {
         slide.classList.toggle('is-active', idx === rel);
-        });
-    };
-
-    const setActiveDot = (rel, dots) => {
-        dots.forEach((dot, idx) => {
-        dot.classList.toggle('active', idx === rel);
         });
     };
 
@@ -168,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         .map(
             (p) => `
             <div class="keen-slider__slide">
-            <img src="${basePath}countries/${p}" alt="Фото ${countryData.name}">
+            <img src="${basePath}img/countries/${p}" alt="Фото ${countryData.name}">
             </div>`
         )
         .join('');
@@ -176,7 +170,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         .map(
             (p) => `
             <div class="keen-slider__slide">
-            <img src="${basePath}countries/${p}" alt="Thumb ${countryData.name}">
+            <img src="${basePath}img/countries/${p}" alt="Thumb ${countryData.name}">
             </div>`
         )
         .join('');
