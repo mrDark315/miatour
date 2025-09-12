@@ -33,6 +33,26 @@ body.dark-theme .logo {
 
 .wrapper {margin: 0 5%;}
 
+@media (min-width: 1309.98px ) {
+    .wrapper {margin: 0 10%;}
+}
+
+@media (min-width: 1623.98px ) {
+    .wrapper {margin: 0 15%;}
+}
+
+@media (min-width: 1843.98px ) {
+    .wrapper {margin: 0 20%;}
+}
+
+@media (min-width: 2123.98px ) {
+    .wrapper {margin: 0 25%;}
+}
+
+@media (min-width: 2594.98px ) {
+    .wrapper {margin: 0 30%;}
+}
+
 @media (max-width: 767.98px ) {
     .wrapper {margin: 0 10%;}
 }
@@ -76,7 +96,6 @@ a {all: unset; cursor: pointer;}
 
     nav {
         display: flex;
-        // justify-content: space-between;
         align-items: center;
         gap: 20px;
 
@@ -144,9 +163,29 @@ a {all: unset; cursor: pointer;}
     }
 }
 
+@media (min-width: 1309.98px ) {
+    .header_countries {padding: 20px 10%;}
+}
+
+@media (min-width: 1623.98px ) {
+    .header_countries {padding: 20px 15%;}
+}
+
+@media (min-width: 1843.98px ) {
+    .header_countries {padding: 20px 20%;}
+}
+
+@media (min-width: 2096.98px ) {
+    .header_countries {padding: 20px 25%;}
+}
+
+@media (min-width: 2593.98px ) {
+    .header_countries {padding: 20px 30%;}
+}
+
 @media (max-width: 767.98px) {
     .header_countries {
-        padding: 20px 0 0 0 ;
+        padding: 20px 0;
         flex-direction: column;
         gap: 20px;
 
