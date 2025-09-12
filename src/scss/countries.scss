@@ -196,7 +196,7 @@ a {all: unset; cursor: pointer;}
 // COUNTRIES
 .countries_all {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 140px;
     position: relative;
     z-index: 2;
@@ -226,7 +226,7 @@ a {all: unset; cursor: pointer;}
         align-items: center;
         justify-content: center;
         text-align: center;
-        font-size: 36px;
+        font-size: clamp(22px, 4vw, 28px);
         text-wrap: wrap;
         margin-bottom: 30px;
         font-style: italic;
@@ -246,7 +246,7 @@ a {all: unset; cursor: pointer;}
     .africa {margin-top: 50px;}
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 868.98px) {
     @keyframes show {
         0% {
             transform: scaleY(0);
