@@ -2,6 +2,7 @@ import './input.js';
 import './header.js';
 import '../scss/style.scss';
 import '../scss/overlay.scss';
+import '../scss/theme.scss';
 import './air-datepicker.js';
 import { initializeReviewsSlider } from './slider-review.js';
 import Swal from 'sweetalert2';
@@ -158,19 +159,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // build slides from JSON photos
         const photos = Array.isArray(countryData.photo) ? countryData.photo : [];
-        const mainSlides = photos
-        .map(
+        const mainSlides = photos.map(
             (p) => `
             <div class="keen-slider__slide">
-            <img src="${basePath}img/countries/${p}" alt="Фото ${countryData.name}">
+                <img src="${basePath}img/countries/${p}" alt="Фото ${countryData.name}">
             </div>`
         )
         .join('');
-        const thumbSlides = photos
-        .map(
+        const thumbSlides = photos.map(
             (p) => `
             <div class="keen-slider__slide">
-            <img src="${basePath}img/countries/${p}" alt="Thumb ${countryData.name}">
+                <img src="${basePath}img/countries/${p}" alt="Thumb ${countryData.name}">
             </div>`
         )
         .join('');
@@ -180,14 +179,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="info_left">
             <h2>${countryData.name}</h2>
             <div class="keen_gallery">
-            <div class="keen-slider main-slider">
-                ${mainSlides}
-            </div>
-            <div class="keen-slider thumb-slider">
-                ${thumbSlides}
-            </div>
+                <div class="keen-slider main-slider">
+                    ${mainSlides}
+                </div>
+                <div class="keen-slider thumb-slider">
+                    ${thumbSlides}
+                </div>
             </div>
         </div>
+
         <div class="info_right">
             <p>${countryData.description || ''}</p>
         </div>

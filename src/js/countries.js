@@ -1,5 +1,6 @@
 import '../scss/countries.scss'
 import '../scss/overlay.scss';
+import '../scss/theme.scss';
 import "flag-icons/css/flag-icons.min.css";
 import 'keen-slider/keen-slider.min.css';
 import KeenSlider from 'keen-slider';
@@ -126,7 +127,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 countryDiv.dataset.countryId = country.id;
 
                 countryDiv.innerHTML = `
-                    ${country.flag}
+                    <div>${country.flag}</div>
                     <h5>${country.name}</h5>
                 `;
                 container.appendChild(countryDiv);
@@ -145,16 +146,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         // build slides from JSON photos
         const photos = Array.isArray(countryData.photo) ? countryData.photo : [];
-        const mainSlides = photos
-        .map(
+        const mainSlides = photos.map(
             (p) => `
             <div class="keen-slider__slide">
                 <img src="${basePath}img/countries/${p}" alt="Фото ${countryData.name}">
             </div>`
         )
         .join('');
-        const thumbSlides = photos
-        .map(
+        const thumbSlides = photos.map(
             (p) => `
             <div class="keen-slider__slide">
                 <img src="${basePath}img/countries/${p}" alt="Thumb ${countryData.name}">
@@ -188,7 +187,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.body.classList.add('body_no_scroll');
 
         // init keen after DOM
-        initializeCountryKeen('.main-slider', '.thumb-slider');
+        setTimeout(() => {
+            initializeCountryKeen('.main-slider', '.thumb-slider');
+        }, 0);
+
+        // initializeCountryKeen('.main-slider', '.thumb-slider');
     });
 
     // close overlay (background click / close icon / ESC)
