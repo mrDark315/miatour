@@ -2,7 +2,7 @@
     {
         "id": 1,
         "clientName": "Олексій",
-        "clientImage": "avatar1.png",
+        "clientImage": "oleksiy.png",
         "location": "Греція, острів Санторіні",
         "hotel": "La Perla Villas and Suites",
         "rating": 5,
@@ -12,6 +12,51 @@
             "photo_1-2.jpg",
             "photo_1-3.jpg",
             "photo_1-4.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "clientName": "Андрій",
+        "clientImage": "andriy.png",
+        "location": "Італія, Рим",
+        "hotel": "Hotel Artemide",
+        "rating": 5,
+        "reviewText": "Це була наша перша подорож з МІА-ТУР, і ми залишились у захваті! Організація туру в Рим була бездоганною. Алла врахувала всі наші побажання, підібрала чудовий готель та цікаві екскурсії",
+        "photo": [
+            "photo_2-1.jpg",
+            "photo_2-2.jpg",
+            "photo_2-3.jpg",
+            "photo_2-4.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "clientName": "Олена",
+        "clientImage": "olena.png",
+        "location": "Таїланд, острів Пхукет",
+        "hotel": "The Surin Phuket",
+        "rating": 5,
+        "reviewText": "Давно мріяла про екзотичну подорож, і завдяки МІА-ТУР моя мрія здійснилася! Відпочинок на Пхукеті був неймовірним. Марта допомогла скласти ідеальний маршрут, який поєднав пляжний релакс та активні розваги",
+        "photo": [
+            "photo_3-1.jpg",
+            "photo_3-2.jpg",
+            "photo_3-3.jpg",
+            "photo_3-4.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "clientName": "Михайло",
+        "clientImage": "mykhailo.png",
+        "location": "Іспанія, Барселона",
+        "hotel": "W Barcelona",
+        "rating": 4,
+        "reviewText": "Подорожуємо з МІА-ТУР вже не вперше. Поїздка до Барселони була чудовою, нам підібрали гарний готель з неймовірним видом. Єдиний мінус – трохи затягнувся трансфер з аеропорту, але загалом враження від відпочинку це не зіпсувало",
+        "photo": [
+            "photo_4-1.jpg",
+            "photo_4-2.jpg",
+            "photo_4-3.jpg",
+            "photo_4-4.jpg"
         ]
     }
 ]
