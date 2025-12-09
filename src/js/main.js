@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// LOAD POPULAR COUNTRIES
+// POPULAR COUNTRIES
+    // load countries
 async function loadCountries() {
     const countriesDataPath = 'data/countries_list.json';
 
@@ -47,7 +48,7 @@ async function loadCountries() {
     }
 }
 
-// SHOW POPULAR COUNTRIES
+    // show countries
 function displayPopularCountries(countries) {
     const popularCountriesContainer = document.querySelector('.popular_countries');
     if (!popularCountriesContainer) return;
@@ -71,7 +72,7 @@ function displayPopularCountries(countries) {
     });
 }
 
-// OVERLAY POPULAR COUNTRIES
+    // overlay countries
 let overlayMainKeen = null;
 let overlayThumbsKeen = null;
 
@@ -222,3 +223,58 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     });
+
+
+// HOTEL INSPECTION
+    // load hotels
+async function loadHotels() {
+    const hotelsDataPath = 'data/hotel_inspection.json';
+
+    try {
+        const response = await fetch(hotelsDataPath);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        return await response.json();
+    } catch (error) {
+        console.error('Failed to load hotels:', error);
+        return [];
+    }
+}
+
+    // show hotels
+function displayHotels(hotels) {
+    const hotelsContainer = document.querySelector('.hotels_inspection');
+    if (!hotelsContainer) return;
+
+    hotelsContainer.innerHTML = '';
+    const topHotels = hotels.slice(0, 4);
+
+    topHotels.forEach((hotel) => {
+        const hotelDiv = document.createElement('div');
+        hotelDiv.classList.add('hotel');
+
+        const photoName = `${hotel.hotel}_photo.png`;
+        const photoSrc = `/img/hotel_photo/${photoName}`;
+        const starsSrc = `img/hotel_stars/stars_${hotel.stars}.svg`;
+
+        hotelDiv.innerHTML = `
+            <img class="hotel_img" src="${photoSrc}" alt="${hotel.hotel}">
+            <div class="info">
+                <h4>${hotel.hotel}</h4>
+                <div class="location">
+                    <h6><i class="fa-solid fa-location-dot"></i>${hotel.location}</h6>
+                    <img src="${starsSrc}" alt="${hotel.stars} stars">
+                </div>
+                <p>${hotel.description}</p>
+            </div>
+        `;
+
+        hotelsContainer.appendChild(hotelDiv);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    const hotels = await loadHotels();
+    if (hotels.length > 0) {
+        displayHotels(hotels);
+    }
+});
