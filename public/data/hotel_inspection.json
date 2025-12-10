@@ -12,8 +12,16 @@
         "location": "Пуерто-Ріко",
         "hotel": "Hilton Garden Inn San Juan Condado",
         "photo": "",
-        "stars": 4,
+        "stars": 5,
         "description": "Поруч з ним пляж де немає великого каміння і великих хвиль і до Старого міста близько"
+    },
+    {
+        "id": 3,
+        "location": "Барбадосі",
+        "hotel": "Bougainvillea Barbados",
+        "photo": "",
+        "stars": 5,
+        "description": "Готель і пляж були дуже хороші і поруч класний ресторанчик на березі океану зі свіжою рибою і восьминігом"
     },
     {
         "id": 3,
