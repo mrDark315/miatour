@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // check input value
     if (sendRequestButton && checkInputs.length > 0 && warningMessage && form) {
-        sendRequestButton.addEventListener('click', function(event) {
+        sendRequestButton.addEventListener('click', function (event) {
             event.preventDefault();
 
             let allFieldsFilled = true;
@@ -63,46 +63,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // send data from input fields
     async function sendFormData() {
-    const formData = new FormData(form);
-    const url = '/api/travel_request.php';
+        const formData = new FormData(form);
+        const url = '/api/travel_request.php';
 
-    const currentTheme = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
+        const currentTheme = document.documentElement.classList.contains('dark-theme') ? 'dark' : 'light';
 
-    try {
-        const response = await fetch(url, {
-            method: 'POST',
-            body: formData,
-        });
-
-        if (!response.ok) {
-            throw new Error(`Помилка мережі: ${response.status} ${response.statusText}`);
-        }
-
-        // sweat alert 2
-        const result = await response.json();
-
-        if (result.success) {
-            Swal.fire({
-                title: 'Повідомлення надіслано',
-                text: 'Ми зв\'яжемось з вами найближчим часом',
-                icon: 'success',
-                confirmButtonText: 'Закрити',
-                theme: currentTheme,
-            });
-            form.reset();
-
-            const inputWrappers = form.querySelectorAll('.input_wrapper');
-            inputWrappers.forEach(wrapper => {
-                wrapper.classList.remove('has-value');
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                body: formData,
             });
 
-            const charCounter = document.getElementById('char_counter');
-            if(charCounter) {
-                const maxLength = document.getElementById('info_area').getAttribute('maxlength');
-                charCounter.textContent = `0/${maxLength}`;
-                charCounter.classList.remove('char_limit');
+            const text = await response.text();
+            let result;
+            try {
+                result = JSON.parse(text);
+            } catch (err) {
+                result = { success: false, message: text };
             }
-        }
+
+            if (!response.ok) {
+                const serverMsg = result && result.message ? ` - ${result.message}` : '';
+                throw new Error(`Помилка мережі: ${response.status} ${response.statusText}${serverMsg}`);
+            }
+
+            // sweat alert 2
+            // `result` already contains parsed JSON (or raw text in `message`)
+
+            if (result.success) {
+                Swal.fire({
+                    title: 'Повідомлення надіслано',
+                    text: 'Ми зв\'яжемось з вами найближчим часом',
+                    icon: 'success',
+                    confirmButtonText: 'Закрити',
+                    theme: currentTheme,
+                });
+                form.reset();
+
+                const inputWrappers = form.querySelectorAll('.input_wrapper');
+                inputWrappers.forEach(wrapper => {
+                    wrapper.classList.remove('has-value');
+                });
+
+                const charCounter = document.getElementById('char_counter');
+                if (charCounter) {
+                    const maxLength = document.getElementById('info_area').getAttribute('maxlength');
+                    charCounter.textContent = `0/${maxLength}`;
+                    charCounter.classList.remove('char_limit');
+                }
+            }
         } catch (error) {
             console.error('Помилка при відправці:', error);
             Swal.fire({
