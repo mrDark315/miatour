@@ -1,24 +1,6 @@
 <?php
-require __DIR__ . '/../../vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php';
 date_default_timezone_set('Europe/Kiev');
-
-// Enable error display for debugging (remove in production)
-ini_set('display_errors', '1');
-ini_set('display_startup_errors', '1');
-error_reporting(E_ALL);
-
-// Shutdown handler to return fatal errors as JSON (helps with PHP built-in server)
-register_shutdown_function(function () {
-    $err = error_get_last();
-    if ($err && ($err['type'] & (E_ERROR | E_PARSE | E_CORE_ERROR | E_COMPILE_ERROR))) {
-        http_response_code(500);
-        header('Content-Type: application/json; charset=UTF-8');
-        echo json_encode([
-            'success' => false,
-            'message' => "Fatal error: {$err['message']} in {$err['file']} on line {$err['line']}"
-        ]);
-    }
-});
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -71,6 +53,7 @@ $message_body .= '<li><strong>Email:</strong> ' . $email . '</li>';
 $message_body .= '<li><strong>Країна:</strong> ' . ($country ?: 'Не вказано') . '</li>';
 $message_body .= '<li><strong>Місто:</strong> ' . ($city ?: 'Не вказано') . '</li>';
 $message_body .= '<li><strong>Дата початку туру:</strong> ' . ($start_date ?: 'Не вказано') . '</li>';
+$message_body .= '<li><strong>Дата кінця туру:</strong> ' . ($finish_date ?: 'Не вказано') . '</li>';
 $message_body .= '<li><strong>Кількість людей:</strong> ' . ($people_num ?: 'Не вказано') . '</li>';
 $message_body .= '<li><strong>Додаткова інформація:</strong> ' . ($info ?: 'Не вказано') . '</li>';
 $message_body .= '</ul>';
@@ -105,7 +88,7 @@ try {
     echo json_encode(['success' => true, 'message' => 'Ваша заявка успішно відправлена!']);
 } catch (Exception $e) {
     http_response_code(500);
-    $errorMsg = $mail->ErrorInfo ?: $e->getMessage();
+        $errorMsg = $mail->ErrorInfo ?: $e->getMessage();
     echo json_encode(['success' => false, 'message' => "На жаль, під час відправлення заявки сталася помилка: {$errorMsg}"]);
 }
 ?>
